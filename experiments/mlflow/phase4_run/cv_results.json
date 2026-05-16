@@ -1,0 +1,17 @@
+{
+  "auroc_mean": 0.9988,
+  "auroc_std": 0.0014,
+  "auprc_mean": 0.9973,
+  "auprc_std": 0.0033,
+  "f1_mean": 0.9529,
+  "f1_std": 0.0279,
+  "precision_mean": 0.9246,
+  "precision_std": 0.0499,
+  "recall_mean": 0.9849,
+  "recall_std": 0.0185,
+  "specificity_mean": 0.9655,
+  "specificity_std": 0.0251,
+  "loss_mean": 0.4653,
+  "loss_std": 0.0424,
+  "oof_auroc": 0.9991
+}

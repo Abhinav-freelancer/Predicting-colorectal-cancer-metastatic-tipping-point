@@ -1,0 +1,95 @@
+# configs/config.yaml
+# Central configuration for the CRC Metastasis Tipping Point Framework
+# All scripts read from this file via: yaml.safe_load(open("configs/config.yaml"))
+
+project:
+  name: "crc_metastasis_tipping_point"
+  version: "1.0.0"
+  seed: 42
+
+# ── Data paths ────────────────────────────────────────────────────────────────
+paths:
+  data_raw:           "data/raw"
+  data_processed:     "data/processed"
+  manifests:          "data/manifests"
+  experiments:        "experiments/mlflow"
+  outputs:            "outputs"
+  logs:               "logs"
+
+# ── Phase 1: Data acquisition ─────────────────────────────────────────────────
+data:
+  project_id:         "TCGA-COAD"
+  query_limit:        500          # max files to query from GDC
+  min_mean_count:     1.0          # gene filter: min mean raw count
+  min_nonzero_frac:   0.1          # gene filter: min fraction of non-zero patients
+
+# ── Phase 2: Preprocessing ────────────────────────────────────────────────────
+preprocessing:
+  normalisation:      "deseq2"     # options: deseq2, tpm, log1p
+  emt_gene_sets:
+    epithelial:       ["CDH1", "EPCAM", "KRT18", "KRT8", "MUC1"]
+    mesenchymal:      ["VIM", "FN1", "CDH2", "SNAI1", "SNAI2", "ZEB1", "ZEB2", "TWIST1"]
+    tgfb_pathway:     ["TGFB1", "TGFB2", "SMAD2", "SMAD3", "SMAD4"]
+  ews:                           # Early warning signal parameters
+    window_size:      10           # rolling window (number of timepoints)
+    lag:              1            # autocorrelation lag
+
+# ── Phase 3: Dynamical systems ────────────────────────────────────────────────
+ode:
+  solver:             "RK45"
+  t_span:             [0, 100]     # simulation time (arbitrary units)
+  t_eval_points:      500
+  n_parameter_sets:   200          # for bifurcation diagram sweeps
+  fit_method:         "L-BFGS-B"  # scipy.optimize method for parameter fitting
+  # EMT ODE initial conditions [E-cad, Vim, TGFb]
+  y0:                 [1.0, 0.0, 0.1]
+
+# ── Phase 4: Deep learning ────────────────────────────────────────────────────
+model:
+  # Graph neural network
+  gnn:
+    hidden_dim:       128
+    num_layers:       3
+    dropout:          0.3
+    aggregation:      "mean"       # options: mean, sum, max
+
+  # Temporal transformer
+  transformer:
+    d_model:          256
+    n_heads:          8
+    n_layers:         4
+    dropout:          0.1
+    max_seq_len:      20           # max longitudinal timepoints per patient
+
+  # Bifurcation classifier head
+  classifier:
+    hidden_dims:      [256, 128, 64]
+    dropout:          0.3
+    output_dim:       1            # MPS score in [0, 1]
+
+  # Training
+  training:
+    epochs:           100
+    batch_size:       32
+    lr:               1.0e-4
+    weight_decay:     1.0e-5
+    scheduler:        "cosine"
+    patience:         15           # early stopping
+    k_folds:          5
+    mc_dropout_samples: 50         # Monte Carlo dropout for uncertainty
+
+  # Physics-informed loss weight
+  physics_lambda:     0.1          # weight of bifurcation regularisation term
+
+# ── Phase 5: Evaluation ───────────────────────────────────────────────────────
+evaluation:
+  primary_metric:     "lead_time"  # months before first metastatic detection
+  secondary_metrics:  ["auroc", "auprc", "calibration_ece"]
+  mps_alert_threshold: 0.72        # flag for clinical intervention
+
+# ── Phase 6: Deployment ───────────────────────────────────────────────────────
+deployment:
+  api_host:           "0.0.0.0"
+  api_port:           8000
+  dashboard_port:     8501
+  model_registry:     "experiments/mlflow"

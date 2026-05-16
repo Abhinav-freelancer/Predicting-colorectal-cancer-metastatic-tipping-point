@@ -1,0 +1,12 @@
+signature,m0_mean,m1_mean,delta,pvalue,direction
+epithelial,-0.0429,-0.15026,-0.10736,0.0,↓ in M1
+mesenchymal,0.03001,0.18265,0.15264,0.0,↑ in M1
+tgfb_pathway,-0.02081,0.13214,0.15295,0.0,↑ in M1
+wnt_pathway,,,,,~
+proliferation,,,,,~
+cytotoxic_t,,,,,~
+immune_suppression,0.11207,0.28069,0.16862,0.0,↑ in M1
+hypoxia,,,,,~
+emt_index,0.07291,0.33291,0.26,0.0,↑ in M1
+immune_balance,,,,,~
+invasion_potential,0.02605,0.23253,0.20648,0.0,↑ in M1

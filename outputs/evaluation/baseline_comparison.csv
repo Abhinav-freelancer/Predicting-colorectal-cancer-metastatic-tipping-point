@@ -1,0 +1,8 @@
+model,features,auroc_mean,auroc_std,auprc_mean,f1_mean
+Logistic Regression,all_35,1.0,0.0,1.0,1.0
+Gradient Boosting,all_35,1.0,0.0,1.0,1.0
+AJCC Stage only,stage_order,1.0,0.0,,
+Random Forest,all_35,0.9998,0.0005,0.9994,0.9846
+EMT index only,emt_index,0.9988,0.0016,,
+EWS composite only,ews_composite,0.8673,0.0582,,
+Physics score only,physics_score,0.5,0.0,,

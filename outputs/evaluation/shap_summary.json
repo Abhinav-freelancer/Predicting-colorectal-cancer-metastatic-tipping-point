@@ -1,0 +1,70 @@
+{
+  "top_10_features": [
+    {
+      "feature": "stage_order",
+      "mean_abs_shap": 8.717997162415942,
+      "group": "Clinical",
+      "description": "AJCC pathologic stage (0=I, 1=II, 2=III, 3=IV)"
+    },
+    {
+      "feature": "invasion_potential",
+      "mean_abs_shap": 0.08979501564262146,
+      "group": "EMT scores",
+      "description": "Combined invasion capacity (EMT + hypoxia + TGF-\u03b2)"
+    },
+    {
+      "feature": "epi_dist",
+      "mean_abs_shap": 0.04325004455582648,
+      "group": "ODE physics",
+      "description": "Epi Dist"
+    },
+    {
+      "feature": "fitted_T_ext",
+      "mean_abs_shap": 0.040701537716475215,
+      "group": "ODE physics",
+      "description": "Fitted T Ext"
+    },
+    {
+      "feature": "ews_em_ratio",
+      "mean_abs_shap": 0.04018046686237495,
+      "group": "Early warning signals",
+      "description": "M/E gene ratio \u2014 tipping point early warning signal"
+    },
+    {
+      "feature": "attractor_proximity",
+      "mean_abs_shap": 0.00015306900181984861,
+      "group": "ODE physics",
+      "description": "Distance to mesenchymal attractor in state space"
+    },
+    {
+      "feature": "emt_index",
+      "mean_abs_shap": 0.00012246789598146894,
+      "group": "EMT scores",
+      "description": "EMT progression score (\u22121=epithelial, +1=mesenchymal)"
+    },
+    {
+      "feature": "mes_dist",
+      "mean_abs_shap": 0.0001112310089018589,
+      "group": "ODE physics",
+      "description": "Mes Dist"
+    },
+    {
+      "feature": "epithelial",
+      "mean_abs_shap": 5.0451003633213144e-05,
+      "group": "EMT scores",
+      "description": "Epithelial gene programme strength (CDH1, EPCAM)"
+    },
+    {
+      "feature": "age_at_index",
+      "mean_abs_shap": 4.870666838793283e-06,
+      "group": "Clinical",
+      "description": "Age At Index"
+    }
+  ],
+  "group_importance": {
+    "EMT scores": 0.08997092896266987,
+    "Early warning signals": 0.04019965886178553,
+    "ODE physics": 0.08421588228302342,
+    "Clinical": 8.718005667559542
+  }
+}

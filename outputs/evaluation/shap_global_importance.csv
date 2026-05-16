@@ -1,0 +1,36 @@
+feature,mean_abs_shap,mean_shap_m1,mean_shap_m0,group,description
+stage_order,8.717997162415942,14.933444952757254,-6.165571894282057,Clinical,"AJCC pathologic stage (0=I, 1=II, 2=III, 3=IV)"
+invasion_potential,0.08979501564262146,0.15636168299510889,-0.0595615504809694,EMT scores,Combined invasion capacity (EMT + hypoxia + TGF-β)
+epi_dist,0.04325004455582648,0.07172214156545335,-0.030543416489763126,ODE physics,Epi Dist
+fitted_T_ext,0.040701537716475215,0.06932575715119794,-0.027689868053896297,ODE physics,Fitted T Ext
+ews_em_ratio,0.04018046686237495,0.06950551038592419,-0.027628093557818655,Early warning signals,M/E gene ratio — tipping point early warning signal
+attractor_proximity,0.00015306900181984861,-2.8109872662450933e-05,0.00018782052093474635,ODE physics,Distance to mesenchymal attractor in state space
+emt_index,0.00012246789598146894,-2.4096909938629972e-06,0.0001581956985222466,EMT scores,"EMT progression score (−1=epithelial, +1=mesenchymal)"
+mes_dist,0.0001112310089018589,-2.0132080534725735e-05,0.0001363649893772784,ODE physics,Mes Dist
+epithelial,5.0451003633213144e-05,-0.0001483332043309385,-2.3141282783166098e-06,EMT scores,"Epithelial gene programme strength (CDH1, EPCAM)"
+age_at_index,4.870666838793283e-06,9.582258746399006e-06,3.361608920968137e-07,Clinical,Age At Index
+ews_kurt_emt,4.516166584220968e-06,-6.339441999873876e-06,-1.3529137083537077e-07,Early warning signals,Ews Kurt Emt
+ews_skew_emt,3.7586661629619838e-06,-6.706145084184272e-06,-1.4550947177457767e-07,Early warning signals,Ews Skew Emt
+ews_var_mesenchymal,3.7291126781235538e-06,4.075685913531337e-06,1.1069362707690085e-07,Early warning signals,Mesenchymal gene variance — rising = approaching tipping point
+ews_var_epithelial,3.546185696230071e-06,5.266701324364748e-06,2.4640775344703566e-07,Early warning signals,Ews Var Epithelial
+ews_cv_mesenchymal,3.4797610371254707e-06,-4.679437115811379e-06,1.6884658700622896e-07,Early warning signals,Ews Cv Mesenchymal
+mesenchymal,2.666750729576104e-06,-8.044725274864317e-06,1.5470513546259068e-07,EMT scores,"Mesenchymal gene programme activation (VIM, ZEB1, SNAI1)"
+days_to_last_fu,2.628229967366522e-06,-7.473536233408956e-06,-1.8410722577851835e-07,Clinical,Days To Last Fu
+ajcc_t_encoded,7.383202700722267e-07,-1.584644192932349e-06,-6.14004864526435e-08,Clinical,Ajcc T Encoded
+tgfb_pathway,2.3809310823490567e-07,9.065695356392234e-08,-4.900826503144392e-08,EMT scores,TGF-β signalling activity — EMT inducer
+ews_composite,1.6210725192122779e-07,4.6854735711012094e-07,4.093975071001982e-09,Early warning signals,Composite critical slowing down signal
+vital_status_encoded,9.780420151637845e-08,9.107548823996336e-08,-1.7722010712390563e-08,Clinical,Vital Status Encoded
+immune_suppression,8.957659591709972e-08,-2.42924289407057e-07,-8.13345709101149e-09,EMT scores,"Immunosuppressive TME (FOXP3, PD-L1, M2 macrophage)"
+ajcc_n_encoded,8.837790259103303e-08,5.276897260064552e-08,1.5596603361665128e-09,Clinical,Ajcc N Encoded
+gender_encoded,8.174441719530195e-08,-3.7537791433375015e-08,-3.0511097421885734e-09,Clinical,Gender Encoded
+immune_balance,0.0,0.0,0.0,EMT scores,Immune Balance
+hypoxia,0.0,0.0,0.0,EMT scores,Hypoxia
+wnt_pathway,0.0,0.0,0.0,EMT scores,Wnt Pathway
+cytotoxic_t,0.0,0.0,0.0,EMT scores,"Anti-tumour immune surveillance (CD8+, Granzyme B)"
+proliferation,0.0,0.0,0.0,EMT scores,Proliferation
+bifurcation_score,0.0,0.0,0.0,ODE physics,Position on TGF-β bifurcation diagram
+physics_score,0.0,0.0,0.0,ODE physics,"ODE bifurcation proximity (0=epithelial, 1=mesenchymal)"
+n_attractors,0.0,0.0,0.0,ODE physics,N Attractors
+in_tipping_zone,0.0,0.0,0.0,ODE physics,In Tipping Zone
+is_bistable,0.0,0.0,0.0,ODE physics,Is Bistable
+current_state_encoded,0.0,0.0,0.0,ODE physics,Current State Encoded

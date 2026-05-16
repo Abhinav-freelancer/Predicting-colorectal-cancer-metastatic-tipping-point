@@ -1,0 +1,18 @@
+{
+  "phase": "Phase 1 \u2014 Data Acquisition",
+  "status": "complete",
+  "cohort": {
+    "n_total": 450,
+    "n_metastatic": 131,
+    "n_nonmetastatic": 319,
+    "n_unknown": 0,
+    "n_labeled": 450,
+    "imbalance_ratio": 0.291
+  },
+  "next_steps": [
+    "Run Phase 2 preprocessor: python src/data/preprocessor.py",
+    "DESeq2 normalisation of RNA-seq counts",
+    "EMT gene signature scoring",
+    "Early warning signal computation"
+  ]
+}

@@ -1,0 +1,451 @@
+case_id,submitter_id,file_id,file_name,md5sum,file_size_bytes,gender,race,age_at_index,tumor_stage,ajcc_stage,ajcc_m,ajcc_t,ajcc_n,vital_status,days_to_death,days_to_last_fu,days_to_dx,days_to_recur,metastasis_label
+c8c3e2da-2c0c-4ed4-b062-14928b291c83,TCGA-AA-3000,c528efaa-df73-41ff-8d18-bd381f6191e6,TCGA-AA-3000.star_counts.tsv,,137670,female,black or african american,61,Stage IV,Stage IV,M1,T4,N1,Alive,,991,13,,1
+b17b8505-b6ef-4623-add4-b81be5163188,TCGA-AA-3001,733d449a-8246-4de4-b211-c1aa1554647d,TCGA-AA-3001.star_counts.tsv,,277365,male,white,69,Stage II,Stage II,M0,T4,N0,Alive,,1753,24,578.0,0
+72734a58-c6fb-4144-b85d-4e2a68c2c9a5,TCGA-AA-3002,0c833022-8517-4254-91ee-611457ae7198,TCGA-AA-3002.star_counts.tsv,,411353,female,white,69,Stage IV,Stage IV,M1,T1,N1,Alive,,259,20,,1
+7590da54-f435-45e1-90ba-4a9304a4e12f,TCGA-AA-3003,bb3a04f8-11db-4a75-a69e-ee16ff61319c,TCGA-AA-3003.star_counts.tsv,,287822,male,white,63,Stage IV,Stage IV,M1,T3,N1,Dead,461.0,535,6,,1
+6dc52616-ddf9-4fa4-9b94-c8b7a2fa2fe6,TCGA-AA-3004,649000da-7fe8-4dd8-acdd-9307d0c1edb8,TCGA-AA-3004.star_counts.tsv,,224946,female,black or african american,66,Stage III,Stage III,M0,T4,N2,Alive,,2087,20,283.0,0
+c50f81d7-c9a7-4fa8-8b21-a5b8c7457353,TCGA-AA-3005,60dae7fb-e223-4ad5-8389-86f7d87a76ad,TCGA-AA-3005.star_counts.tsv,,382066,male,black or african american,59,Stage II,Stage II,M0,T3,N1,Alive,,162,4,268.0,0
+a5ec1d6f-fc16-46ae-8be3-a946a5a67252,TCGA-AA-3006,7373f88f-d194-4ca8-ac46-ca73c248acd4,TCGA-AA-3006.star_counts.tsv,,353887,female,white,73,Stage III,Stage III,M0,T3,N1,Alive,,2160,13,328.0,0
+6658a97a-9878-4ecc-83c1-cbd3fcbba3fe,TCGA-AA-3007,c7f0aa0a-ca31-4daa-9bd8-523214c3c79d,TCGA-AA-3007.star_counts.tsv,,212553,male,white,72,Stage II,Stage II,M0,T1,N1,Dead,2960.0,2971,23,598.0,0
+1dbc0a5b-9bb3-4fa7-aad9-f304d8c4972d,TCGA-AA-3008,b3d1aba8-fb5e-480b-b009-6d899dfda7e0,TCGA-AA-3008.star_counts.tsv,,136019,female,white,59,Stage II,Stage II,M0,T3,N2,Dead,196.0,200,4,617.0,0
+a2cef8fe-d5f0-4034-a67c-c5d64252e8a0,TCGA-AA-3009,a0a9897c-4e60-4022-8629-6abe3efdabf7,TCGA-AA-3009.star_counts.tsv,,244725,female,white,50,Stage II,Stage II,M0,T2,N2,Alive,,606,27,619.0,0
+75a4d822-ccbf-40f5-b1a0-c0354818c8c2,TCGA-AA-3010,4ab719bf-1a1f-41ad-8507-d244e5c92cce,TCGA-AA-3010.star_counts.tsv,,279744,female,white,61,Stage II,Stage II,M0,T2,N0,Alive,,1775,6,383.0,0
+2dfe75d7-2e5b-471a-a094-356a69207694,TCGA-AA-3011,2d2eaf11-6bff-47d1-9225-8de397b4c5fd,TCGA-AA-3011.star_counts.tsv,,387785,male,white,65,Stage III,Stage III,M0,T1,N1,Alive,,755,19,250.0,0
+a0a7387c-0a6e-4a78-809e-81b73064af3e,TCGA-AA-3012,71f74ac5-ad22-43ec-a2c4-069506df3816,TCGA-AA-3012.star_counts.tsv,,157809,female,white,57,Stage II,Stage II,M0,T1,N0,Alive,,168,17,408.0,0
+0f551ada-8ca3-4e29-8937-687aab52d970,TCGA-AA-3013,289eade7-422a-42a2-a233-3b9eb757957b,TCGA-AA-3013.star_counts.tsv,,413094,female,white,86,Stage III,Stage III,M0,T3,N1,Alive,,231,28,543.0,0
+175f5152-342c-4175-92e7-016b6d1e6b8b,TCGA-AA-3014,c589f52e-7ff0-41db-8443-62a6ed60c447,TCGA-AA-3014.star_counts.tsv,,275564,male,black or african american,66,Stage III,Stage III,M0,T1,N1,Alive,,874,16,265.0,0
+36f1cd51-8f93-4b2a-ac96-468ddfad5fae,TCGA-AA-3015,e20f7692-e1eb-4282-a533-b1cc4fb2d8e1,TCGA-AA-3015.star_counts.tsv,,407458,male,white,59,Stage III,Stage III,M0,T4,N0,Alive,,676,1,532.0,0
+d38f0734-c81f-4e86-b72a-a9ff8c5827a0,TCGA-AA-3016,aeb22596-d14a-4ac1-ab9f-aa4d9bbf5e3c,TCGA-AA-3016.star_counts.tsv,,481159,female,white,64,Stage II,Stage II,M0,T2,N2,Alive,,2836,4,226.0,0
+04f89f70-dd70-4cfd-9776-39c3513f59e9,TCGA-AA-3017,bb30ae1d-e234-4007-8a2d-32b35532bf80,TCGA-AA-3017.star_counts.tsv,,307543,female,white,67,Stage II,Stage II,M0,T2,N1,Alive,,2247,11,256.0,0
+4c38a4b8-5bab-4850-b57e-25ff69015b66,TCGA-AA-3018,e21672ea-0592-4092-bb8f-7ef8592b4d47,TCGA-AA-3018.star_counts.tsv,,149103,male,white,60,Stage IV,Stage IV,M1,T4,N1,Alive,,356,26,,1
+d805ec89-6398-4ad3-af1a-f47195e99a2d,TCGA-AA-3019,e729f5c0-81b7-4054-8ef4-e5df46d36a10,TCGA-AA-3019.star_counts.tsv,,300296,female,white,68,Stage II,Stage II,M0,T1,N0,Alive,,570,3,606.0,0
+5502aca0-e41c-4c20-a170-7d080dce9b81,TCGA-AA-3020,196a4cb0-143c-4f25-ab16-89937b139afd,TCGA-AA-3020.star_counts.tsv,,179910,female,black or african american,50,Stage I,Stage I,M0,T4,N2,Alive,,1114,3,756.0,0
+a388183c-a717-47bc-a75a-99d6c5f7051f,TCGA-AA-3021,ac0dee88-f78f-4716-87cd-b6779f01dfc3,TCGA-AA-3021.star_counts.tsv,,482249,male,white,57,Stage II,Stage II,M0,T2,N0,Alive,,1080,16,580.0,0
+9b46b4d8-d0d7-4f5e-8910-9c2df487abd4,TCGA-AA-3022,52003e08-dcf9-475b-9536-f0358849bdd4,TCGA-AA-3022.star_counts.tsv,,338417,male,black or african american,48,Stage I,Stage I,M0,T4,N1,Alive,,543,0,265.0,0
+65f604af-5bc3-425f-962d-ab32ff50f53b,TCGA-AA-3023,cc3c93b1-45d1-4b8b-8845-b8a24b4b97a3,TCGA-AA-3023.star_counts.tsv,,342406,female,asian,89,Stage IV,Stage IV,M1,T2,N1,Dead,235.0,341,11,,1
+5b180889-e6b1-468c-839b-7b91873907df,TCGA-AA-3024,57ef384b-b613-401a-bfad-cdb9dea4aa15,TCGA-AA-3024.star_counts.tsv,,199135,male,black or african american,85,Stage II,Stage II,M0,T1,N2,Alive,,2100,1,556.0,0
+b94acd21-2096-4b2a-9cb6-38059f522537,TCGA-AA-3025,d8c97c4f-8421-4491-b69c-8c4f44dfb9c9,TCGA-AA-3025.star_counts.tsv,,468388,male,white,60,Stage I,Stage I,M0,T3,N0,Alive,,715,3,212.0,0
+d54ac89f-0615-48b2-9a1a-028247a681f3,TCGA-AA-3026,d8548d3e-a4e7-4b26-a572-240293105159,TCGA-AA-3026.star_counts.tsv,,257452,female,white,65,Stage I,Stage I,M0,T2,N2,Alive,,152,1,308.0,0
+d91defae-46cd-4e10-b191-a6d7e4438e80,TCGA-AA-3027,a51373ed-73b8-4c62-8f1e-a740cf308e9c,TCGA-AA-3027.star_counts.tsv,,119701,female,white,67,Stage II,Stage II,M0,T4,N0,Alive,,268,25,231.0,0
+8dda6c65-c8fc-4297-96cd-38d5b4c1560a,TCGA-AA-3028,d24751ff-4d09-4d86-a804-f3f66eed91f1,TCGA-AA-3028.star_counts.tsv,,491828,male,black or african american,65,Stage IV,Stage IV,M1,T4,N1,Alive,,272,4,,1
+c433ee3b-d1ea-4686-bdc3-1f26cb08f8f5,TCGA-AA-3029,8025ca3c-86e3-4a7a-97ac-eed758536109,TCGA-AA-3029.star_counts.tsv,,254035,female,white,68,Stage III,Stage III,M0,T1,N0,Alive,,335,14,450.0,0
+e6913c33-e425-4a6b-ab9c-7231323bc7ea,TCGA-AA-3030,55e34d30-a9c2-4f05-bfd7-7c75e51025b9,TCGA-AA-3030.star_counts.tsv,,251785,male,white,79,Stage II,Stage II,M0,T3,N2,Alive,,487,14,397.0,0
+d0264f6b-a32c-4746-a70f-7ac2e48ab26d,TCGA-AA-3031,24e26073-b3e7-4f04-8830-c843e4f3b5e9,TCGA-AA-3031.star_counts.tsv,,313088,female,white,57,Stage III,Stage III,M0,T1,N2,Alive,,4354,6,616.0,0
+6f0fee2e-1978-47c5-916e-f9817fb7f258,TCGA-AA-3032,1a688997-52ce-4142-955e-c774b1b271b6,TCGA-AA-3032.star_counts.tsv,,390286,female,not reported,64,Stage IV,Stage IV,M1,T1,N2,Dead,14.0,33,24,,1
+277caaff-7548-4e52-bd40-037f3ed71412,TCGA-AA-3033,5c38f50f-151c-407b-a435-9ed3f649590a,TCGA-AA-3033.star_counts.tsv,,201353,female,white,57,Stage III,Stage III,M0,T3,N1,Alive,,1618,5,538.0,0
+101ff1f1-09c7-4a16-aa76-9189e83803a0,TCGA-AA-3034,7d76f692-b375-4c2f-9f35-94c1b08b853f,TCGA-AA-3034.star_counts.tsv,,419697,female,white,58,Stage III,Stage III,M0,T2,N2,Alive,,1966,3,252.0,0
+05a58b82-49a8-448a-ab88-32770cec6278,TCGA-AA-3035,d9394bc6-3566-4d48-8510-d068a412530f,TCGA-AA-3035.star_counts.tsv,,233455,male,asian,67,Stage III,Stage III,M0,T3,N0,Alive,,468,10,388.0,0
+a29d9cac-3dca-4180-bf3d-85ba3ee63e88,TCGA-AA-3036,1513d038-0b4b-42dc-abe2-4b9c3f495401,TCGA-AA-3036.star_counts.tsv,,253327,male,white,55,Stage II,Stage II,M0,T3,N1,Alive,,349,14,425.0,0
+2946edd1-9f37-4a4a-aac4-4f9f1b7c01b0,TCGA-AA-3037,fb842e1c-190c-4d84-a1a5-312129bd8ccb,TCGA-AA-3037.star_counts.tsv,,440213,female,white,42,Stage IV,Stage IV,M1,T2,N1,Alive,,297,20,,1
+4dfeef3c-32fa-4500-844e-0507fcda90cc,TCGA-AA-3038,b3fa167a-070c-4b36-bbb6-dd7498ad080f,TCGA-AA-3038.star_counts.tsv,,283419,male,white,70,Stage I,Stage I,M0,T2,N2,Alive,,860,3,798.0,0
+6e1be0c2-6665-4e8c-afbd-e10d4aad3464,TCGA-AA-3039,4ad30f91-834b-4255-a7e3-888c521e3e27,TCGA-AA-3039.star_counts.tsv,,499641,female,white,66,Stage IV,Stage IV,M1,T3,N0,Alive,,177,26,,1
+e57fa74e-6c60-4124-80cc-aa96df40fc33,TCGA-AA-3040,adb33d8b-5137-49f4-98e7-c7851ccc8f5e,TCGA-AA-3040.star_counts.tsv,,179281,male,white,62,Stage I,Stage I,M0,T4,N0,Dead,467.0,622,1,563.0,0
+988b6016-fc78-41f7-bb08-ac990827d1cc,TCGA-AA-3041,2442d22e-fdbb-44b5-9ca4-acbb41a8e100,TCGA-AA-3041.star_counts.tsv,,420385,male,not reported,67,Stage IV,Stage IV,M1,T4,N2,Alive,,140,25,,1
+b22e944c-f028-4157-b69d-93de4dfdc1e6,TCGA-AA-3042,f43bd29b-5354-4b55-a10b-59e3cae0dfa6,TCGA-AA-3042.star_counts.tsv,,398075,female,asian,58,Stage I,Stage I,M0,T3,N2,Dead,1203.0,1303,5,362.0,0
+3002133e-da13-4106-a2a6-139758fe3ba3,TCGA-AA-3043,56c1a236-6f39-4720-b316-3a74c854930c,TCGA-AA-3043.star_counts.tsv,,346523,female,white,63,Stage IV,Stage IV,M1,T2,N2,Dead,432.0,442,5,,1
+8a7308ba-caf5-471c-954b-f4f0e1e9674a,TCGA-AA-3044,8a8dcf2e-dd68-414a-88ba-58d4aa0ff3d6,TCGA-AA-3044.star_counts.tsv,,413632,male,white,68,Stage I,Stage I,M0,T3,N0,Alive,,1156,9,546.0,0
+38b5f778-4bbe-4649-a3cc-e8c69fbb7dab,TCGA-AA-3045,f08f00fa-c46c-4e6c-9d90-cce1ca0b8376,TCGA-AA-3045.star_counts.tsv,,303341,female,white,86,Stage III,Stage III,M0,T1,N0,Alive,,796,4,366.0,0
+689ab262-9dd7-4ca4-b4be-14a5ac523e50,TCGA-AA-3046,1f025271-d92f-4ada-a521-bdad235e81b6,TCGA-AA-3046.star_counts.tsv,,264724,male,white,42,Stage II,Stage II,M0,T2,N1,Alive,,659,1,451.0,0
+2a1027e4-764f-4287-b05f-6ba665386a17,TCGA-AA-3047,81202db4-8c53-40ed-a1de-ec1c84bcd10e,TCGA-AA-3047.star_counts.tsv,,380800,male,white,67,Stage III,Stage III,M0,T3,N0,Alive,,225,23,529.0,0
+5ebfedd8-c4d0-437e-8239-3f1f0b6da21d,TCGA-AA-3048,fae7becd-fe90-4168-bc65-e4c80e890189,TCGA-AA-3048.star_counts.tsv,,394682,female,not reported,64,Stage II,Stage II,M0,T4,N2,Alive,,999,23,388.0,0
+15d6cca8-150e-4fc9-bd4e-bd185fa8695d,TCGA-AA-3049,7328a270-d8d3-40fb-89f3-d8be00715c6b,TCGA-AA-3049.star_counts.tsv,,436797,female,white,61,Stage IV,Stage IV,M1,T3,N1,Dead,233.0,247,5,,1
+f303f1f9-251d-4c61-b4dc-55895b29c72e,TCGA-AA-3050,91b13179-a0ba-4388-9b6c-02d968dec5c8,TCGA-AA-3050.star_counts.tsv,,442619,male,white,57,Stage II,Stage II,M0,T2,N2,Dead,913.0,1078,10,775.0,0
+28ff7e96-66f8-4b29-9e9c-6b94d5152fed,TCGA-AA-3051,edab53b6-8d10-4c86-8607-67b98fdee416,TCGA-AA-3051.star_counts.tsv,,382162,male,white,66,Stage IV,Stage IV,M1,T2,N0,Dead,974.0,1111,6,,1
+67416a40-a497-4d96-bc48-1fe5c5e58215,TCGA-AA-3052,743e51d1-37ed-442f-99c0-487039f91fb0,TCGA-AA-3052.star_counts.tsv,,495653,female,black or african american,79,Stage III,Stage III,M0,T3,N1,Dead,479.0,646,13,435.0,0
+b7da0138-92bd-47a5-82f2-2b18a3a60c4c,TCGA-AA-3053,88ab4868-a353-466c-9b2b-fac533c07fa9,TCGA-AA-3053.star_counts.tsv,,160269,male,white,60,Stage I,Stage I,M0,T4,N0,Alive,,1509,6,375.0,0
+d1da760b-b88d-4dcd-83af-2d3e470b0ed3,TCGA-AA-3054,80f9671e-de96-4828-bd14-2e5f1b9829ac,TCGA-AA-3054.star_counts.tsv,,197466,female,white,63,Stage III,Stage III,M0,T4,N1,Alive,,2700,22,234.0,0
+f503d110-f6d2-4ae6-99c5-3784fac49528,TCGA-AA-3055,ec70d734-cb43-46ea-ba91-cf6635f122bd,TCGA-AA-3055.star_counts.tsv,,293029,female,black or african american,87,Stage II,Stage II,M0,T2,N1,Alive,,1136,27,552.0,0
+e77e9c8e-9edf-4a6e-a97b-931882773012,TCGA-AA-3056,876400bc-b90c-4ac8-9800-391f69cd5986,TCGA-AA-3056.star_counts.tsv,,141991,male,not reported,65,Stage IV,Stage IV,M1,T2,N1,Dead,188.0,294,10,,1
+0cd61188-6783-49e4-a4f1-2d060855e819,TCGA-AA-3057,bc43040b-b8bd-42ef-a772-8796c439e9f1,TCGA-AA-3057.star_counts.tsv,,223014,male,white,64,Stage II,Stage II,M0,T2,N0,Alive,,167,21,580.0,0
+98e36ce8-ffa1-4565-a629-4f3249646818,TCGA-AA-3058,cc5c18c5-cdc9-4c53-9369-e8499e9d4ef6,TCGA-AA-3058.star_counts.tsv,,461331,female,not reported,61,Stage IV,Stage IV,M1,T3,N1,Dead,246.0,398,3,,1
+fdd5f112-9b50-4a69-96d3-43352c7c117c,TCGA-AA-3059,ca87bd23-5b7a-4c61-bfab-7e4ba12cb65f,TCGA-AA-3059.star_counts.tsv,,487926,female,not reported,67,Stage IV,Stage IV,M1,T4,N2,Dead,256.0,386,22,,1
+a06a361e-cbf1-4c2e-80a0-e9adb0bf131c,TCGA-AA-3060,5277f31d-bfcf-476f-a224-6f0fe2d49be7,TCGA-AA-3060.star_counts.tsv,,295879,female,white,45,Stage II,Stage II,M0,T4,N0,Dead,839.0,994,23,250.0,0
+50f0d4e1-e660-4040-9c3c-3c55faffc83a,TCGA-AA-3061,34938dad-cb27-48e8-9068-1ae35ba8adff,TCGA-AA-3061.star_counts.tsv,,114788,male,white,70,Stage III,Stage III,M0,T2,N0,Alive,,1880,20,627.0,0
+f59114be-c680-494a-a6d2-da294856817f,TCGA-AA-3062,75dc63d5-6b01-4420-88d0-9904f76c2502,TCGA-AA-3062.star_counts.tsv,,119585,female,white,60,Stage IV,Stage IV,M1,T1,N1,Alive,,1353,15,,1
+605a535c-4d98-4da4-899c-94924e0ed645,TCGA-AA-3063,fe44f38d-092b-4184-bf9c-6aa73f40c841,TCGA-AA-3063.star_counts.tsv,,368645,male,white,38,Stage III,Stage III,M0,T3,N1,Alive,,321,25,379.0,0
+e3146a6a-d79b-48d4-b132-0a17da7bf802,TCGA-AA-3064,801eaa84-b307-4283-ad46-ca93e17bf4c2,TCGA-AA-3064.star_counts.tsv,,175037,female,white,48,Stage III,Stage III,M0,T1,N1,Alive,,652,29,377.0,0
+791d42d1-b09e-452c-ac6c-81621ea539c1,TCGA-AA-3065,9bdfe7b3-b1f0-430d-83b4-15f97609c82f,TCGA-AA-3065.star_counts.tsv,,380352,female,white,66,Stage II,Stage II,M0,T2,N2,Alive,,491,14,280.0,0
+1c8dfa53-b88b-4969-8000-41a34605c41c,TCGA-AA-3066,3bf3df97-9c2e-4676-93b1-6a56758abbf3,TCGA-AA-3066.star_counts.tsv,,281311,female,white,61,Stage II,Stage II,M0,T3,N2,Dead,522.0,525,22,524.0,0
+398b1784-2615-4b70-948e-6a0724d22c8f,TCGA-AA-3067,ca837bec-a719-4d3c-a677-9e2f1f3afb2c,TCGA-AA-3067.star_counts.tsv,,463625,female,white,36,Stage II,Stage II,M0,T1,N1,Dead,1696.0,1761,19,379.0,0
+b82f162e-7ab0-47a1-a9de-2fedfb7f5fd0,TCGA-AA-3068,5e62084f-1662-45c3-9cc1-4b9d196ea38d,TCGA-AA-3068.star_counts.tsv,,213298,male,black or african american,63,Stage II,Stage II,M0,T3,N1,Dead,517.0,691,14,796.0,0
+fba08e43-6c1d-48b5-ac47-5a8c322061f3,TCGA-AA-3069,1a09fa23-10e2-406e-887d-b64e9fcb3224,TCGA-AA-3069.star_counts.tsv,,174071,male,white,81,Stage III,Stage III,M0,T2,N1,Alive,,1286,28,507.0,0
+5a7e2443-1af0-4df9-9264-7116b822698f,TCGA-AA-3070,774db912-80f1-46fc-941a-14b71896e264,TCGA-AA-3070.star_counts.tsv,,116431,male,white,54,Stage II,Stage II,M0,T1,N0,Alive,,50,9,230.0,0
+378401bd-c0c6-4107-b7e3-8867ce9b19f6,TCGA-AA-3071,a851eaf7-37b7-41a2-9184-0d5e749ffb42,TCGA-AA-3071.star_counts.tsv,,182808,female,white,62,Stage I,Stage I,M0,T1,N1,Dead,354.0,493,0,267.0,0
+cdedf4c1-1a1c-4f36-89f7-10a15953ff6f,TCGA-AA-3072,817585b8-7480-46ba-8e76-67444f1a9230,TCGA-AA-3072.star_counts.tsv,,233237,male,black or african american,53,Stage IV,Stage IV,M1,T2,N1,Dead,0.0,97,9,,1
+64692d79-f324-4da7-a23d-1229691b66a1,TCGA-AA-3073,e30138c3-4d52-4fbd-a82d-851fab518713,TCGA-AA-3073.star_counts.tsv,,232294,male,not reported,52,Stage II,Stage II,M0,T2,N1,Alive,,3430,21,290.0,0
+0c5e1daa-8c06-4fa3-8543-94824bb02920,TCGA-AA-3074,685ed393-d15e-4b82-96ba-66e7bf981f38,TCGA-AA-3074.star_counts.tsv,,175328,female,white,40,Stage I,Stage I,M0,T1,N1,Alive,,976,17,554.0,0
+1991020d-6e77-4b3e-b483-db3efd171d2d,TCGA-AA-3075,f2214282-9b03-4527-9d77-2a34d1609722,TCGA-AA-3075.star_counts.tsv,,165097,male,black or african american,55,Stage IV,Stage IV,M1,T2,N0,Alive,,126,27,,1
+ea1d71e3-1cb5-4fc9-bb92-9be00902dd1b,TCGA-AA-3076,e992b5aa-ce03-4eb9-8937-9cf79bc11120,TCGA-AA-3076.star_counts.tsv,,425263,male,black or african american,69,Stage III,Stage III,M0,T2,N0,Alive,,1174,12,390.0,0
+f03d6483-ae7d-470c-871b-3d8caa9fcfc4,TCGA-AA-3077,224b7771-cee6-4d78-a71c-c1d250061749,TCGA-AA-3077.star_counts.tsv,,166195,male,black or african american,83,Stage I,Stage I,M0,T2,N2,Alive,,18,9,734.0,0
+cca82133-d77b-4772-b6ce-2ea82bae9c1e,TCGA-AA-3078,d6b0a990-69bc-472f-b201-a1ef1a4ad557,TCGA-AA-3078.star_counts.tsv,,169177,female,not reported,64,Stage III,Stage III,M0,T3,N2,Dead,65.0,203,29,550.0,0
+68d7c5cb-598e-4d6f-8073-36da67095554,TCGA-AA-3079,9c0e1c92-0180-47ac-9a90-10ba86cd863c,TCGA-AA-3079.star_counts.tsv,,348716,male,white,56,Stage I,Stage I,M0,T2,N1,Alive,,4033,8,598.0,0
+d53ffd63-3de4-478f-b4d4-4a7767591742,TCGA-AA-3080,0f86825c-a7d1-448a-b2b2-155ad395a665,TCGA-AA-3080.star_counts.tsv,,449555,female,white,53,Stage IV,Stage IV,M1,T2,N1,Dead,14.0,60,20,,1
+9b87f64c-a547-4f61-8ccd-7dee3c48ed4c,TCGA-AA-3081,4ccca215-544f-4871-a0db-75afd2c18c39,TCGA-AA-3081.star_counts.tsv,,267708,male,white,62,Stage IV,Stage IV,M1,T1,N2,Alive,,608,15,,1
+87defb97-08db-4fde-8332-0ea8dad6c03c,TCGA-AA-3082,4710b8f3-7eef-494e-9e10-3601746835c7,TCGA-AA-3082.star_counts.tsv,,373032,male,not reported,59,Stage II,Stage II,M0,T1,N2,Alive,,263,25,747.0,0
+77d6f5ff-f021-4603-bdbc-1d869583593a,TCGA-AA-3083,648feec3-884c-4306-9ed2-efe04c837fd6,TCGA-AA-3083.star_counts.tsv,,251621,male,white,78,Stage II,Stage II,M0,T3,N2,Alive,,4935,23,541.0,0
+6a58bc18-5235-46a4-b6d3-6ae42f091f89,TCGA-AA-3084,1b1a25ed-7074-472f-a215-7fa2047f0ea8,TCGA-AA-3084.star_counts.tsv,,139944,male,black or african american,61,Stage I,Stage I,M0,T1,N0,Alive,,3318,11,631.0,0
+80835fa5-3e58-46fc-871b-aedbbfd4d55e,TCGA-AA-3085,89c24e63-bfcd-4b8f-85a4-b2dfec624517,TCGA-AA-3085.star_counts.tsv,,332395,female,white,75,Stage IV,Stage IV,M1,T3,N2,Dead,400.0,521,14,,1
+28c755b8-5d1c-4055-91af-fdba14b6ffe6,TCGA-AA-3086,57d1b496-fe55-42b7-8c0d-7d2cf7952367,TCGA-AA-3086.star_counts.tsv,,165148,male,white,72,Stage II,Stage II,M0,T3,N2,Alive,,270,2,652.0,0
+3e25b0a7-7eb4-46c2-a75f-2ff208973493,TCGA-AA-3087,b9f14d11-81ea-46cf-90fe-fbb548f45eb4,TCGA-AA-3087.star_counts.tsv,,308804,male,white,64,Stage IV,Stage IV,M1,T1,N0,Dead,781.0,818,14,,1
+d96c5ab1-7598-4dc6-bc34-631df0b21a6c,TCGA-AA-3088,3df5f906-d1ae-4657-8b50-9cf094ab088d,TCGA-AA-3088.star_counts.tsv,,200974,male,black or african american,64,Stage IV,Stage IV,M1,T2,N2,Dead,2071.0,2093,29,,1
+6529352f-acab-4ac5-a707-529a3d7e3618,TCGA-AA-3089,dc9fd3f4-dc33-4dfd-89df-f8b975ba4c32,TCGA-AA-3089.star_counts.tsv,,221786,female,white,37,Stage IV,Stage IV,M1,T4,N2,Dead,289.0,316,18,,1
+efcd1c17-9d9d-4de2-9649-77a0e14ba12a,TCGA-AA-3090,0c1d9eb2-9d8d-43ce-9e18-317cee856bad,TCGA-AA-3090.star_counts.tsv,,440773,male,black or african american,70,Stage III,Stage III,M0,T3,N2,Alive,,584,12,656.0,0
+f8dd778e-feda-4fab-96a7-b00121bd6b83,TCGA-AA-3091,74aafd58-d078-4343-8fd8-93b75b041a6c,TCGA-AA-3091.star_counts.tsv,,458448,male,white,65,Stage IV,Stage IV,M1,T1,N2,Alive,,178,5,,1
+18964046-c8fb-4de7-be6a-0a8950661f14,TCGA-AA-3092,6e65df6d-440c-48ac-8f1c-5cd0dbf4eb9c,TCGA-AA-3092.star_counts.tsv,,440533,female,white,70,Stage II,Stage II,M0,T4,N2,Dead,124.0,266,7,296.0,0
+2557d794-5612-4a74-924e-71fc9a507d0b,TCGA-AA-3093,cfd3ddd3-1bc9-4587-bc7f-930ec3da8926,TCGA-AA-3093.star_counts.tsv,,296243,male,white,69,Stage IV,Stage IV,M1,T4,N1,Alive,,1033,3,,1
+2561cf43-8b81-430d-b22a-aa9a22f9182c,TCGA-AA-3094,2e43ad77-8e4a-40c4-9180-0e492f69c331,TCGA-AA-3094.star_counts.tsv,,183086,male,white,74,Stage I,Stage I,M0,T2,N0,Dead,2875.0,2985,9,564.0,0
+b141ea5b-ca1a-4171-85f5-a24e8d5597cf,TCGA-AA-3095,a1e8c412-f644-4573-b0b9-f0b3c43de33c,TCGA-AA-3095.star_counts.tsv,,495441,female,black or african american,24,Stage III,Stage III,M0,T2,N1,Alive,,673,4,752.0,0
+1b651ede-d893-42bc-93c9-f0a80c8f4809,TCGA-AA-3096,31041efb-490e-4ff4-90d9-b38c2085b62a,TCGA-AA-3096.star_counts.tsv,,349083,male,black or african american,82,Stage II,Stage II,M0,T4,N0,Alive,,337,13,583.0,0
+b41c6028-6307-42fe-a5e3-d7688f9d4932,TCGA-AA-3097,cc5b08fd-589f-4674-8a5d-4636ac061be7,TCGA-AA-3097.star_counts.tsv,,151612,female,white,63,Stage I,Stage I,M0,T2,N1,Dead,6286.0,6377,27,391.0,0
+a16235b0-c356-4f41-967d-be100789d6cb,TCGA-AA-3098,92445ab8-ea25-45c1-963c-7988d16b3b09,TCGA-AA-3098.star_counts.tsv,,289113,female,white,67,Stage IV,Stage IV,M1,T4,N0,Alive,,437,25,,1
+133bcf2e-2f2a-431a-a5e2-c73a83f3cde9,TCGA-AA-3099,079fe003-d744-4ffd-a14b-d3d80b94315f,TCGA-AA-3099.star_counts.tsv,,496723,female,white,59,Stage I,Stage I,M0,T1,N0,Alive,,1204,28,419.0,0
+5897b89d-090e-46c6-864b-4227c361efe1,TCGA-AA-3100,b404b64a-fec9-439a-8c8f-10da959e6de4,TCGA-AA-3100.star_counts.tsv,,303573,female,white,64,Stage IV,Stage IV,M1,T4,N1,Dead,313.0,456,12,,1
+28d1b0ae-fb82-42f3-902a-d924d53529cf,TCGA-AA-3101,d2cdc51e-c022-45a5-9a19-5fe5de5f0430,TCGA-AA-3101.star_counts.tsv,,362207,male,white,69,Stage II,Stage II,M0,T4,N0,Dead,1597.0,1730,5,666.0,0
+e729d989-c4ab-4773-9b7f-f32ee44fd781,TCGA-AA-3102,065da4e5-af0d-499b-9e76-9a31c5be4b12,TCGA-AA-3102.star_counts.tsv,,210061,female,white,68,Stage IV,Stage IV,M1,T1,N2,Alive,,148,6,,1
+8cabc40c-8c62-444b-8827-6be7a857cc3c,TCGA-AA-3103,6c6ac630-833b-4af5-9ba2-ca53669c1d7a,TCGA-AA-3103.star_counts.tsv,,202042,female,white,76,Stage III,Stage III,M0,T3,N2,Alive,,2853,11,611.0,0
+ca37c62b-ce82-41e4-afb0-17a0834a12ca,TCGA-AA-3104,436bf1c2-8494-42a4-aed7-b0a88c983c77,TCGA-AA-3104.star_counts.tsv,,277577,male,asian,54,Stage I,Stage I,M0,T4,N2,Alive,,658,14,579.0,0
+2f6ebcaa-a697-4dc3-b374-6bb8f100ed55,TCGA-AA-3105,e01e650d-af37-4891-a156-8d1b7cea72aa,TCGA-AA-3105.star_counts.tsv,,437329,female,not reported,51,Stage II,Stage II,M0,T4,N2,Alive,,665,22,488.0,0
+bc61364f-6a40-4d64-9da3-e084926f90f0,TCGA-AA-3106,92672d06-6246-4945-aff4-7aa06c2cd2c0,TCGA-AA-3106.star_counts.tsv,,203123,male,white,80,Stage III,Stage III,M0,T3,N1,Alive,,453,25,300.0,0
+58cc96f9-4ef6-464b-af71-5e87dc0ebb1d,TCGA-AA-3107,b61a0cc9-6edd-4a3a-909a-0fe15e1934c3,TCGA-AA-3107.star_counts.tsv,,155331,female,black or african american,52,Stage I,Stage I,M0,T1,N1,Alive,,891,29,315.0,0
+5179cbed-9537-4e3f-ab0a-1bd2539d0194,TCGA-AA-3108,aaa89944-1250-43e1-9192-88e8249c9593,TCGA-AA-3108.star_counts.tsv,,492328,female,white,69,Stage II,Stage II,M0,T1,N0,Alive,,546,26,598.0,0
+2af2a8ef-45f1-4d1e-8d42-d3d001f29b4d,TCGA-AA-3109,00763ffa-def7-4793-bbda-53a3767087bc,TCGA-AA-3109.star_counts.tsv,,320873,male,white,73,Stage I,Stage I,M0,T4,N1,Dead,3141.0,3225,29,799.0,0
+74527d30-a516-4b1e-bf29-7901dbc9a631,TCGA-AA-3110,6c80471d-536d-43c9-8d25-1244f7700ac1,TCGA-AA-3110.star_counts.tsv,,227330,male,white,71,Stage III,Stage III,M0,T2,N1,Alive,,263,10,672.0,0
+3248c0e5-fb7d-458c-8c54-b0006392abd8,TCGA-AA-3111,bba23aa9-7a72-4e19-9b55-dec635b4dedd,TCGA-AA-3111.star_counts.tsv,,399528,female,black or african american,52,Stage IV,Stage IV,M1,T1,N2,Dead,432.0,496,4,,1
+d92ae8dc-f72b-443a-9e47-bdd99028ad42,TCGA-AA-3112,7d918201-f832-4c31-8b90-06be33a5ad2a,TCGA-AA-3112.star_counts.tsv,,127007,female,white,56,Stage IV,Stage IV,M1,T1,N2,Dead,38.0,144,1,,1
+09892433-0ce9-45be-ab70-6c13f1f60628,TCGA-AA-3113,2d6eb592-e0dc-46c8-a0a7-10b23212eef7,TCGA-AA-3113.star_counts.tsv,,444320,female,black or african american,62,Stage III,Stage III,M0,T2,N2,Dead,2519.0,2548,2,436.0,0
+f59f2f7a-087d-40ab-8146-40b63728dcf6,TCGA-AA-3114,5005f3c9-48ac-4866-a246-d7cc41909f64,TCGA-AA-3114.star_counts.tsv,,400106,female,white,42,Stage IV,Stage IV,M1,T2,N1,Alive,,265,22,,1
+decaa0ea-7591-47d8-a94b-6ce5c6d36395,TCGA-AA-3115,2007c0d2-95d8-4cc8-a5e7-c9c86220f9d6,TCGA-AA-3115.star_counts.tsv,,429243,male,white,75,Stage I,Stage I,M0,T4,N0,Dead,13.0,48,19,469.0,0
+45e28e27-71e2-4cd4-b1a3-8b98245bf1af,TCGA-AA-3116,63743421-fe32-4c67-b758-68437517c1a1,TCGA-AA-3116.star_counts.tsv,,176920,female,white,62,Stage II,Stage II,M0,T1,N0,Alive,,1703,16,530.0,0
+966f5922-9fbe-4ed8-8463-004a874617b2,TCGA-AA-3117,b43e741c-f235-4a81-9e1f-2844f5bbb79f,TCGA-AA-3117.star_counts.tsv,,340623,female,white,63,Stage IV,Stage IV,M1,T2,N1,Dead,905.0,914,22,,1
+84456334-4b70-4520-ba4b-d6c312ca2170,TCGA-AA-3118,c62a4288-8c4b-46f1-8036-957f87ac5c90,TCGA-AA-3118.star_counts.tsv,,308767,male,white,56,Stage IV,Stage IV,M1,T2,N2,Dead,159.0,213,0,,1
+680db2ec-acc7-425a-9e2b-d2bf4caba39a,TCGA-AA-3119,510eb570-27bd-4501-9dc9-910ab0a63da4,TCGA-AA-3119.star_counts.tsv,,456105,male,white,76,Stage II,Stage II,M0,T4,N2,Alive,,1162,1,329.0,0
+9850c313-d726-480c-861a-93505b9559b3,TCGA-AA-3120,06412787-cea8-4ebb-94e2-5bd8ed1babef,TCGA-AA-3120.star_counts.tsv,,139662,male,white,69,Stage III,Stage III,M0,T1,N0,Alive,,494,25,392.0,0
+67420955-6238-416e-84aa-5dd73bad01ff,TCGA-AA-3121,6409b363-5a71-4e60-9d90-3acd85481b39,TCGA-AA-3121.star_counts.tsv,,344194,male,white,62,Stage II,Stage II,M0,T1,N2,Alive,,120,2,264.0,0
+f13b1155-7aaa-47f2-86f2-e5fcea8094e2,TCGA-AA-3122,f5ee3bef-696b-404e-90f1-fdeda002f136,TCGA-AA-3122.star_counts.tsv,,401708,male,white,73,Stage I,Stage I,M0,T4,N1,Dead,2338.0,2508,12,394.0,0
+5750c23f-b7d1-458a-85d6-292ae9c5174a,TCGA-AA-3123,d3df17f2-a517-4d04-8ab9-16ee24a5d564,TCGA-AA-3123.star_counts.tsv,,491453,male,white,65,Stage IV,Stage IV,M1,T4,N1,Alive,,399,17,,1
+c89b3001-4e7a-44d3-a33b-1c94ba12ce4e,TCGA-AA-3124,9cb49601-e50f-4381-b7f3-d1f8fab709d8,TCGA-AA-3124.star_counts.tsv,,446457,male,white,59,Stage I,Stage I,M0,T3,N1,Dead,818.0,838,18,756.0,0
+6c3192e0-5018-4581-b896-118696e7c39f,TCGA-AA-3125,d485513c-f12f-4e12-be8e-603e66d58a45,TCGA-AA-3125.star_counts.tsv,,327173,male,white,68,Stage IV,Stage IV,M1,T2,N1,Dead,202.0,292,9,,1
+054bedd3-8993-416d-8a00-c02e93c3ba4e,TCGA-AA-3126,eed4d700-f3fa-40a7-8ea3-6ed40b24530b,TCGA-AA-3126.star_counts.tsv,,389245,female,white,60,Stage II,Stage II,M0,T2,N2,Dead,2323.0,2356,7,696.0,0
+b28aa8fe-5016-4f9e-bed3-e53fc543c901,TCGA-AA-3127,381f2224-db6f-45f2-b544-8f33b0119ad7,TCGA-AA-3127.star_counts.tsv,,478207,female,white,69,Stage IV,Stage IV,M1,T4,N1,Alive,,46,0,,1
+fe35aca3-aaeb-430b-ac83-c102a2bc5460,TCGA-AA-3128,b76cdb11-9081-49c1-b23d-769ee9cef678,TCGA-AA-3128.star_counts.tsv,,397383,male,white,73,Stage I,Stage I,M0,T4,N1,Alive,,584,23,398.0,0
+567ac383-7a0f-4af8-858e-150f16784f16,TCGA-AA-3129,ce5da8f5-79f3-4c80-8cd8-48be50a7f55e,TCGA-AA-3129.star_counts.tsv,,164235,male,black or african american,41,Stage IV,Stage IV,M1,T1,N1,Dead,451.0,505,28,,1
+ac42166f-24b0-4409-9ef0-ed1d9323b766,TCGA-AA-3130,afa3fc63-c5b3-4d08-82f7-603ce2221737,TCGA-AA-3130.star_counts.tsv,,451258,female,white,71,Stage IV,Stage IV,M1,T2,N1,Dead,196.0,314,16,,1
+e5fd9425-4e3f-44e0-ad59-eb9a7b5e4a53,TCGA-AA-3131,001c8c43-2cfd-4c43-9175-540e04f4de6c,TCGA-AA-3131.star_counts.tsv,,267047,male,white,73,Stage IV,Stage IV,M1,T1,N2,Dead,155.0,228,8,,1
+57ec4eda-bbb1-4522-9fef-4b43636f1c37,TCGA-AA-3132,e3db2783-a926-4e70-8cb0-f91ddd2c54aa,TCGA-AA-3132.star_counts.tsv,,285470,male,white,58,Stage II,Stage II,M0,T3,N0,Dead,583.0,687,18,224.0,0
+8038cfe0-e371-4cc4-990c-9aa3d9a49933,TCGA-AA-3133,2e9d94cd-f989-42fb-b0a6-63410c645a51,TCGA-AA-3133.star_counts.tsv,,175389,male,white,53,Stage III,Stage III,M0,T3,N2,Dead,316.0,343,12,685.0,0
+82d63979-7cf0-4b71-b18f-2335d7c3afc8,TCGA-AA-3134,ec552998-b4c0-4445-ba11-2c038e5d3020,TCGA-AA-3134.star_counts.tsv,,353693,male,white,69,Stage IV,Stage IV,M1,T2,N0,Alive,,223,29,,1
+1c1c5e87-95b8-46d9-9116-c176c2ea6ead,TCGA-AA-3135,4a1d683a-6515-4ea2-b61c-90da21978963,TCGA-AA-3135.star_counts.tsv,,461195,female,white,71,Stage IV,Stage IV,M1,T4,N2,Alive,,101,3,,1
+e9525445-8716-43db-81f9-c5fe0aaf450d,TCGA-AA-3136,cd9f8702-f931-46e2-a6e2-3af4df6fd06f,TCGA-AA-3136.star_counts.tsv,,466297,female,white,60,Stage I,Stage I,M0,T3,N2,Dead,1551.0,1657,29,386.0,0
+f0356815-6d6a-4a9c-9929-b6c8084bde50,TCGA-AA-3137,f97deda2-849d-466b-9da9-4720a45c0db5,TCGA-AA-3137.star_counts.tsv,,446921,male,black or african american,48,Stage II,Stage II,M0,T1,N2,Alive,,463,25,766.0,0
+ac503982-cc8b-4bbc-b676-fcca06a3ac79,TCGA-AA-3138,a42f950c-64b8-4672-9ab1-0309cdc52f1a,TCGA-AA-3138.star_counts.tsv,,459568,male,black or african american,33,Stage I,Stage I,M0,T4,N1,Alive,,3388,11,416.0,0
+57fe8a21-503c-4953-9062-8ea0d1bb0f08,TCGA-AA-3139,4df59a0b-8732-401a-b351-65ba0bea8330,TCGA-AA-3139.star_counts.tsv,,278429,male,not reported,81,Stage II,Stage II,M0,T1,N0,Dead,414.0,569,4,323.0,0
+1de622a3-9380-4ce7-84e7-97a292d02a83,TCGA-AA-3140,344e5e99-b5b5-4aee-a203-90b99b12441a,TCGA-AA-3140.star_counts.tsv,,490877,male,white,62,Stage IV,Stage IV,M1,T1,N2,Dead,136.0,323,5,,1
+727e1ca3-d533-4226-89b8-3cf2e7a7bd2d,TCGA-AA-3141,2a54173f-7e18-49be-bcb4-3778fd34fd02,TCGA-AA-3141.star_counts.tsv,,180746,male,black or african american,89,Stage III,Stage III,M0,T3,N2,Alive,,1447,28,408.0,0
+4180bce1-1b28-4f2d-985e-b0906684f5a5,TCGA-AA-3142,de0f3af6-ac36-4023-8f97-4f0d33e62b86,TCGA-AA-3142.star_counts.tsv,,251323,male,white,69,Stage I,Stage I,M0,T4,N1,Alive,,609,19,603.0,0
+19e91bc4-7fa3-4a01-99e1-5ee173e2dc7b,TCGA-AA-3143,57d8a1c8-753f-49be-80fe-4c0a8380bacb,TCGA-AA-3143.star_counts.tsv,,474667,male,white,55,Stage II,Stage II,M0,T3,N1,Alive,,117,15,504.0,0
+99fe1b17-b82a-4c18-a982-982f6ef18e7f,TCGA-AA-3144,9bee22ac-8020-40a6-a189-32eda55cafbd,TCGA-AA-3144.star_counts.tsv,,126730,female,white,63,Stage II,Stage II,M0,T3,N1,Alive,,3958,29,481.0,0
+f8784447-d9c2-48e1-adfe-053bd005ca33,TCGA-AA-3145,da63db38-68c1-46fe-b7ec-7c380390ae48,TCGA-AA-3145.star_counts.tsv,,359273,male,black or african american,81,Stage IV,Stage IV,M1,T2,N1,Dead,648.0,812,25,,1
+9c1ac496-433b-4ff2-872f-86e6f2fe0327,TCGA-AA-3146,aae0043d-17ad-4af6-8705-f4990018bf15,TCGA-AA-3146.star_counts.tsv,,484234,female,white,75,Stage III,Stage III,M0,T2,N1,Alive,,1870,22,475.0,0
+f85cb855-ca3d-4051-b4e7-95e43ba643a1,TCGA-AA-3147,abef4be5-b9c0-4345-bfbc-f3eb69624ea4,TCGA-AA-3147.star_counts.tsv,,350729,female,black or african american,62,Stage II,Stage II,M0,T3,N0,Dead,2685.0,2724,3,773.0,0
+f10a09de-e6c0-4e22-9abd-e59c22132f7a,TCGA-AA-3148,ba399db6-add6-40b5-a61b-f3994fb71045,TCGA-AA-3148.star_counts.tsv,,453130,female,black or african american,56,Stage II,Stage II,M0,T4,N2,Alive,,472,14,288.0,0
+9387d612-98c7-4602-b6d6-f9a3c3d03da4,TCGA-AA-3149,b854b63e-4202-41e0-8973-d630f0e4d6b1,TCGA-AA-3149.star_counts.tsv,,382011,male,white,52,Stage II,Stage II,M0,T1,N2,Dead,644.0,754,22,689.0,0
+5bfc5e24-2fee-42fd-a618-79aa0e10706b,TCGA-AA-3150,14603b91-43b2-4773-af74-cd047cadc92e,TCGA-AA-3150.star_counts.tsv,,170542,male,white,41,Stage II,Stage II,M0,T2,N2,Dead,4640.0,4712,9,363.0,0
+3668548d-f510-40bc-a1b0-378a4635580e,TCGA-AA-3151,0fbdedcf-db7f-4e5e-80b3-9863186bed3e,TCGA-AA-3151.star_counts.tsv,,194398,female,black or african american,57,Stage I,Stage I,M0,T2,N1,Alive,,1897,19,720.0,0
+5b2cdd66-1448-40ac-8801-cf3908aae4ee,TCGA-AA-3152,5b010679-952f-4267-a956-16ed9d9ff131,TCGA-AA-3152.star_counts.tsv,,416580,male,white,63,Stage IV,Stage IV,M1,T2,N1,Alive,,1904,14,,1
+192c971d-066a-4f45-aa72-47b82b2d736c,TCGA-AA-3153,c4866c7e-7f13-4fc6-804f-719f139a9aff,TCGA-AA-3153.star_counts.tsv,,143462,male,white,73,Stage II,Stage II,M0,T1,N2,Alive,,1563,29,723.0,0
+dd85366d-9dfa-48c1-a826-2ee1c12d3a80,TCGA-AA-3154,f95099b7-d3bd-4eca-8e1b-c96f27b2e966,TCGA-AA-3154.star_counts.tsv,,342519,female,white,56,Stage IV,Stage IV,M1,T4,N1,Dead,356.0,409,5,,1
+97178036-fddd-46f4-8615-d45e4a52a396,TCGA-AA-3155,8179454a-c89e-45fc-8f7d-dc930874ca3f,TCGA-AA-3155.star_counts.tsv,,433648,male,white,56,Stage II,Stage II,M0,T3,N0,Alive,,204,24,358.0,0
+37d3acae-014d-45c1-83ea-05ff523ac50d,TCGA-AA-3156,e0d1b74c-b8de-45a6-973a-066e32c8d9de,TCGA-AA-3156.star_counts.tsv,,194102,female,not reported,66,Stage IV,Stage IV,M1,T2,N0,Alive,,310,12,,1
+902f6d23-ac1b-474e-8ab2-5443a916c3cc,TCGA-AA-3157,30bfacc1-7148-446b-96cc-28036c819117,TCGA-AA-3157.star_counts.tsv,,434050,male,white,65,Stage II,Stage II,M0,T3,N1,Alive,,841,29,223.0,0
+a2d157d7-33bf-4b79-b513-14dfa7108a37,TCGA-AA-3158,ff1cfdc6-0983-457e-89b8-83ab025e8186,TCGA-AA-3158.star_counts.tsv,,258093,male,white,75,Stage II,Stage II,M0,T3,N0,Alive,,1049,12,487.0,0
+f18a58ca-ba5c-49c3-a778-08a07fca0537,TCGA-AA-3159,2ba0f4a8-2649-4303-bac3-0e88ee2ed521,TCGA-AA-3159.star_counts.tsv,,264737,male,white,67,Stage IV,Stage IV,M1,T1,N0,Alive,,526,21,,1
+a45b28bc-5b68-4857-aeeb-2a8718773399,TCGA-AA-3160,d19e5c1d-4df6-4faf-98d4-c16a09035912,TCGA-AA-3160.star_counts.tsv,,174150,male,white,67,Stage IV,Stage IV,M1,T2,N0,Dead,107.0,147,24,,1
+5622c423-0a33-405f-9482-01dc1120b353,TCGA-AA-3161,ee10be8d-c400-465a-8333-e78481ff0b8c,TCGA-AA-3161.star_counts.tsv,,477519,female,white,97,Stage II,Stage II,M0,T2,N2,Alive,,1684,11,221.0,0
+c784f52c-40e3-4950-ace2-9a6c8da5bdc7,TCGA-AA-3162,eb99e9cc-6039-4aed-84d1-8266fbad9053,TCGA-AA-3162.star_counts.tsv,,466958,female,black or african american,82,Stage II,Stage II,M0,T4,N1,Alive,,1600,26,383.0,0
+49b0e1a7-6662-416e-b968-4179b12e7295,TCGA-AA-3163,0f4ea793-c410-4ef8-bed6-cb374bb33922,TCGA-AA-3163.star_counts.tsv,,475404,male,black or african american,75,Stage III,Stage III,M0,T1,N2,Dead,3577.0,3733,15,646.0,0
+f38c19a9-18b5-4ea8-8458-2537a12c4752,TCGA-AA-3164,279cd534-7eb2-4e97-bada-c80fad4e5920,TCGA-AA-3164.star_counts.tsv,,195335,male,white,77,Stage IV,Stage IV,M1,T3,N2,Dead,712.0,735,23,,1
+1809c14c-d6b6-4ca2-a299-068d549ce01f,TCGA-AA-3165,f22b504b-8332-4569-ae4c-41e73a979edb,TCGA-AA-3165.star_counts.tsv,,309236,male,white,69,Stage IV,Stage IV,M1,T2,N2,Alive,,162,21,,1
+008a3af1-71db-4d50-8903-cee35420eb2a,TCGA-AA-3166,5ddef434-eb0d-4de8-a367-faae8bc14910,TCGA-AA-3166.star_counts.tsv,,289573,male,white,67,Stage IV,Stage IV,M1,T4,N1,Dead,747.0,874,8,,1
+e0be1371-4ab8-4452-bcd1-731f8387c4c3,TCGA-AA-3167,dbacf07d-70ac-46d4-890e-505838fd4987,TCGA-AA-3167.star_counts.tsv,,220528,female,black or african american,47,Stage IV,Stage IV,M1,T1,N1,Alive,,503,19,,1
+2f548a10-a22a-4502-b6ff-af6dc5cbd60d,TCGA-AA-3168,85c6dc5a-0947-4c11-b29e-e0cbc58ee4c3,TCGA-AA-3168.star_counts.tsv,,325409,female,white,72,Stage IV,Stage IV,M1,T2,N2,Dead,12.0,154,0,,1
+6270bc2c-0dde-45f9-840c-3959c50da324,TCGA-AA-3169,999ba923-80d1-44dd-a9d1-1c0f27e8a73a,TCGA-AA-3169.star_counts.tsv,,203045,female,asian,59,Stage II,Stage II,M0,T2,N0,Dead,4247.0,4396,15,667.0,0
+feaf6e00-c606-4397-b0f7-cd6ff79cf9c1,TCGA-AA-3170,f246fd67-9ea1-4145-b437-f9bf3fd10414,TCGA-AA-3170.star_counts.tsv,,384006,male,black or african american,67,Stage II,Stage II,M0,T3,N0,Dead,529.0,720,13,584.0,0
+d0377267-cbfa-40ce-a589-5160a42df214,TCGA-AA-3171,f250ef33-effa-4ab5-8c19-84ace955abdd,TCGA-AA-3171.star_counts.tsv,,331443,male,white,53,Stage II,Stage II,M0,T1,N2,Alive,,1076,27,399.0,0
+684be6be-ba2e-4002-9bec-4ba6acbafd5d,TCGA-AA-3172,45daadec-1c3a-49d6-98b2-fc37f55359da,TCGA-AA-3172.star_counts.tsv,,128521,male,white,66,Stage II,Stage II,M0,T4,N1,Dead,768.0,792,17,664.0,0
+aef11a68-1d3b-4c3b-ba75-fe1d74a8de37,TCGA-AA-3173,567780e0-d65c-40cd-9147-09f7c47dd86a,TCGA-AA-3173.star_counts.tsv,,385099,female,white,75,Stage III,Stage III,M0,T1,N1,Alive,,1104,5,677.0,0
+5947c4c3-8a8e-447b-98a1-332d79aa5687,TCGA-AA-3174,8bb03023-27b9-49e7-99b1-ce6cc69ddc68,TCGA-AA-3174.star_counts.tsv,,232080,female,asian,58,Stage II,Stage II,M0,T3,N2,Dead,1061.0,1229,9,329.0,0
+815dba68-6fa3-4fe1-b05c-6b733a9b5863,TCGA-AA-3175,9d8e97ea-442e-46cd-af9f-1d7bb3ec5cfb,TCGA-AA-3175.star_counts.tsv,,215933,female,white,83,Stage III,Stage III,M0,T2,N1,Alive,,2233,18,281.0,0
+b26e9522-c910-4e8b-8cc1-ae21668a16dd,TCGA-AA-3176,b9c55f15-1a19-4c36-b705-42ff36024a33,TCGA-AA-3176.star_counts.tsv,,278735,male,white,74,Stage III,Stage III,M0,T2,N0,Alive,,5118,22,342.0,0
+f3f03b77-66a1-4903-9a36-a2b16a286f80,TCGA-AA-3177,4ac212c6-a62f-4974-a453-85540e28bbec,TCGA-AA-3177.star_counts.tsv,,299677,male,white,68,Stage IV,Stage IV,M1,T4,N1,Alive,,907,15,,1
+9f17571a-4e2d-4b50-9088-1eb3d251e70e,TCGA-AA-3178,b3cd567a-69c9-4530-a24b-d2e01c755d88,TCGA-AA-3178.star_counts.tsv,,292636,female,white,78,Stage III,Stage III,M0,T4,N2,Dead,432.0,535,13,308.0,0
+fb5670c6-4e81-40dd-9247-ccb8d3515e4d,TCGA-AA-3179,94e34c10-ea07-4a0e-8be2-b2d53bbb2184,TCGA-AA-3179.star_counts.tsv,,407697,female,black or african american,61,Stage II,Stage II,M0,T1,N1,Dead,121.0,207,4,764.0,0
+02d4fff6-6564-45a1-8c9c-bc28e2f583eb,TCGA-AA-3180,29c2ecbb-6334-4ae8-a290-e5bfa3542e72,TCGA-AA-3180.star_counts.tsv,,264903,male,white,70,Stage II,Stage II,M0,T4,N2,Alive,,1644,22,709.0,0
+8167448a-212e-41d5-b2b8-11ceacbf7220,TCGA-AA-3181,1bfe56fa-878a-46e3-9f03-46812e303adf,TCGA-AA-3181.star_counts.tsv,,205148,female,white,72,Stage IV,Stage IV,M1,T1,N2,Dead,212.0,262,15,,1
+1931f58a-362e-40d7-bc1c-7cf9e8345d54,TCGA-AA-3182,939f2846-88b9-4086-8f82-cb853dc7d6db,TCGA-AA-3182.star_counts.tsv,,311416,female,white,74,Stage III,Stage III,M0,T4,N0,Alive,,2074,29,743.0,0
+71127946-cc99-4b60-a5c2-5bf24c2c2330,TCGA-AA-3183,94ac42e2-826a-4cc5-81c6-bc61ffe94845,TCGA-AA-3183.star_counts.tsv,,324310,female,white,67,Stage IV,Stage IV,M1,T2,N1,Dead,164.0,273,22,,1
+3f84617c-a33d-4656-a1a6-274900ccd417,TCGA-AA-3184,6af0de96-cde5-40b7-96a1-f0bfe54afbee,TCGA-AA-3184.star_counts.tsv,,440208,female,white,65,Stage II,Stage II,M0,T2,N2,Dead,652.0,689,0,389.0,0
+27d3705a-bfdb-43f9-9dc6-b4800d70a2c1,TCGA-AA-3185,9527a6f8-3cf6-4d74-a898-12d9f42c5fc5,TCGA-AA-3185.star_counts.tsv,,121973,female,white,63,Stage II,Stage II,M0,T1,N2,Alive,,972,4,563.0,0
+98351a38-8e83-4adf-b1e0-e1a076f2b0e5,TCGA-AA-3186,bedcd12e-6658-4ebf-bb51-74681c5a116b,TCGA-AA-3186.star_counts.tsv,,457220,male,white,72,Stage II,Stage II,M0,T1,N1,Dead,1620.0,1780,4,321.0,0
+743904f4-60de-4620-b66b-590761330892,TCGA-AA-3187,ff5cc04a-889a-4185-b202-cea4468ff21a,TCGA-AA-3187.star_counts.tsv,,297625,female,white,84,Stage III,Stage III,M0,T4,N1,Alive,,857,6,227.0,0
+25e14bae-01fd-4b84-86ce-03af4bb0286e,TCGA-AA-3188,84b83e14-8493-4f76-88f1-179be867c4bf,TCGA-AA-3188.star_counts.tsv,,357603,male,black or african american,47,Stage II,Stage II,M0,T3,N0,Dead,642.0,729,3,485.0,0
+bc69aff4-3699-49f4-98df-e0d0c5f31191,TCGA-AA-3189,b29a0c30-a7d1-461f-8f1e-9c71e49f169f,TCGA-AA-3189.star_counts.tsv,,281957,female,white,60,Stage III,Stage III,M0,T1,N2,Dead,2031.0,2075,27,320.0,0
+2fbe257f-3b7c-40db-a9f5-967da18db917,TCGA-AA-3190,ab9483e9-5bfb-4807-9c1c-a8e0350bfd54,TCGA-AA-3190.star_counts.tsv,,104820,female,not reported,69,Stage IV,Stage IV,M1,T4,N0,Alive,,194,16,,1
+966fe7a3-09cd-44a8-979d-77acc77874c6,TCGA-AA-3191,a093473a-3c49-48cc-b7b7-95d6f0abae83,TCGA-AA-3191.star_counts.tsv,,266901,female,white,61,Stage I,Stage I,M0,T3,N2,Alive,,1287,2,637.0,0
+d659a4ad-fa16-4f31-a4f8-be1c7bf525e3,TCGA-AA-3192,37b52118-099a-4a30-a15c-e00258e9217a,TCGA-AA-3192.star_counts.tsv,,487783,male,white,73,Stage IV,Stage IV,M1,T3,N1,Dead,189.0,251,13,,1
+dc20dbb4-2f29-4afb-82a7-b5405fbf4a37,TCGA-AA-3193,dc680742-b377-4fcd-b8bd-af3eba41f223,TCGA-AA-3193.star_counts.tsv,,251280,male,asian,57,Stage IV,Stage IV,M1,T3,N1,Dead,99.0,270,27,,1
+ee88c08e-e983-4953-993d-82ba1642cda0,TCGA-AA-3194,dc0231ed-2139-43e1-975e-8ef47eef66c4,TCGA-AA-3194.star_counts.tsv,,135360,female,white,55,Stage II,Stage II,M0,T3,N1,Alive,,1644,22,371.0,0
+37aa9c7b-81ed-45d9-9b05-12d28a2519e6,TCGA-AA-3195,8e42ee2e-2606-45c5-8bf0-4b7e58d9d620,TCGA-AA-3195.star_counts.tsv,,278555,male,not reported,61,Stage II,Stage II,M0,T1,N0,Alive,,2852,26,493.0,0
+4d39f4b1-28d9-45e7-9cdd-4da9318a1df8,TCGA-AA-3196,f6049bf0-2980-4277-a7a3-c471875b6692,TCGA-AA-3196.star_counts.tsv,,214637,male,white,73,Stage I,Stage I,M0,T1,N1,Alive,,159,8,219.0,0
+fbc94080-f653-4822-9308-2000f3b26710,TCGA-AA-3197,d85ca789-b8ce-4e64-9ddc-573db9a28dca,TCGA-AA-3197.star_counts.tsv,,105510,female,white,70,Stage III,Stage III,M0,T2,N1,Alive,,801,24,426.0,0
+009e512d-a897-4002-8596-6067f3896007,TCGA-AA-3198,7efcfabe-8b3c-49ea-b57e-b60bf3578da0,TCGA-AA-3198.star_counts.tsv,,237932,female,white,69,Stage III,Stage III,M0,T2,N2,Dead,1190.0,1293,0,560.0,0
+047a85f0-c9ea-4041-af7e-3c048050bdce,TCGA-AA-3199,e3eaec95-10c7-474d-b0e7-02c8f0ee7412,TCGA-AA-3199.star_counts.tsv,,471665,female,not reported,60,Stage IV,Stage IV,M1,T2,N1,Alive,,161,16,,1
+b6f3be7c-e60c-4620-bb25-8f6634ad9cfa,TCGA-AA-3200,eaa5ad6a-dfb0-43a3-8878-80bff17e4476,TCGA-AA-3200.star_counts.tsv,,281003,male,white,51,Stage I,Stage I,M0,T4,N0,Alive,,774,14,278.0,0
+9a139ebc-157c-4f2d-86aa-2af045da68be,TCGA-AA-3201,614b36b4-aefc-4d38-8420-2b37232a1c25,TCGA-AA-3201.star_counts.tsv,,136280,female,white,70,Stage I,Stage I,M0,T3,N1,Alive,,888,29,355.0,0
+e78e05a5-43a6-416c-b5a4-8d0c0cf51481,TCGA-AA-3202,8d43cea6-1639-48e4-af5b-32f9846b6527,TCGA-AA-3202.star_counts.tsv,,442190,female,white,79,Stage III,Stage III,M0,T2,N0,Alive,,1894,9,218.0,0
+9a2a9a33-7719-4329-b399-bbf0b04c0f56,TCGA-AA-3203,8e376bdd-343d-4f91-b74f-8d215f19ba4b,TCGA-AA-3203.star_counts.tsv,,369925,male,white,75,Stage II,Stage II,M0,T2,N1,Alive,,889,21,479.0,0
+3282932f-1a2c-4a81-9184-2125bfc292aa,TCGA-AA-3204,3b9ef867-b741-4493-b317-b0de6557dd3f,TCGA-AA-3204.star_counts.tsv,,460036,male,white,51,Stage II,Stage II,M0,T2,N1,Alive,,2870,7,648.0,0
+a9c50ab1-630f-42c3-aa1d-a2956f9b4c88,TCGA-AA-3205,2d49e3a9-1150-432a-b03d-22154cfe1d3b,TCGA-AA-3205.star_counts.tsv,,384143,male,black or african american,49,Stage I,Stage I,M0,T2,N1,Alive,,1378,4,511.0,0
+63783200-367f-45ce-bd47-a17e79d29256,TCGA-AA-3206,079ffce9-69eb-41f0-9ff4-a1b0af90de29,TCGA-AA-3206.star_counts.tsv,,471067,female,white,49,Stage III,Stage III,M0,T2,N2,Alive,,939,8,219.0,0
+cd3f0807-765a-4aa3-8844-3a32a5b06d35,TCGA-AA-3207,81b9b777-dad5-4ef8-9fb6-b05142cabe5a,TCGA-AA-3207.star_counts.tsv,,235603,male,white,69,Stage II,Stage II,M0,T3,N0,Alive,,329,6,653.0,0
+9938faf2-1481-4aaa-b59c-2ce67ff18e91,TCGA-AA-3208,1d9e7dd5-f10d-47e8-8a6e-72aa28aa0685,TCGA-AA-3208.star_counts.tsv,,225832,male,black or african american,71,Stage IV,Stage IV,M1,T4,N1,Dead,394.0,500,13,,1
+5e2a5cdf-3ad4-46f9-a41b-594ebacd6196,TCGA-AA-3209,d4ec7734-3fa1-42f4-acab-b30df302839c,TCGA-AA-3209.star_counts.tsv,,137736,female,not reported,67,Stage IV,Stage IV,M1,T1,N0,Dead,565.0,750,19,,1
+96184f31-033f-4688-a5d8-a6f8981afda5,TCGA-AA-3210,b61e92b0-0b53-4eef-8186-d5dd212828d9,TCGA-AA-3210.star_counts.tsv,,442744,male,white,69,Stage I,Stage I,M0,T1,N2,Alive,,1030,13,359.0,0
+5678cf0c-abc1-4b2c-b913-62a4d880ef71,TCGA-AA-3211,d3400127-fcf4-4905-8856-7303b11763d9,TCGA-AA-3211.star_counts.tsv,,457497,male,white,71,Stage II,Stage II,M0,T3,N1,Alive,,871,12,354.0,0
+0ad38a53-244d-4760-b738-b38762a53472,TCGA-AA-3212,1484e3c0-86ce-4e75-a163-7497457bf590,TCGA-AA-3212.star_counts.tsv,,265363,male,white,90,Stage III,Stage III,M0,T4,N0,Alive,,497,29,702.0,0
+183968b3-1591-4d00-8b1d-2b4f70bc7437,TCGA-AA-3213,13bd25bb-085e-4f65-b69e-2eb77d91df7f,TCGA-AA-3213.star_counts.tsv,,333664,female,white,61,Stage I,Stage I,M0,T4,N0,Dead,209.0,372,16,632.0,0
+9f228a86-a640-43d9-b963-31f7f39a8a4a,TCGA-AA-3214,df24dabd-4358-447d-89e9-537b3c05b6e8,TCGA-AA-3214.star_counts.tsv,,304897,male,white,55,Stage I,Stage I,M0,T2,N1,Alive,,1982,26,311.0,0
+cb216e02-2fef-4b52-8b72-d214f4134e63,TCGA-AA-3215,5c41b194-59da-42d1-81b0-09075dca8fbc,TCGA-AA-3215.star_counts.tsv,,162516,female,white,79,Stage II,Stage II,M0,T2,N1,Alive,,2023,27,252.0,0
+bd033840-3961-4f2a-88ca-25614dd38149,TCGA-AA-3216,d9168f9a-2a46-49f0-ba6d-746cee41f146,TCGA-AA-3216.star_counts.tsv,,242065,female,white,51,Stage I,Stage I,M0,T2,N1,Alive,,1820,7,623.0,0
+c02e644a-6519-487a-86c8-8801ecec5a18,TCGA-AA-3217,f845bf5e-e8a5-4943-b309-20e5fd5799f3,TCGA-AA-3217.star_counts.tsv,,362183,female,white,53,Stage I,Stage I,M0,T4,N2,Alive,,93,26,281.0,0
+7b9cb15e-abc0-43fc-bbe6-b6aac969f241,TCGA-AA-3218,025593af-d27a-47d9-9c64-7943ec6f300b,TCGA-AA-3218.star_counts.tsv,,124252,male,white,66,Stage II,Stage II,M0,T2,N0,Alive,,332,7,576.0,0
+94741d36-c004-47e7-8115-23fb60862f17,TCGA-AA-3219,a6d5f9b9-e10e-4b2d-b1f3-ed0d82bd8a36,TCGA-AA-3219.star_counts.tsv,,251547,male,white,76,Stage II,Stage II,M0,T2,N1,Alive,,1274,27,676.0,0
+8171c037-668e-42c7-9ca0-6cc71e1ff9ca,TCGA-AA-3220,4156d17b-3722-49b3-aa69-695c20fba22b,TCGA-AA-3220.star_counts.tsv,,283350,male,white,65,Stage I,Stage I,M0,T1,N2,Alive,,1579,15,634.0,0
+ec950399-727c-4db1-a440-2db2303472ad,TCGA-AA-3221,e3f3c005-b423-4d50-9096-186c3b1cddce,TCGA-AA-3221.star_counts.tsv,,436982,female,asian,67,Stage IV,Stage IV,M1,T1,N1,Dead,477.0,627,6,,1
+29a3abdc-8a2d-4ea4-8a88-46462b5f553e,TCGA-AA-3222,b550e0f4-a4f3-4607-8482-88ee91d01472,TCGA-AA-3222.star_counts.tsv,,235609,female,white,53,Stage IV,Stage IV,M1,T3,N1,Dead,87.0,124,22,,1
+4f068754-8f78-4be2-9c3d-e39097bf029c,TCGA-AA-3223,1f987b80-fd9f-430d-a05b-1b38a037c5d8,TCGA-AA-3223.star_counts.tsv,,344208,female,white,70,Stage II,Stage II,M0,T3,N0,Alive,,1075,21,225.0,0
+63aee73a-3f94-41b0-9205-986d6ae0475a,TCGA-AA-3224,1d34f556-91d0-4222-939a-80ac1aa99676,TCGA-AA-3224.star_counts.tsv,,288656,male,white,51,Stage I,Stage I,M0,T2,N2,Alive,,3343,12,558.0,0
+58756109-e81b-4abc-9eda-c109b1554cbe,TCGA-AA-3225,08ef172f-bd91-4103-8216-0fc3199df382,TCGA-AA-3225.star_counts.tsv,,240848,female,white,71,Stage IV,Stage IV,M1,T1,N2,Dead,588.0,624,14,,1
+43f69b7d-4b31-468d-8423-83cb43c92957,TCGA-AA-3226,3dccdcca-ed2c-4ca7-a867-a1f4be6d3950,TCGA-AA-3226.star_counts.tsv,,132110,male,not reported,50,Stage IV,Stage IV,M1,T2,N0,Dead,4.0,84,17,,1
+06ead909-5998-46f4-8265-f0812e93dbd0,TCGA-AA-3227,dfcae7c1-b0df-49c5-9b65-129e0c846e70,TCGA-AA-3227.star_counts.tsv,,155432,male,white,68,Stage III,Stage III,M0,T1,N2,Alive,,563,11,540.0,0
+a98f4950-7be3-476b-b8f0-7b7c692cd7e9,TCGA-AA-3228,f280dd4e-3aac-4070-978f-03966a7b692c,TCGA-AA-3228.star_counts.tsv,,215223,male,white,93,Stage I,Stage I,M0,T3,N2,Dead,262.0,407,2,214.0,0
+a673c8f5-4c8b-41e3-9a88-3bcb9e914e7e,TCGA-AA-3229,64ab9fa2-a700-4e9d-a565-12393dcd100d,TCGA-AA-3229.star_counts.tsv,,270497,female,black or african american,86,Stage I,Stage I,M0,T1,N1,Dead,2770.0,2879,29,290.0,0
+75d6e8a4-98a9-48c5-a7fb-d31448963d54,TCGA-AA-3230,e30d09e2-21e7-46e4-836d-b58d3313af1b,TCGA-AA-3230.star_counts.tsv,,366085,female,white,69,Stage IV,Stage IV,M1,T3,N0,Dead,1.0,178,15,,1
+7d020841-7174-42f7-8c61-a2caf181c026,TCGA-AA-3231,86143532-caae-42d4-8b5b-2bb25b681951,TCGA-AA-3231.star_counts.tsv,,246018,male,white,40,Stage III,Stage III,M0,T1,N1,Alive,,626,4,616.0,0
+971f2f9d-2d73-4587-ab4e-021836b6f47a,TCGA-AA-3232,27df7917-4af8-4246-b7e7-c2be4447abdc,TCGA-AA-3232.star_counts.tsv,,118900,male,not reported,74,Stage IV,Stage IV,M1,T4,N1,Dead,410.0,411,2,,1
+a1ac195a-361f-4355-bbdd-03053a354e95,TCGA-AA-3233,3a047040-9513-41ad-840e-8bb34756a75b,TCGA-AA-3233.star_counts.tsv,,338075,female,not reported,63,Stage III,Stage III,M0,T2,N0,Alive,,1432,3,533.0,0
+dbcaba28-aa18-42a1-a900-5f4d3dfc02a6,TCGA-AA-3234,0d5a40ac-8fdc-4536-9da5-259b27ebd5ba,TCGA-AA-3234.star_counts.tsv,,422309,male,white,68,Stage III,Stage III,M0,T1,N2,Alive,,706,27,609.0,0
+61d83c07-4550-4d65-8434-06554777dad3,TCGA-AA-3235,d5a39fd4-269b-4618-86f2-cd5b3937842d,TCGA-AA-3235.star_counts.tsv,,142914,male,white,60,Stage IV,Stage IV,M1,T1,N0,Dead,338.0,435,27,,1
+9270bb1e-e4cc-4678-aa0a-989eb2f68cf1,TCGA-AA-3236,e93b5b9d-fa0b-4a2b-a1fa-763d0654f616,TCGA-AA-3236.star_counts.tsv,,460111,female,white,57,Stage I,Stage I,M0,T3,N2,Alive,,629,22,696.0,0
+00a16b19-d560-4e9a-a1c4-bcbf6856267e,TCGA-AA-3237,f85e8f70-2959-463e-a5cc-1559fd488b6f,TCGA-AA-3237.star_counts.tsv,,482788,female,white,72,Stage IV,Stage IV,M1,T2,N1,Dead,1212.0,1351,22,,1
+b85dff50-a81a-4e76-8d9a-8004b80f8ec9,TCGA-AA-3238,4152d45d-35fd-45ea-9cb2-9db52bb7866d,TCGA-AA-3238.star_counts.tsv,,292550,female,white,62,Stage IV,Stage IV,M1,T3,N2,Dead,32.0,139,17,,1
+27647e44-05a8-4b9b-8a86-4ea9d9e9e24f,TCGA-AA-3239,32dc4858-c2a9-4c2a-ad86-4ab94957d967,TCGA-AA-3239.star_counts.tsv,,349904,female,white,55,Stage III,Stage III,M0,T4,N0,Alive,,1280,8,516.0,0
+c2e3a95c-6755-4026-a022-16f7449e67fa,TCGA-AA-3240,5c76c732-788f-443d-ad9c-273d7c024dbe,TCGA-AA-3240.star_counts.tsv,,188695,male,black or african american,79,Stage IV,Stage IV,M1,T3,N2,Dead,563.0,681,10,,1
+9940d070-701a-4d35-bd50-d5c3cfa0a000,TCGA-AA-3241,98ae17d7-1cb4-480f-b9a8-2182b4184d87,TCGA-AA-3241.star_counts.tsv,,247292,female,white,66,Stage II,Stage II,M0,T2,N0,Alive,,1260,11,766.0,0
+a7257134-6643-44e1-85e5-27552da1ad59,TCGA-AA-3242,2da0a1d9-8853-4d42-aae5-3e70bc3d28ea,TCGA-AA-3242.star_counts.tsv,,426292,female,black or african american,54,Stage III,Stage III,M0,T2,N1,Dead,1137.0,1204,18,775.0,0
+172dacff-7d66-4d01-b322-7be7abb95e17,TCGA-AA-3243,81702068-e213-4a3d-bf0c-86d6b8ce5e3a,TCGA-AA-3243.star_counts.tsv,,308856,male,white,73,Stage II,Stage II,M0,T3,N2,Alive,,216,14,220.0,0
+7904b84a-5a9a-452a-8e1d-273817811043,TCGA-AA-3244,9fafbc27-72de-4872-aa40-0c21baf7a697,TCGA-AA-3244.star_counts.tsv,,121330,female,not reported,60,Stage III,Stage III,M0,T4,N2,Alive,,4142,13,451.0,0
+5b4cbc03-1c5f-4136-af12-a1bde6bdee88,TCGA-AA-3245,368b7f7f-dc82-44b0-b9df-382cb8cbb038,TCGA-AA-3245.star_counts.tsv,,158332,female,white,57,Stage I,Stage I,M0,T4,N0,Dead,867.0,1034,4,537.0,0
+73a6db46-15aa-47f7-bd0d-945c54a8a561,TCGA-AA-3246,ed74b92d-a895-4181-b8f3-6ab08d3d06c9,TCGA-AA-3246.star_counts.tsv,,465373,male,black or african american,65,Stage II,Stage II,M0,T4,N1,Alive,,1084,19,614.0,0
+58be6a63-387c-467e-86ff-dda58be5e1e7,TCGA-AA-3247,89adc5b6-9174-45f5-8e24-3207e49ceb9b,TCGA-AA-3247.star_counts.tsv,,250912,female,white,63,Stage I,Stage I,M0,T2,N1,Alive,,3067,13,403.0,0
+e750561c-eada-40a9-b4f1-7a63b9a865a6,TCGA-AA-3248,c748d61f-cd5c-4bf5-9dd9-cc1e828a650e,TCGA-AA-3248.star_counts.tsv,,169170,female,white,76,Stage II,Stage II,M0,T2,N0,Alive,,982,19,770.0,0
+ab71e0f6-b8c6-4084-8035-2cc305733185,TCGA-AA-3249,7b977161-fa46-4fb9-8701-0f63192ee223,TCGA-AA-3249.star_counts.tsv,,285487,male,white,78,Stage II,Stage II,M0,T3,N2,Dead,527.0,579,22,509.0,0
+dcdec7aa-3557-47d9-9d7e-b15952ad0d0e,TCGA-AA-3250,dfc59d86-9f1d-47b4-ac9d-a5583c74cbcd,TCGA-AA-3250.star_counts.tsv,,361998,male,white,58,Stage III,Stage III,M0,T4,N1,Dead,480.0,499,24,527.0,0
+19ba7e80-e7bc-4a7d-8753-8206e205bb62,TCGA-AA-3251,e921fb02-8ec3-411b-869c-d40d1c400ea1,TCGA-AA-3251.star_counts.tsv,,470472,female,white,45,Stage III,Stage III,M0,T2,N0,Alive,,1341,5,202.0,0
+cb10d9ed-b6b9-4245-95c1-6c7f6fe1f351,TCGA-AA-3252,2a222973-f473-4831-9a9b-d56401901cc5,TCGA-AA-3252.star_counts.tsv,,260948,female,asian,63,Stage II,Stage II,M0,T4,N2,Dead,552.0,642,8,747.0,0
+012f38e5-3cdf-49dc-9633-3cfd139e0ca4,TCGA-AA-3253,9a6284f7-3a70-440f-b83c-476a61f77864,TCGA-AA-3253.star_counts.tsv,,264481,male,white,73,Stage I,Stage I,M0,T3,N2,Alive,,933,0,286.0,0
+d8dfed69-a2ac-4a48-a573-049fe0419b02,TCGA-AA-3254,a7ea7b51-bf4d-4754-943f-51a62e4e1d90,TCGA-AA-3254.star_counts.tsv,,454658,female,white,69,Stage III,Stage III,M0,T4,N0,Alive,,920,14,318.0,0
+9a0e059b-5050-47a9-9ee3-471fc59bc1d8,TCGA-AA-3255,4cf4f666-580e-4989-9e6e-f76d57589845,TCGA-AA-3255.star_counts.tsv,,483838,male,white,77,Stage IV,Stage IV,M1,T4,N1,Alive,,795,12,,1
+90a942c5-c03d-44dc-9284-e316ae25aae5,TCGA-AA-3256,0f47be9a-d1ed-49e4-beec-82be45e72cfe,TCGA-AA-3256.star_counts.tsv,,132971,female,asian,64,Stage III,Stage III,M0,T2,N2,Alive,,1351,12,478.0,0
+8f7dea57-bd09-48e9-ab38-8e83c71aeef7,TCGA-AA-3257,dec02eee-1503-4d3a-b932-288195731b89,TCGA-AA-3257.star_counts.tsv,,403994,female,white,70,Stage II,Stage II,M0,T2,N0,Dead,1490.0,1633,26,637.0,0
+56f6d175-4787-4a59-89a0-36bc6f25ed61,TCGA-AA-3258,9a532702-75c8-49df-a5ea-1bc4b3bc2a54,TCGA-AA-3258.star_counts.tsv,,268065,male,black or african american,55,Stage IV,Stage IV,M1,T4,N2,Alive,,315,11,,1
+4e8c96f7-79d1-45cd-a443-5b0d3f2db96f,TCGA-AA-3259,60d5bfad-19fc-4dab-87d7-4f2b767cfe01,TCGA-AA-3259.star_counts.tsv,,258621,female,white,77,Stage III,Stage III,M0,T1,N1,Dead,278.0,446,24,737.0,0
+8c5428f0-eb4c-4991-ba9c-107409081eb4,TCGA-AA-3260,b3ec40eb-afe4-429b-a8da-44d5b4e954ae,TCGA-AA-3260.star_counts.tsv,,278910,male,white,57,Stage I,Stage I,M0,T2,N0,Alive,,865,14,690.0,0
+7b2032f6-b0d4-401a-8966-02fc505ac367,TCGA-AA-3261,93d31b41-bb95-4899-913c-c5a6cbad5436,TCGA-AA-3261.star_counts.tsv,,161396,female,white,63,Stage IV,Stage IV,M1,T4,N2,Alive,,646,7,,1
+c0dd79a1-fbfa-4a2c-8173-e0c747b1ef8f,TCGA-AA-3262,725c33cb-0fe7-4ca5-a68a-a13b38b360be,TCGA-AA-3262.star_counts.tsv,,252523,male,not reported,78,Stage III,Stage III,M0,T4,N1,Alive,,700,11,722.0,0
+77b59ffd-abee-48c5-a0d1-679214119590,TCGA-AA-3263,48868f97-1ba1-4e0e-b27c-5ad7552fad62,TCGA-AA-3263.star_counts.tsv,,383823,male,white,63,Stage III,Stage III,M0,T2,N0,Alive,,567,5,585.0,0
+e64a3ff7-db2e-4ae6-bac5-222b4b6a91d8,TCGA-AA-3264,43bd237a-942b-4d59-8ffa-86efbc3760f4,TCGA-AA-3264.star_counts.tsv,,444225,female,white,58,Stage IV,Stage IV,M1,T1,N1,Dead,200.0,227,16,,1
+790d5647-384e-4cba-9977-96f7f5a6d528,TCGA-AA-3265,82162c49-7817-4406-96f2-f3d888195edf,TCGA-AA-3265.star_counts.tsv,,167175,male,black or african american,60,Stage III,Stage III,M0,T2,N0,Alive,,1277,11,735.0,0
+c639fa1a-8103-42e4-a7db-01bbd4f56d20,TCGA-AA-3266,34f12f84-02fc-493a-9b4b-2bfaea44a4e3,TCGA-AA-3266.star_counts.tsv,,208818,female,white,69,Stage I,Stage I,M0,T2,N0,Alive,,720,17,255.0,0
+9135d14e-1035-4ac9-bcd8-a12e18097f63,TCGA-AA-3267,1fdffd7b-9c3b-482f-85b1-e6523df388ab,TCGA-AA-3267.star_counts.tsv,,413104,female,white,66,Stage IV,Stage IV,M1,T4,N1,Alive,,109,0,,1
+bd34c9cf-4aff-4cd5-8ae5-35463ef943b7,TCGA-AA-3268,aae065e8-a3a6-450a-82f6-9e5f5cdd9929,TCGA-AA-3268.star_counts.tsv,,452831,male,asian,75,Stage II,Stage II,M0,T4,N1,Alive,,1729,15,591.0,0
+d669cd05-9ec4-446f-9ff7-da21d63a48f3,TCGA-AA-3269,a55a570c-857c-46b6-a48f-7040bb82fa1c,TCGA-AA-3269.star_counts.tsv,,477922,female,white,63,Stage IV,Stage IV,M1,T1,N2,Dead,64.0,78,29,,1
+84d05d90-903b-4eaf-9fdb-03e5849f977e,TCGA-AA-3270,daf15bb1-5de7-4976-ba3e-7c45afb3213a,TCGA-AA-3270.star_counts.tsv,,401636,female,white,65,Stage II,Stage II,M0,T2,N0,Alive,,703,4,270.0,0
+3c00d1f5-65c0-4243-9a2c-7b8981e6be90,TCGA-AA-3271,2e965fc8-175f-407d-a5c6-d2c15ff4af16,TCGA-AA-3271.star_counts.tsv,,376754,male,white,60,Stage I,Stage I,M0,T3,N2,Alive,,1117,11,701.0,0
+4d1285e0-fd0a-4559-a820-b6a2730d8f3e,TCGA-AA-3272,f13bd73b-c01d-4e27-b415-089c74146147,TCGA-AA-3272.star_counts.tsv,,331865,female,white,54,Stage I,Stage I,M0,T3,N2,Alive,,4643,29,495.0,0
+08f14861-4d2c-44c9-bc82-e7ab35fd0735,TCGA-AA-3273,284929ac-4ce7-43c2-8003-4d56c730aa82,TCGA-AA-3273.star_counts.tsv,,231511,female,black or african american,76,Stage I,Stage I,M0,T4,N0,Dead,1497.0,1545,1,723.0,0
+623af286-fd24-4354-aca2-c931b23b6a9c,TCGA-AA-3274,80b2076d-cb10-4018-94bc-b106f221a134,TCGA-AA-3274.star_counts.tsv,,213013,female,white,72,Stage III,Stage III,M0,T3,N2,Dead,61.0,172,20,232.0,0
+8eea24ba-3be8-4639-9caa-cca15bac8976,TCGA-AA-3275,0cd1726a-8951-4bd9-857d-0f13c05d727a,TCGA-AA-3275.star_counts.tsv,,187997,male,black or african american,44,Stage IV,Stage IV,M1,T1,N0,Alive,,647,13,,1
+5f7525b8-9b83-4213-9b46-aa67f8892a98,TCGA-AA-3276,b694bd9b-ff29-465b-8dc2-d8ce69f361e1,TCGA-AA-3276.star_counts.tsv,,359930,male,white,71,Stage III,Stage III,M0,T2,N0,Alive,,594,12,462.0,0
+fcc5aa6c-1cf3-408e-b777-6331119c1e41,TCGA-AA-3277,713c6d38-d4e6-4d55-a7d9-41dcb8dc85ca,TCGA-AA-3277.star_counts.tsv,,125683,female,black or african american,65,Stage II,Stage II,M0,T3,N1,Alive,,249,12,689.0,0
+67cd019d-ba91-4a72-9aa4-315ceaf6c856,TCGA-AA-3278,da039d1e-d976-4f69-99fa-75124fe0a01e,TCGA-AA-3278.star_counts.tsv,,272672,male,white,71,Stage II,Stage II,M0,T3,N2,Alive,,5272,9,262.0,0
+3a04227e-9deb-4563-a6dd-f8b23c446946,TCGA-AA-3279,d90a7848-d1d8-4151-b440-984372943424,TCGA-AA-3279.star_counts.tsv,,472284,female,white,83,Stage II,Stage II,M0,T4,N1,Alive,,149,0,349.0,0
+de93304a-c608-4f19-9f4b-8f9f33fbcc02,TCGA-AA-3280,0a4747eb-cb76-499a-8653-aec1976d8df8,TCGA-AA-3280.star_counts.tsv,,311615,female,white,48,Stage I,Stage I,M0,T1,N0,Alive,,504,9,529.0,0
+723ac8ec-e0ab-4937-b8da-81008b396cbc,TCGA-AA-3281,3180070b-b04b-4d05-805f-030a6285f6cf,TCGA-AA-3281.star_counts.tsv,,150743,female,white,85,Stage II,Stage II,M0,T3,N1,Alive,,60,18,792.0,0
+610c9ebf-0846-410a-901c-4fb66ff11435,TCGA-AA-3282,a5a54683-3d08-4c7f-9e12-60ac9fe668f2,TCGA-AA-3282.star_counts.tsv,,253580,male,white,78,Stage I,Stage I,M0,T4,N1,Alive,,497,19,780.0,0
+66e9558a-cc6d-4956-ba95-22cd882a114c,TCGA-AA-3283,d5687188-d183-40e2-8eec-48ebb121fec3,TCGA-AA-3283.star_counts.tsv,,159673,male,white,73,Stage I,Stage I,M0,T1,N1,Alive,,4525,4,346.0,0
+2800948d-147c-40b4-94d3-027f99360d8f,TCGA-AA-3284,edf7aeb7-949e-4754-b8db-c4e6d9fa9eb0,TCGA-AA-3284.star_counts.tsv,,102993,female,white,55,Stage IV,Stage IV,M1,T1,N0,Alive,,233,20,,1
+777e80d4-a63f-4ccb-bfea-31c6f75a9ca7,TCGA-AA-3285,94ddc8e9-be5e-4cf0-9822-e8071c775bf0,TCGA-AA-3285.star_counts.tsv,,183054,female,white,65,Stage III,Stage III,M0,T4,N2,Alive,,2020,14,392.0,0
+95e815e7-4068-40e6-8c92-d300d524bf7d,TCGA-AA-3286,1d34aa6a-b6f8-4a9b-9488-395fd522be40,TCGA-AA-3286.star_counts.tsv,,188992,male,white,69,Stage I,Stage I,M0,T4,N2,Dead,304.0,501,9,679.0,0
+f78139b2-93e9-4a3d-99b1-84bd5ce56240,TCGA-AA-3287,a9bc1402-a7d6-4dd7-8253-59a6303985cd,TCGA-AA-3287.star_counts.tsv,,159178,male,not reported,61,Stage IV,Stage IV,M1,T1,N1,Dead,1193.0,1348,4,,1
+ed6ceef6-c377-4ebc-b1d5-fe3d3c8ac89d,TCGA-AA-3288,c499f325-6d48-406d-8828-6204fcfee5c7,TCGA-AA-3288.star_counts.tsv,,487917,female,white,65,Stage I,Stage I,M0,T1,N2,Alive,,917,9,370.0,0
+89c4bb46-da17-4a58-983a-d812ffe84881,TCGA-AA-3289,0a9f33fa-5100-4c63-93ab-c6a32a24f134,TCGA-AA-3289.star_counts.tsv,,151272,female,not reported,65,Stage III,Stage III,M0,T2,N2,Alive,,671,19,626.0,0
+98a51f62-a8a1-4744-b12a-5bc462a33276,TCGA-AA-3290,8de0763e-d115-47e8-b4fd-995ecb3bcc0d,TCGA-AA-3290.star_counts.tsv,,139803,female,white,53,Stage IV,Stage IV,M1,T3,N1,Dead,460.0,515,16,,1
+997e2d10-769d-4de9-9b7b-62b6d6ad8de8,TCGA-AA-3291,02f16b38-bbec-45ef-9ad5-25d1f6d1588d,TCGA-AA-3291.star_counts.tsv,,223817,male,white,68,Stage II,Stage II,M0,T1,N1,Alive,,1459,19,326.0,0
+e9229a75-1d94-4090-a614-84209fdd60a2,TCGA-AA-3292,f9922d0a-2549-4dfb-bc2d-7561ce72a02a,TCGA-AA-3292.star_counts.tsv,,197941,male,white,60,Stage IV,Stage IV,M1,T3,N1,Alive,,184,3,,1
+74ba551c-1a47-4827-bb13-c28174832c74,TCGA-AA-3293,2ec0ca61-db7e-419b-bbaf-153a5dd8bd46,TCGA-AA-3293.star_counts.tsv,,404829,female,white,69,Stage I,Stage I,M0,T4,N2,Alive,,816,28,254.0,0
+0a875f6d-c3e4-47a8-9d4c-8dd6728ba337,TCGA-AA-3294,5711174c-3e75-4c94-9c12-20760465f158,TCGA-AA-3294.star_counts.tsv,,289697,male,white,66,Stage II,Stage II,M0,T3,N1,Alive,,591,25,561.0,0
+5c9de10d-2238-4faa-91ef-263ec9cfd295,TCGA-AA-3295,d4798535-bc25-4437-986e-b391cb911c67,TCGA-AA-3295.star_counts.tsv,,192041,male,not reported,57,Stage II,Stage II,M0,T3,N1,Dead,1999.0,2049,0,310.0,0
+6b0f0103-0270-40b7-bbb4-eb1f20d2e6d3,TCGA-AA-3296,48c82ae7-50bb-4949-9530-45289b8b4efc,TCGA-AA-3296.star_counts.tsv,,278953,male,not reported,56,Stage III,Stage III,M0,T3,N0,Alive,,2222,27,349.0,0
+c59d35fd-7ccd-4743-9769-eaf076ca39ec,TCGA-AA-3297,ce2f409c-b78b-47ad-b1f6-cc2c95252a74,TCGA-AA-3297.star_counts.tsv,,345842,female,white,80,Stage IV,Stage IV,M1,T1,N0,Dead,70.0,226,6,,1
+9a63d30c-f13f-4a76-ba53-f5bf0a3989bf,TCGA-AA-3298,8798adcf-9b0d-45a1-b14d-39c86211f12a,TCGA-AA-3298.star_counts.tsv,,453123,male,white,56,Stage II,Stage II,M0,T2,N1,Alive,,1064,21,469.0,0
+d61708b3-39b3-4234-9978-b00592209717,TCGA-AA-3299,0f51f127-3d36-4cdc-9ede-8a4d9db37331,TCGA-AA-3299.star_counts.tsv,,447636,male,not reported,59,Stage I,Stage I,M0,T1,N1,Alive,,1767,18,360.0,0
+4a74c60d-bf4b-45b1-8101-60d8029066fc,TCGA-AA-3300,b829989c-8169-40f3-b2f0-687d0cd3c204,TCGA-AA-3300.star_counts.tsv,,404381,female,white,58,Stage II,Stage II,M0,T2,N2,Alive,,499,27,724.0,0
+445d4f71-d456-44a0-a42e-d9bd000bf563,TCGA-AA-3301,cbf744e8-2d5c-49f4-abd3-d8da9d401c0d,TCGA-AA-3301.star_counts.tsv,,118989,female,white,63,Stage IV,Stage IV,M1,T3,N0,Alive,,907,5,,1
+66d9d4ba-940e-4390-b1c8-aeac50e183db,TCGA-AA-3302,45fb36fa-7cb1-409a-ad05-1eefaadd5858,TCGA-AA-3302.star_counts.tsv,,356378,male,white,68,Stage IV,Stage IV,M1,T3,N1,Alive,,267,28,,1
+3900b8c4-9c88-4b71-8b69-2c281668ae0c,TCGA-AA-3303,58e039e2-0442-45d3-9e1b-d54270252a0c,TCGA-AA-3303.star_counts.tsv,,280519,male,white,55,Stage II,Stage II,M0,T4,N2,Alive,,2322,8,363.0,0
+5ecf00f6-9b62-4699-9720-01daf00680f3,TCGA-AA-3304,800f2f8c-3d0b-484c-826f-cb8cb56c380b,TCGA-AA-3304.star_counts.tsv,,176167,female,white,64,Stage II,Stage II,M0,T1,N1,Alive,,156,28,456.0,0
+70ae427c-65e7-411b-8bb6-7e82f1989db2,TCGA-AA-3305,8af0f909-3775-4de5-b623-b4f9b26a37f6,TCGA-AA-3305.star_counts.tsv,,404408,female,black or african american,66,Stage IV,Stage IV,M1,T1,N2,Dead,78.0,222,11,,1
+669a6662-47d3-47fd-9488-23b920161509,TCGA-AA-3306,4ea2badf-a2db-42fd-8fe7-4aa887f64f7f,TCGA-AA-3306.star_counts.tsv,,430803,male,black or african american,73,Stage II,Stage II,M0,T3,N0,Alive,,737,5,200.0,0
+b1c984ed-6465-4616-93d4-e0a265bcaa93,TCGA-AA-3307,4372c281-f384-43b3-92f6-5edf690933a2,TCGA-AA-3307.star_counts.tsv,,232699,female,white,59,Stage III,Stage III,M0,T4,N2,Dead,2275.0,2312,9,789.0,0
+d92504a3-712b-4d8d-836f-f63af1b6f445,TCGA-AA-3308,472fdccc-2c01-4127-9e41-a6e06748d393,TCGA-AA-3308.star_counts.tsv,,376258,male,white,85,Stage IV,Stage IV,M1,T1,N2,Alive,,212,29,,1
+1451de2c-e94e-4459-818b-52ba40b915a3,TCGA-AA-3309,0e8fec50-851b-4ac0-a8ea-a6c5253deb4f,TCGA-AA-3309.star_counts.tsv,,116072,female,asian,76,Stage III,Stage III,M0,T3,N0,Alive,,1456,15,762.0,0
+efd74fbf-7da9-4a6c-ad2f-64566e3246fe,TCGA-AA-3310,98afdfec-ea99-406e-976f-32835b105557,TCGA-AA-3310.star_counts.tsv,,132217,female,asian,68,Stage II,Stage II,M0,T3,N1,Dead,1035.0,1046,5,216.0,0
+c4a8a9c9-bd1c-431e-add2-53ad7440f3f5,TCGA-AA-3311,b46e5ce3-2ee4-4923-80c1-a9ecffa52226,TCGA-AA-3311.star_counts.tsv,,322004,male,white,67,Stage III,Stage III,M0,T3,N2,Alive,,2657,22,753.0,0
+99a027e0-21d7-48f8-bdb2-56754f47fadd,TCGA-AA-3312,da3e6fde-b4b8-4b4c-b6da-555e8815c07c,TCGA-AA-3312.star_counts.tsv,,101446,male,white,52,Stage IV,Stage IV,M1,T1,N1,Alive,,548,21,,1
+d206d61d-2fb3-4d6e-8d77-d97f743064c4,TCGA-AA-3313,820790c9-be18-4cad-8d05-6d17c424e59e,TCGA-AA-3313.star_counts.tsv,,241920,male,white,67,Stage IV,Stage IV,M1,T1,N0,Dead,448.0,597,8,,1
+5d66f92e-7edc-4a7f-b82c-c3bb11673fb8,TCGA-AA-3314,5598ad90-b23b-44d7-8d96-217f84307493,TCGA-AA-3314.star_counts.tsv,,423133,female,white,63,Stage IV,Stage IV,M1,T3,N1,Alive,,236,13,,1
+c7def1db-b852-4b40-a855-472bc4c93306,TCGA-AA-3315,72b3a215-4c66-4f59-9bfe-5b2ecedb1f34,TCGA-AA-3315.star_counts.tsv,,153018,male,not reported,71,Stage I,Stage I,M0,T1,N1,Dead,1153.0,1185,9,738.0,0
+ca1d2a5e-fb58-414e-a79d-e1eb7ff21726,TCGA-AA-3316,35bf1c7f-d26a-49fe-a258-2b991f5217c0,TCGA-AA-3316.star_counts.tsv,,322487,male,black or african american,65,Stage III,Stage III,M0,T2,N0,Alive,,1108,29,531.0,0
+2165c974-7042-4431-af58-5ea0d95a9df1,TCGA-AA-3317,11cf6337-d2a1-4e65-a052-4b2e3499e08a,TCGA-AA-3317.star_counts.tsv,,140574,male,white,71,Stage II,Stage II,M0,T1,N0,Dead,1210.0,1370,2,617.0,0
+39d034b3-3d6c-4cda-b406-dd486342ff09,TCGA-AA-3318,999391a3-60a1-4dfc-aafc-ff12949820bf,TCGA-AA-3318.star_counts.tsv,,175511,female,not reported,63,Stage I,Stage I,M0,T4,N2,Alive,,947,17,584.0,0
+c133e78a-2dc0-4a76-b338-87ff494ac6ae,TCGA-AA-3319,7d9b4085-ec38-4713-a0fd-fb977f2133d0,TCGA-AA-3319.star_counts.tsv,,313343,female,white,69,Stage IV,Stage IV,M1,T3,N1,Alive,,434,1,,1
+a4f8c59c-b75a-40d8-869d-0d2ea1a5865f,TCGA-AA-3320,49552399-37ba-4a07-8a2d-162fbb205bda,TCGA-AA-3320.star_counts.tsv,,351390,male,white,76,Stage II,Stage II,M0,T2,N1,Dead,251.0,378,21,547.0,0
+0e5cfed1-08a2-40c9-bcaf-dee59ac29cfc,TCGA-AA-3321,6d1e8828-d3e2-49a1-b8da-1f51f717705f,TCGA-AA-3321.star_counts.tsv,,298791,male,white,67,Stage III,Stage III,M0,T1,N2,Alive,,887,9,353.0,0
+6b6ae406-b6c3-48ec-a6fa-c38b2b668a58,TCGA-AA-3322,ebf9ad10-1382-4b5a-ac15-ea69270f19ef,TCGA-AA-3322.star_counts.tsv,,110200,male,white,74,Stage IV,Stage IV,M1,T3,N2,Dead,1242.0,1254,16,,1
+a2177d83-037b-415c-9e6b-083bd1206416,TCGA-AA-3323,8b658239-dd96-4f97-af85-001e1d3ad31e,TCGA-AA-3323.star_counts.tsv,,140714,female,white,67,Stage III,Stage III,M0,T2,N0,Dead,861.0,1008,13,624.0,0
+4f5383ab-e749-4730-883b-fc5caed8f7d2,TCGA-AA-3324,f974d2d2-e0bd-4939-874d-c92922f34734,TCGA-AA-3324.star_counts.tsv,,439508,female,white,75,Stage IV,Stage IV,M1,T3,N1,Alive,,609,0,,1
+fb74891a-c063-4f9c-87cd-cd92aa29580a,TCGA-AA-3325,c9d95e65-1f61-40fc-a52c-5d8ded82c08e,TCGA-AA-3325.star_counts.tsv,,453250,male,white,68,Stage II,Stage II,M0,T1,N1,Alive,,1140,24,294.0,0
+4541e3e3-ec3d-4dcc-bb70-6527faca470b,TCGA-AA-3326,b2b272e4-6136-4e4d-91ac-bf3d20b9a49b,TCGA-AA-3326.star_counts.tsv,,335849,female,white,60,Stage I,Stage I,M0,T4,N1,Alive,,737,1,397.0,0
+05f58518-0b75-4fef-b688-1592e5c6a0c5,TCGA-AA-3327,12a0e4c8-e5ba-4d3f-b148-2f3c86af0d08,TCGA-AA-3327.star_counts.tsv,,371177,male,white,79,Stage III,Stage III,M0,T1,N1,Alive,,436,17,557.0,0
+fd8dfcd2-bf1c-4120-80ef-592834bd664d,TCGA-AA-3328,bf501d02-7beb-40f3-815d-f538589de57e,TCGA-AA-3328.star_counts.tsv,,154020,male,asian,58,Stage II,Stage II,M0,T2,N2,Alive,,1162,4,504.0,0
+b843c71b-3a80-487e-acc3-cadcea471ea6,TCGA-AA-3329,2877844c-0ec5-402a-a18b-4abe3ffffa3c,TCGA-AA-3329.star_counts.tsv,,481707,female,white,98,Stage II,Stage II,M0,T2,N2,Alive,,118,16,321.0,0
+56f0366e-407c-4100-8cbf-fe7381015105,TCGA-AA-3330,40a6e5c3-45c1-468c-9d15-2ab83cb5976c,TCGA-AA-3330.star_counts.tsv,,207405,female,white,74,Stage III,Stage III,M0,T1,N1,Alive,,1881,22,756.0,0
+e367729d-b119-4629-957b-55686be02735,TCGA-AA-3331,2ff9c34d-4b98-4951-80ad-320ea5ec320b,TCGA-AA-3331.star_counts.tsv,,127530,male,black or african american,68,Stage I,Stage I,M0,T2,N2,Alive,,525,26,687.0,0
+76d37f41-8b14-4d7b-9b76-8552fba2b92c,TCGA-AA-3332,343b4e9c-cff6-42ab-8e1d-0a72ed85c937,TCGA-AA-3332.star_counts.tsv,,363538,female,white,62,Stage III,Stage III,M0,T1,N1,Alive,,145,6,572.0,0
+5c63542f-4fd0-43ed-bb73-2a1728e2f660,TCGA-AA-3333,6a1bdcfe-81b1-4eeb-91e1-73e5b914a149,TCGA-AA-3333.star_counts.tsv,,236907,male,white,67,Stage IV,Stage IV,M1,T2,N0,Alive,,211,15,,1
+fc7559d5-92b0-49b6-9a48-547adc10555c,TCGA-AA-3334,776af16b-4ff6-44b8-a3ee-02d6ddefc20e,TCGA-AA-3334.star_counts.tsv,,325011,male,not reported,58,Stage I,Stage I,M0,T3,N0,Alive,,1754,9,393.0,0
+48e04fb7-c88b-48df-abca-9d75b9fd27b2,TCGA-AA-3335,bc1d8e7c-1bde-4b5c-96d2-6e632508ae24,TCGA-AA-3335.star_counts.tsv,,116172,female,white,65,Stage I,Stage I,M0,T1,N1,Alive,,2340,20,653.0,0
+7757752d-ed27-4262-a28f-c0b4bb2a1191,TCGA-AA-3336,412b6074-1d95-41c2-a86f-c7dc5f21e1ac,TCGA-AA-3336.star_counts.tsv,,100396,male,not reported,61,Stage II,Stage II,M0,T1,N0,Alive,,7882,27,212.0,0
+33da1ce9-613c-4a09-a890-580c1b15d548,TCGA-AA-3337,75474721-0418-4313-8909-e928daf515ec,TCGA-AA-3337.star_counts.tsv,,215279,female,black or african american,59,Stage IV,Stage IV,M1,T1,N1,Alive,,588,9,,1
+83624ee8-9ace-4ee2-8b8d-7306591cf75e,TCGA-AA-3338,50b28db2-18cb-49de-9f29-0adb5fb72ed7,TCGA-AA-3338.star_counts.tsv,,320933,male,white,62,Stage II,Stage II,M0,T2,N2,Alive,,3737,27,759.0,0
+52945616-e94d-4513-8a09-99277e20c836,TCGA-AA-3339,acbe7b76-2bfa-4c0d-88a4-f8cf84c61964,TCGA-AA-3339.star_counts.tsv,,325192,female,white,83,Stage III,Stage III,M0,T4,N0,Alive,,1090,14,552.0,0
+b9105598-859e-47d0-b011-d5256c794743,TCGA-AA-3340,e9ec2102-28b0-40e2-a8a0-36ad6f6c5c35,TCGA-AA-3340.star_counts.tsv,,426542,male,black or african american,66,Stage I,Stage I,M0,T3,N1,Alive,,3306,12,542.0,0
+003b3bab-3524-4706-81d9-5dd84e929f0a,TCGA-AA-3341,d5290d58-e650-4631-95b2-565bf44233b7,TCGA-AA-3341.star_counts.tsv,,298623,female,black or african american,69,Stage I,Stage I,M0,T2,N0,Alive,,695,28,624.0,0
+ee1af6a5-9ad3-4f7d-87d6-65960ac72368,TCGA-AA-3342,ef0e64fd-ed51-4da2-9517-5fedffb6b620,TCGA-AA-3342.star_counts.tsv,,343771,female,white,66,Stage IV,Stage IV,M1,T1,N1,Alive,,842,26,,1
+b78b4aa1-570a-4a0d-9c4d-078ae69a1ea2,TCGA-AA-3343,e13efb3b-153b-445c-a0a3-52b52ac3ce36,TCGA-AA-3343.star_counts.tsv,,143434,female,white,60,Stage I,Stage I,M0,T4,N1,Alive,,1656,1,209.0,0
+f9894c6f-f0a2-4240-a4cd-ef9981b0bbce,TCGA-AA-3344,12d24edb-8a34-4b27-b529-ed99f4f3ae78,TCGA-AA-3344.star_counts.tsv,,191318,female,white,54,Stage III,Stage III,M0,T3,N1,Alive,,284,16,731.0,0
+4b80c22d-140c-4b1a-9107-706643f2355b,TCGA-AA-3345,5a18af0f-9b57-4291-b718-005f5b0878a9,TCGA-AA-3345.star_counts.tsv,,499059,female,white,44,Stage II,Stage II,M0,T2,N2,Alive,,512,16,406.0,0
+fa9537a6-1dbf-485b-9afc-1ae24afae0f3,TCGA-AA-3346,513611be-7ab5-464d-9fc6-2b4863411b2a,TCGA-AA-3346.star_counts.tsv,,470336,female,white,77,Stage III,Stage III,M0,T3,N1,Alive,,348,27,310.0,0
+4d8f4a40-7c56-4114-b0db-961d94f77e7f,TCGA-AA-3347,408c3282-792f-4af7-8fc8-e2fe2740ca79,TCGA-AA-3347.star_counts.tsv,,434880,female,white,65,Stage IV,Stage IV,M1,T4,N0,Alive,,470,9,,1
+454c6c2e-99f6-4445-841d-3bb8eccaadd0,TCGA-AA-3348,aa189afa-f0b0-49be-9e77-1e755164ee22,TCGA-AA-3348.star_counts.tsv,,202670,female,white,62,Stage II,Stage II,M0,T3,N1,Alive,,1881,12,633.0,0
+4218a43c-49ef-4c08-a839-a4d58cabb749,TCGA-AA-3349,cdb2a476-2524-4a8d-ae9e-7abc931b1662,TCGA-AA-3349.star_counts.tsv,,411743,female,white,71,Stage IV,Stage IV,M1,T1,N0,Dead,2028.0,2124,24,,1
+87f3cb58-1539-40a8-afac-5e2972488775,TCGA-AA-3350,e1ff4595-de00-4ac6-9faf-90e0c3fe00bc,TCGA-AA-3350.star_counts.tsv,,453139,male,white,69,Stage I,Stage I,M0,T4,N0,Alive,,486,15,332.0,0
+c4b42bf2-bcaa-4d14-81c8-b49c74b2876e,TCGA-AA-3351,2aa69e4d-6869-40e9-9e6c-eae163eea299,TCGA-AA-3351.star_counts.tsv,,179582,male,white,69,Stage IV,Stage IV,M1,T2,N0,Dead,0.0,49,18,,1
+b922082f-d103-4b7e-ab4d-39232af41b64,TCGA-AA-3352,85550a61-ea74-482b-aa73-a5e08c84c4b5,TCGA-AA-3352.star_counts.tsv,,163895,female,not reported,75,Stage IV,Stage IV,M1,T2,N0,Alive,,504,13,,1
+ce7b3232-b5ab-407e-ae08-471c2bc99527,TCGA-AA-3353,f2f81ed9-bf15-4eb0-b222-97e6cea71cf8,TCGA-AA-3353.star_counts.tsv,,368975,male,white,57,Stage IV,Stage IV,M1,T1,N0,Dead,661.0,838,28,,1
+3dd251c3-e6e9-4e9f-beec-5ac3be7a32e6,TCGA-AA-3354,58eb8ff2-01fb-4047-92cb-fac89fd057ed,TCGA-AA-3354.star_counts.tsv,,428850,male,black or african american,62,Stage III,Stage III,M0,T1,N1,Alive,,272,0,689.0,0
+325c8e2b-5eb1-4442-b715-feed19e2a8f7,TCGA-AA-3355,cf27d493-f128-4a36-828a-9620d3647450,TCGA-AA-3355.star_counts.tsv,,255733,male,white,83,Stage II,Stage II,M0,T4,N0,Alive,,309,6,385.0,0
+b39c6c16-75bc-469a-be5e-a8edc230f8a0,TCGA-AA-3356,895ea7a8-6027-43f4-aa8a-d1514f183c54,TCGA-AA-3356.star_counts.tsv,,266821,female,white,44,Stage II,Stage II,M0,T4,N2,Dead,150.0,181,26,607.0,0
+a631b961-53b6-495d-87ce-1ec89aa6b4dc,TCGA-AA-3357,2afef155-d180-44ff-bebf-9f3a6f016a68,TCGA-AA-3357.star_counts.tsv,,251999,female,white,87,Stage II,Stage II,M0,T4,N1,Dead,713.0,738,8,407.0,0
+b2c56ac8-9cbc-4ab6-af29-df4e23154019,TCGA-AA-3358,400bf079-7f1c-4617-97d5-58cf1bed352c,TCGA-AA-3358.star_counts.tsv,,211264,female,black or african american,60,Stage IV,Stage IV,M1,T1,N2,Dead,1583.0,1697,14,,1
+121ecce4-f255-4feb-b297-c537c6067385,TCGA-AA-3359,9038fa87-ccc8-430e-b4d6-cef36398a4d7,TCGA-AA-3359.star_counts.tsv,,346054,male,white,73,Stage II,Stage II,M0,T1,N1,Alive,,440,2,525.0,0
+7c83d47b-8648-4376-97cc-a5fd47ff129d,TCGA-AA-3360,f25ce65c-80cd-4b13-b86f-105af03b0a23,TCGA-AA-3360.star_counts.tsv,,109911,male,asian,44,Stage IV,Stage IV,M1,T2,N1,Dead,484.0,493,20,,1
+3fc7a557-4f50-4935-a28f-e3cc39b4716e,TCGA-AA-3361,8f4a7e64-2061-41cd-9155-dec02260372d,TCGA-AA-3361.star_counts.tsv,,275614,female,black or african american,76,Stage I,Stage I,M0,T1,N2,Alive,,554,29,652.0,0
+c2e4561e-eeaa-4a23-887d-b92b9277e89a,TCGA-AA-3362,45b702d6-a128-457f-956b-d0d816f1918a,TCGA-AA-3362.star_counts.tsv,,473873,female,white,63,Stage IV,Stage IV,M1,T2,N2,Alive,,517,12,,1
+bb8fbd8c-4c5c-44ec-bef1-cde86c1e4a43,TCGA-AA-3363,e9e0be3d-645e-4043-98b6-6d821b5776fb,TCGA-AA-3363.star_counts.tsv,,383847,female,black or african american,57,Stage IV,Stage IV,M1,T1,N2,Alive,,540,17,,1
+2a7a9eab-c6bb-4098-8480-28f643ee2b36,TCGA-AA-3364,dc91d2b1-f0bd-4bf9-b17a-552092c9c430,TCGA-AA-3364.star_counts.tsv,,389894,female,white,72,Stage III,Stage III,M0,T4,N1,Alive,,221,25,506.0,0
+779bc6f0-87d4-44d7-97f8-31bdcfa5e9a8,TCGA-AA-3365,6e62b76b-93a8-4fad-a28b-4bd2daf8fca6,TCGA-AA-3365.star_counts.tsv,,223828,male,white,68,Stage I,Stage I,M0,T3,N1,Alive,,918,13,650.0,0
+eb7bde19-34b1-41e7-96d5-f9c24ea3f309,TCGA-AA-3366,f8e586b5-ab01-4347-b515-b8ff16fc7646,TCGA-AA-3366.star_counts.tsv,,471139,male,not reported,50,Stage III,Stage III,M0,T1,N1,Alive,,1352,7,235.0,0
+6999a191-7a46-4316-838c-342306a4b24a,TCGA-AA-3367,3e31f8b0-4db2-48f4-b8ec-2577a8f5e645,TCGA-AA-3367.star_counts.tsv,,352258,male,not reported,53,Stage IV,Stage IV,M1,T2,N2,Dead,515.0,647,24,,1
+778a8f3f-1bdf-47a9-82e3-703361cd2e16,TCGA-AA-3368,02f43974-7936-40ff-8aea-a169484e7505,TCGA-AA-3368.star_counts.tsv,,403208,male,white,79,Stage IV,Stage IV,M1,T4,N0,Alive,,648,6,,1
+a6f078aa-08bd-415d-85de-e82aa084f103,TCGA-AA-3369,07b30d68-78c6-4d6e-b348-57d54b6884a1,TCGA-AA-3369.star_counts.tsv,,239601,female,white,56,Stage III,Stage III,M0,T3,N0,Alive,,2220,0,292.0,0
+6f863fb3-c24a-439b-9968-b59939711915,TCGA-AA-3370,b24283a9-a377-4940-b1f1-8c4f84086041,TCGA-AA-3370.star_counts.tsv,,266112,male,white,56,Stage III,Stage III,M0,T2,N0,Alive,,745,5,212.0,0
+3315754d-8c40-4c49-b5ae-e51ab55c232d,TCGA-AA-3371,c58132dc-952a-4568-8af1-028cbe409c0c,TCGA-AA-3371.star_counts.tsv,,419267,male,white,63,Stage II,Stage II,M0,T4,N1,Alive,,2888,1,458.0,0
+fe6eb2f4-9174-471f-ba3c-6660d95f14ec,TCGA-AA-3372,c620fcda-f4c3-4694-9d8f-749ae34c1826,TCGA-AA-3372.star_counts.tsv,,436377,female,white,60,Stage II,Stage II,M0,T4,N1,Alive,,737,21,526.0,0
+719e9ec9-74eb-425d-b03f-d3e415b188bd,TCGA-AA-3373,1f680e98-d98d-465c-afec-07475b503fd2,TCGA-AA-3373.star_counts.tsv,,290364,male,white,60,Stage II,Stage II,M0,T3,N1,Alive,,1380,8,463.0,0
+6a142fa8-6118-47ae-ba26-bfe6f792038d,TCGA-AA-3374,56e978e5-2571-4e90-9f62-f432cfe26aa2,TCGA-AA-3374.star_counts.tsv,,373023,female,white,62,Stage III,Stage III,M0,T3,N1,Alive,,93,21,341.0,0
+2aff3085-6bce-402b-98f9-1be60cb83e2e,TCGA-AA-3375,ca1d59e1-2eb4-4bb2-a41a-24723c89a0db,TCGA-AA-3375.star_counts.tsv,,256384,female,white,75,Stage II,Stage II,M0,T2,N2,Alive,,364,13,623.0,0
+a8dc32e6-c06a-4ef3-893f-48560b2d1d1c,TCGA-AA-3376,37b933dd-de7f-435e-b4db-3ef3bc435158,TCGA-AA-3376.star_counts.tsv,,237484,male,white,70,Stage I,Stage I,M0,T4,N0,Dead,563.0,698,18,480.0,0
+f0794269-5bb8-4f47-b8d8-a0564bfbfbbf,TCGA-AA-3377,df972c83-e63e-4fd4-ac06-f82f081884b6,TCGA-AA-3377.star_counts.tsv,,499616,male,white,65,Stage II,Stage II,M0,T1,N2,Dead,227.0,250,0,451.0,0
+ca368259-56fe-4c89-8f34-45aedb43185f,TCGA-AA-3378,5b6a29ce-cf52-4b48-ab59-4b508183d041,TCGA-AA-3378.star_counts.tsv,,489776,male,not reported,53,Stage IV,Stage IV,M1,T1,N2,Alive,,325,7,,1
+11c79fbb-0747-41ee-8c7d-066f0a9e79fa,TCGA-AA-3379,e9675bbc-1dfd-4c42-91da-d15ef108c6b4,TCGA-AA-3379.star_counts.tsv,,469847,female,white,55,Stage I,Stage I,M0,T1,N1,Alive,,1673,4,315.0,0
+accb1cf4-667d-4199-ad8c-4bff9143dc36,TCGA-AA-3380,a72e4d34-89d7-4e67-a0d6-06e1538c324a,TCGA-AA-3380.star_counts.tsv,,249747,female,black or african american,64,Stage I,Stage I,M0,T3,N1,Alive,,1664,24,506.0,0
+3adfaf88-b358-44a7-b94d-73af0acd4d7c,TCGA-AA-3381,c82c5ba4-b9f2-415e-828d-f210dae77b21,TCGA-AA-3381.star_counts.tsv,,221964,female,white,74,Stage III,Stage III,M0,T2,N1,Alive,,2385,12,330.0,0
+162fbeae-3ad4-42b6-aaab-f9aa3a316337,TCGA-AA-3382,6c812a0c-383b-45a3-beb2-bce6ccd603e8,TCGA-AA-3382.star_counts.tsv,,324022,male,black or african american,63,Stage IV,Stage IV,M1,T3,N0,Alive,,486,15,,1
+66a323d3-65d6-4309-b4e7-c87ab7a16386,TCGA-AA-3383,5b5c4322-7d2b-4784-9f64-a7de0d61105d,TCGA-AA-3383.star_counts.tsv,,205419,female,white,63,Stage III,Stage III,M0,T2,N1,Dead,1655.0,1754,2,243.0,0
+562ddf41-e888-4795-8f66-6667ca721f44,TCGA-AA-3384,94806123-5d8b-4ddf-80a4-ad63d9a6e994,TCGA-AA-3384.star_counts.tsv,,452687,male,white,65,Stage II,Stage II,M0,T1,N2,Alive,,1224,12,775.0,0
+62cbd293-c7e4-4c1d-b270-02ba82637cf8,TCGA-AA-3385,a55190ef-df56-41fd-899b-8e6307693563,TCGA-AA-3385.star_counts.tsv,,495631,male,not reported,83,Stage IV,Stage IV,M1,T1,N1,Dead,391.0,509,9,,1
+90f2ba9e-b45d-4476-9e16-e5a7fd8fb809,TCGA-AA-3386,b96407a3-7d74-456e-bc98-7d2ad1c4b07a,TCGA-AA-3386.star_counts.tsv,,136143,male,white,52,Stage I,Stage I,M0,T2,N0,Alive,,911,28,286.0,0
+811c598d-b2a9-487e-b4e7-ef11f9a3ab04,TCGA-AA-3387,c10d8698-d6ec-47a8-802e-6bbc735bb8ba,TCGA-AA-3387.star_counts.tsv,,121909,male,white,54,Stage III,Stage III,M0,T4,N1,Dead,994.0,1034,2,464.0,0
+311c5585-9f18-4130-9bea-ec1d4970b924,TCGA-AA-3388,71ddf9fb-a248-414f-8409-ef106fddc850,TCGA-AA-3388.star_counts.tsv,,188052,male,not reported,84,Stage III,Stage III,M0,T2,N2,Alive,,1573,12,248.0,0
+c0de1e48-3444-46d8-8688-2b3157c02f5b,TCGA-AA-3389,d623147e-a147-41fb-a91a-29c01aebaf5d,TCGA-AA-3389.star_counts.tsv,,281276,female,white,53,Stage II,Stage II,M0,T3,N2,Dead,520.0,539,10,711.0,0
+4fea6be0-81f5-4c51-96c4-46ec821064ad,TCGA-AA-3390,c6f9a44d-25f1-4a86-be22-8c07f210f862,TCGA-AA-3390.star_counts.tsv,,160986,male,white,67,Stage II,Stage II,M0,T1,N2,Dead,3521.0,3620,27,225.0,0
+88abc4e1-ae2f-47f5-ac39-59e4f17be255,TCGA-AA-3391,bb702240-57be-4b25-9e0e-70433846918c,TCGA-AA-3391.star_counts.tsv,,135095,male,black or african american,49,Stage III,Stage III,M0,T4,N0,Alive,,2622,9,741.0,0
+bcbc058e-2591-442f-88d1-52ed87e85672,TCGA-AA-3392,db6a03d4-8e55-4107-8a38-a4829f192dad,TCGA-AA-3392.star_counts.tsv,,292012,female,white,81,Stage IV,Stage IV,M1,T4,N2,Alive,,294,16,,1
+592fd8b5-1185-4f15-ab84-665f88cdab5e,TCGA-AA-3393,2bbf2b7d-0cbf-490f-aae3-7f90961a1465,TCGA-AA-3393.star_counts.tsv,,251537,female,black or african american,43,Stage I,Stage I,M0,T3,N2,Alive,,1223,4,754.0,0
+855c6d9f-6df1-4e0a-bf15-454bc3e6b8ca,TCGA-AA-3394,285b35f3-b7fb-4e5d-b83a-40193e0ade37,TCGA-AA-3394.star_counts.tsv,,246689,male,not reported,75,Stage III,Stage III,M0,T3,N0,Dead,824.0,877,13,696.0,0
+9f86a648-461d-44f8-8606-4a4cf70ce3c1,TCGA-AA-3395,25d79291-c3c9-43c6-9443-8df53dfdf6a5,TCGA-AA-3395.star_counts.tsv,,420031,female,not reported,53,Stage IV,Stage IV,M1,T4,N0,Alive,,278,17,,1
+14c5d1e9-a1e5-4781-8aaf-384291f99c8b,TCGA-AA-3396,c565b6d6-a831-479e-8216-b399ab69e09d,TCGA-AA-3396.star_counts.tsv,,172403,female,white,73,Stage I,Stage I,M0,T2,N2,Alive,,302,0,443.0,0
+f1f39524-42b3-4c2c-bbc2-11cbaed52535,TCGA-AA-3397,85608e46-006d-4708-9de7-34b9bafc6c5f,TCGA-AA-3397.star_counts.tsv,,247788,male,white,78,Stage III,Stage III,M0,T1,N0,Dead,4929.0,5019,16,753.0,0
+ce43e4bd-d944-4244-a3f6-e7842819d506,TCGA-AA-3398,41eec479-b10f-4d82-95fb-0d5bf55e715f,TCGA-AA-3398.star_counts.tsv,,140380,female,black or african american,51,Stage III,Stage III,M0,T4,N0,Dead,3364.0,3399,9,554.0,0
+eab7d739-86fa-49a2-a004-1fa8b99e804c,TCGA-AA-3399,ddbcca37-f6b7-4394-9ac1-2b7abb0b5517,TCGA-AA-3399.star_counts.tsv,,363503,male,white,77,Stage III,Stage III,M0,T2,N2,Alive,,631,2,627.0,0
+da41d351-a2b8-43a4-88aa-7b5b98dc29af,TCGA-AA-3400,d0d29d13-4cc4-45c8-8099-f28b6e2e7267,TCGA-AA-3400.star_counts.tsv,,431096,female,white,67,Stage IV,Stage IV,M1,T4,N0,Dead,905.0,969,17,,1
+3abfcb23-481b-4cf8-b0f2-f77580eca8d0,TCGA-AA-3401,f2f7a9c0-c6be-4938-a3ff-fbc77ea31875,TCGA-AA-3401.star_counts.tsv,,419284,male,asian,67,Stage IV,Stage IV,M1,T2,N2,Dead,277.0,467,4,,1
+fa44da35-0975-4c82-b2da-be1bf8680fa3,TCGA-AA-3402,4bebafd7-7b84-46fa-8746-4dca56e2e5f4,TCGA-AA-3402.star_counts.tsv,,392455,female,white,63,Stage III,Stage III,M0,T3,N0,Alive,,860,0,501.0,0
+0d6094d2-1885-4cae-82ea-0d9ef0a3661f,TCGA-AA-3403,7ba5a5cf-0d8c-4aeb-b206-ec639c231d55,TCGA-AA-3403.star_counts.tsv,,311589,female,white,65,Stage IV,Stage IV,M1,T3,N1,Alive,,273,7,,1
+9b53ab18-ca6d-4d3a-ac7c-9a3dc9eb85c5,TCGA-AA-3404,273d4b03-f422-46de-adc1-3c4c89cb0b58,TCGA-AA-3404.star_counts.tsv,,199994,male,white,72,Stage I,Stage I,M0,T3,N2,Alive,,2323,0,744.0,0
+f3ad5e86-99d3-4947-8e08-1af0790e4a0c,TCGA-AA-3405,64af6c39-e520-4cdb-a1ab-3b2225822813,TCGA-AA-3405.star_counts.tsv,,212092,female,asian,64,Stage I,Stage I,M0,T1,N1,Dead,1463.0,1567,7,211.0,0
+4c4567cc-6a7b-48a3-ab11-a44130efb94d,TCGA-AA-3406,1965e32c-bdfc-434b-ba1f-366136871f53,TCGA-AA-3406.star_counts.tsv,,382735,male,white,60,Stage II,Stage II,M0,T4,N0,Alive,,3050,18,791.0,0
+fc5ae0e5-c894-4c19-b8a1-e7aff20ab9a6,TCGA-AA-3407,f63a74ca-d097-440b-a0f2-4dad897cbfa7,TCGA-AA-3407.star_counts.tsv,,379769,female,white,60,Stage III,Stage III,M0,T4,N2,Alive,,2056,3,280.0,0
+0c84395f-eec3-40d2-ab2f-9d3577abc05a,TCGA-AA-3408,df59e240-1bf2-435e-86c2-fbe92cbd9d26,TCGA-AA-3408.star_counts.tsv,,320943,female,white,62,Stage I,Stage I,M0,T4,N2,Dead,511.0,655,26,305.0,0
+8b8dc765-d0f7-44d8-978e-6d6732a73138,TCGA-AA-3409,1f132954-b6d6-4ff7-ad77-4d749f6b6ecf,TCGA-AA-3409.star_counts.tsv,,345770,male,black or african american,65,Stage I,Stage I,M0,T1,N0,Alive,,657,1,469.0,0
+0ff3d095-bfd8-41af-aee6-67c2be2a9ca9,TCGA-AA-3410,4cdb2ff7-01ae-4443-b1f9-aec4722a27a4,TCGA-AA-3410.star_counts.tsv,,145393,female,white,57,Stage II,Stage II,M0,T3,N1,Alive,,2443,29,610.0,0
+e7b713b5-b46b-4156-8085-12a2502b175b,TCGA-AA-3411,54f3bc83-c735-493a-b8da-08bb7c6ba481,TCGA-AA-3411.star_counts.tsv,,187364,male,asian,76,Stage II,Stage II,M0,T4,N0,Alive,,106,16,353.0,0
+120fcc1e-792c-4d6f-8f79-5a8c8610b5d7,TCGA-AA-3412,943d9a81-48b6-4d1e-bdee-7c0eb77f3792,TCGA-AA-3412.star_counts.tsv,,126865,female,white,102,Stage IV,Stage IV,M1,T1,N1,Alive,,173,23,,1
+c0b61796-3c10-4bbd-8936-6d035867165e,TCGA-AA-3413,69cccba7-d154-4847-8bf2-41bb74769859,TCGA-AA-3413.star_counts.tsv,,205336,female,asian,60,Stage IV,Stage IV,M1,T4,N0,Dead,445.0,588,24,,1
+d81b9e31-f7f6-4687-a52b-91bf846121b9,TCGA-AA-3414,04702a7e-9536-4d11-9ac1-dee1ff25365d,TCGA-AA-3414.star_counts.tsv,,438472,female,white,50,Stage II,Stage II,M0,T1,N1,Dead,583.0,689,8,775.0,0
+182c1fd2-08e7-4372-9a47-43a4a1c404f2,TCGA-AA-3415,8614ccbd-d772-4e15-9a7e-0694029f79d2,TCGA-AA-3415.star_counts.tsv,,304728,female,white,76,Stage IV,Stage IV,M1,T3,N2,Alive,,433,22,,1
+c02840f3-c2f2-4a5e-a892-fc032eef8866,TCGA-AA-3416,530979e8-369f-4933-b074-55fa5741dc7c,TCGA-AA-3416.star_counts.tsv,,184641,female,white,41,Stage IV,Stage IV,M1,T1,N2,Alive,,560,21,,1
+05cb4bd0-19dc-41b4-b813-e90931c08149,TCGA-AA-3417,9619122f-ff3b-4e86-b6ef-a6a9839ab26e,TCGA-AA-3417.star_counts.tsv,,458642,male,white,60,Stage I,Stage I,M0,T4,N0,Alive,,2434,29,562.0,0
+ab90cbd7-36fb-404f-ab6a-b11f6c7529cb,TCGA-AA-3418,a7dda1a9-dbf0-4aa4-9ddf-01db3ca12605,TCGA-AA-3418.star_counts.tsv,,423831,male,white,42,Stage I,Stage I,M0,T2,N2,Dead,273.0,390,20,483.0,0
+e8d9a41d-d314-4bd8-b868-1fe104306750,TCGA-AA-3419,75803e66-6f7e-44af-b12e-dc4795d783cc,TCGA-AA-3419.star_counts.tsv,,237703,female,not reported,65,Stage IV,Stage IV,M1,T1,N1,Dead,28.0,138,23,,1
+acc5cda1-9dfd-49c6-8180-8a02dad46684,TCGA-AA-3420,097e0e37-659d-4ff8-ab1a-c32fc8b9a3df,TCGA-AA-3420.star_counts.tsv,,473902,female,asian,60,Stage II,Stage II,M0,T4,N1,Dead,712.0,835,16,571.0,0
+4df0eae9-7758-440c-a830-ffa88a71b397,TCGA-AA-3421,75ba6a70-c698-44ca-913d-803be5cee37e,TCGA-AA-3421.star_counts.tsv,,396578,female,black or african american,74,Stage I,Stage I,M0,T4,N0,Alive,,418,28,240.0,0
+a2296c3c-4478-41df-b6ac-7ac8154bf822,TCGA-AA-3422,40dd3e87-09b6-4fa9-bd19-7c5b5687fcc3,TCGA-AA-3422.star_counts.tsv,,109979,female,black or african american,65,Stage III,Stage III,M0,T3,N0,Dead,1415.0,1418,17,340.0,0
+e7b3d819-fdc1-416f-994f-7629e938a949,TCGA-AA-3423,4c033a9d-26a1-45d0-9526-34c7c1ef5a90,TCGA-AA-3423.star_counts.tsv,,307834,male,black or african american,58,Stage IV,Stage IV,M1,T4,N0,Alive,,421,19,,1
+91650f2c-cb51-48d7-a1b5-5b7b37538496,TCGA-AA-3424,6161bb5b-1d8d-4300-8523-690cc58f0550,TCGA-AA-3424.star_counts.tsv,,225554,female,black or african american,81,Stage I,Stage I,M0,T2,N2,Alive,,2921,19,787.0,0
+1743dd47-9910-4b59-a645-fdea2cdbd6e0,TCGA-AA-3425,47007c07-7e7a-4bb4-b446-3807532af03c,TCGA-AA-3425.star_counts.tsv,,158649,female,white,68,Stage IV,Stage IV,M1,T4,N0,Dead,28.0,145,15,,1
+8f30677f-4920-4837-aab8-2ab910f0225b,TCGA-AA-3426,54b748a3-04c4-46a2-8e78-cdd4123080d5,TCGA-AA-3426.star_counts.tsv,,178096,female,white,62,Stage II,Stage II,M0,T4,N2,Dead,2033.0,2177,6,482.0,0
+8205dff1-635a-47e7-9206-6a448ad13d92,TCGA-AA-3427,61ef657b-a18d-4cd9-835f-49a4987f55cd,TCGA-AA-3427.star_counts.tsv,,388056,male,white,57,Stage IV,Stage IV,M1,T1,N2,Dead,1154.0,1184,15,,1
+71dda09a-a410-4055-8517-a016671cd589,TCGA-AA-3428,94d5b81d-8c5a-44e2-874b-61b973f7a0a0,TCGA-AA-3428.star_counts.tsv,,402606,male,black or african american,57,Stage III,Stage III,M0,T1,N2,Alive,,2571,0,363.0,0
+733ded3a-03da-4caf-aade-bb0a2abc17d8,TCGA-AA-3429,34952b60-2e81-4632-bd91-ad66840b3aab,TCGA-AA-3429.star_counts.tsv,,450009,female,white,88,Stage III,Stage III,M0,T3,N0,Alive,,643,22,290.0,0
+683d039b-ec1e-4df8-bc9e-034bf2534606,TCGA-AA-3430,c83a1b2d-c3ad-48c5-83d9-b6199d109cc8,TCGA-AA-3430.star_counts.tsv,,100894,female,white,59,Stage II,Stage II,M0,T3,N1,Alive,,3045,6,555.0,0
+a9d941f9-cecf-4363-892e-8783206c0fa9,TCGA-AA-3431,be29053e-b8e2-485c-b4ce-42d304cbc156,TCGA-AA-3431.star_counts.tsv,,111932,female,white,70,Stage II,Stage II,M0,T4,N2,Dead,727.0,774,11,545.0,0
+9ce6c595-f966-4155-9016-24977375b7ae,TCGA-AA-3432,6da2f857-0c29-42e9-9e42-e27b39d8f0fd,TCGA-AA-3432.star_counts.tsv,,220714,male,white,65,Stage III,Stage III,M0,T1,N2,Dead,2481.0,2540,3,474.0,0
+bf4cb47f-61c7-4b6c-bea1-1655a8abb77b,TCGA-AA-3433,949d6b87-b45e-4adb-927f-d3b55845156f,TCGA-AA-3433.star_counts.tsv,,436896,female,not reported,69,Stage II,Stage II,M0,T4,N1,Alive,,1523,15,400.0,0
+259f535e-575c-4f93-baf3-d34ed8d91b1e,TCGA-AA-3434,82a14623-7de5-4935-bebb-26182b61f57a,TCGA-AA-3434.star_counts.tsv,,268364,female,white,86,Stage I,Stage I,M0,T2,N1,Dead,746.0,910,4,299.0,0
+1b2369ae-527f-41a4-9c14-7b17b2845291,TCGA-AA-3435,3cc1b64a-435b-4e73-bf67-0cd9b6e684b4,TCGA-AA-3435.star_counts.tsv,,116199,male,white,58,Stage III,Stage III,M0,T2,N1,Alive,,2706,7,697.0,0
+6e8625e8-dd08-4251-ba8e-1e8030681629,TCGA-AA-3436,7bde1b20-3568-4a84-8f9f-4b19c0832c1a,TCGA-AA-3436.star_counts.tsv,,196595,male,white,70,Stage IV,Stage IV,M1,T4,N0,Dead,429.0,587,8,,1
+0801ff17-bb73-454a-a888-6891e8d37822,TCGA-AA-3437,1e15ed4c-4df6-4249-8ad9-a4e0858bafa6,TCGA-AA-3437.star_counts.tsv,,142884,male,white,79,Stage III,Stage III,M0,T4,N1,Alive,,769,14,713.0,0
+c9bd9ee9-5ffa-4f03-9041-2d238a31fcd9,TCGA-AA-3438,41a4395e-5f7d-4cef-be7b-9daa1a0e03a0,TCGA-AA-3438.star_counts.tsv,,284158,male,white,57,Stage IV,Stage IV,M1,T1,N2,Dead,18.0,141,22,,1
+ec8330f9-31a6-49d5-8b51-eff4de63b6f6,TCGA-AA-3439,b00c2513-2856-495b-93c3-d2506c1131ef,TCGA-AA-3439.star_counts.tsv,,148805,male,white,63,Stage II,Stage II,M0,T3,N1,Alive,,3386,8,657.0,0
+3862614c-0765-48b7-a264-5bec0d56941b,TCGA-AA-3440,03a922de-a063-47c6-a300-65403ed900d0,TCGA-AA-3440.star_counts.tsv,,440224,male,white,49,Stage II,Stage II,M0,T3,N2,Alive,,210,7,530.0,0
+e6b61f73-c693-434b-a32d-c03bf7232fd8,TCGA-AA-3441,8e76e7f6-480d-47de-b386-26bd432856e8,TCGA-AA-3441.star_counts.tsv,,301263,female,white,70,Stage IV,Stage IV,M1,T2,N2,Alive,,285,4,,1
+1e3276c5-443d-4b32-9f95-b9e8bcaac94d,TCGA-AA-3442,cd458ad8-e106-44e9-a6b0-9cf2ef7bf1dc,TCGA-AA-3442.star_counts.tsv,,297388,male,white,41,Stage II,Stage II,M0,T2,N0,Dead,238.0,435,21,370.0,0
+e156d3aa-b954-42f4-87ab-e4920a3543cf,TCGA-AA-3443,08861b48-8976-47d2-97b9-f0e0184df142,TCGA-AA-3443.star_counts.tsv,,200150,male,black or african american,62,Stage I,Stage I,M0,T3,N2,Dead,1729.0,1864,0,622.0,0
+840531b2-a2dd-470d-80b9-53f31b8e91fc,TCGA-AA-3444,271a72cb-39ae-45d1-9ea3-de4ea972324b,TCGA-AA-3444.star_counts.tsv,,164158,female,black or african american,76,Stage IV,Stage IV,M1,T3,N1,Dead,54.0,216,17,,1
+cb57e760-0218-47a5-8e69-f6d44d0c2d96,TCGA-AA-3445,af4f7779-96ee-4424-8c0d-bdbb4a458c9b,TCGA-AA-3445.star_counts.tsv,,439467,female,white,56,Stage II,Stage II,M0,T4,N0,Dead,2865.0,2937,14,245.0,0
+4a4346bf-9689-435f-aa77-87e33f4456fb,TCGA-AA-3446,df3b7ec3-07bc-4bc6-b0cd-305c18f386b0,TCGA-AA-3446.star_counts.tsv,,368806,female,white,69,Stage III,Stage III,M0,T4,N0,Alive,,1329,26,341.0,0
+a2b768c1-ae2c-4ab5-9e6a-e5f2e8900fdc,TCGA-AA-3447,85f0517c-2d53-4351-8db6-f5f65b55d277,TCGA-AA-3447.star_counts.tsv,,491217,female,white,56,Stage III,Stage III,M0,T4,N0,Dead,1500.0,1542,11,573.0,0
+447613f4-6729-49f2-aacf-b73a7b16c6c3,TCGA-AA-3448,779b9924-3dcf-4b1e-b6aa-5bfd14a487b9,TCGA-AA-3448.star_counts.tsv,,187119,female,not reported,82,Stage IV,Stage IV,M1,T1,N1,Dead,342.0,513,20,,1
+9b293835-c2bb-4aff-8e00-9583052817d2,TCGA-AA-3449,a166b025-4352-48c3-8f76-35c2b3179936,TCGA-AA-3449.star_counts.tsv,,319727,male,white,66,Stage III,Stage III,M0,T2,N0,Alive,,1370,28,583.0,0

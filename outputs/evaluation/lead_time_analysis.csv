@@ -1,0 +1,451 @@
+patient_id,label,stage,mps_score,risk_stratum,standard_detect_months,mps_alert_months,lead_time_months,survival_months,event,mps_alerted
+TCGA-AA-3000,1,Stage IV,0.7944,High (MPS ≥ 0.72),48.0,12.0,36.0,32.6,0,True
+TCGA-AA-3001,0,Stage II,0.3629,Low (MPS < 0.45),12.0,12.0,0.0,57.6,0,False
+TCGA-AA-3002,1,Stage IV,0.9798,High (MPS ≥ 0.72),48.0,12.0,36.0,8.5,0,True
+TCGA-AA-3003,1,Stage IV,0.5158,Intermediate (0.45–0.72),48.0,48.0,0.0,15.1,1,False
+TCGA-AA-3004,0,Stage III,0.18,Low (MPS < 0.45),27.0,27.0,0.0,68.6,0,False
+TCGA-AA-3005,0,Stage II,0.4563,Intermediate (0.45–0.72),12.0,12.0,0.0,5.3,0,False
+TCGA-AA-3006,0,Stage III,0.1616,Low (MPS < 0.45),27.0,27.0,0.0,71.0,0,False
+TCGA-AA-3007,0,Stage II,0.1951,Low (MPS < 0.45),12.0,12.0,0.0,97.2,1,False
+TCGA-AA-3008,0,Stage II,0.3993,Low (MPS < 0.45),12.0,12.0,0.0,6.4,1,False
+TCGA-AA-3009,0,Stage II,0.4754,Intermediate (0.45–0.72),12.0,12.0,0.0,19.9,0,False
+TCGA-AA-3010,0,Stage II,0.2303,Low (MPS < 0.45),12.0,12.0,0.0,58.3,0,False
+TCGA-AA-3011,0,Stage III,0.2058,Low (MPS < 0.45),27.0,27.0,0.0,24.8,0,False
+TCGA-AA-3012,0,Stage II,0.4869,Intermediate (0.45–0.72),12.0,12.0,0.0,5.5,0,False
+TCGA-AA-3013,0,Stage III,0.2421,Low (MPS < 0.45),27.0,27.0,0.0,7.6,0,False
+TCGA-AA-3014,0,Stage III,0.2541,Low (MPS < 0.45),27.0,27.0,0.0,28.7,0,False
+TCGA-AA-3015,0,Stage III,0.2697,Low (MPS < 0.45),27.0,27.0,0.0,22.2,0,False
+TCGA-AA-3016,0,Stage II,0.3135,Low (MPS < 0.45),12.0,12.0,0.0,93.2,0,False
+TCGA-AA-3017,0,Stage II,0.4043,Low (MPS < 0.45),12.0,12.0,0.0,73.8,0,False
+TCGA-AA-3018,1,Stage IV,0.8037,High (MPS ≥ 0.72),48.0,12.0,36.0,11.7,0,True
+TCGA-AA-3019,0,Stage II,0.4455,Low (MPS < 0.45),12.0,12.0,0.0,18.7,0,False
+TCGA-AA-3020,0,Stage I,0.1807,Low (MPS < 0.45),3.0,3.0,0.0,36.6,0,False
+TCGA-AA-3021,0,Stage II,0.3026,Low (MPS < 0.45),12.0,12.0,0.0,35.5,0,False
+TCGA-AA-3022,0,Stage I,0.3336,Low (MPS < 0.45),3.0,3.0,0.0,17.8,0,False
+TCGA-AA-3023,1,Stage IV,0.8527,High (MPS ≥ 0.72),48.0,12.0,36.0,7.7,1,True
+TCGA-AA-3024,0,Stage II,0.312,Low (MPS < 0.45),12.0,12.0,0.0,69.0,0,False
+TCGA-AA-3025,0,Stage I,0.3579,Low (MPS < 0.45),3.0,3.0,0.0,23.5,0,False
+TCGA-AA-3026,0,Stage I,0.4363,Low (MPS < 0.45),3.0,3.0,0.0,5.0,0,False
+TCGA-AA-3027,0,Stage II,0.3652,Low (MPS < 0.45),12.0,12.0,0.0,8.8,0,False
+TCGA-AA-3028,1,Stage IV,0.7053,Intermediate (0.45–0.72),48.0,48.0,0.0,8.9,0,False
+TCGA-AA-3029,0,Stage III,0.3881,Low (MPS < 0.45),27.0,27.0,0.0,11.0,0,False
+TCGA-AA-3030,0,Stage II,0.355,Low (MPS < 0.45),12.0,12.0,0.0,16.0,0,False
+TCGA-AA-3031,0,Stage III,0.5138,Intermediate (0.45–0.72),27.0,27.0,0.0,143.0,0,False
+TCGA-AA-3032,1,Stage IV,0.868,High (MPS ≥ 0.72),48.0,12.0,36.0,0.5,1,True
+TCGA-AA-3033,0,Stage III,0.0,Low (MPS < 0.45),27.0,27.0,0.0,53.2,0,False
+TCGA-AA-3034,0,Stage III,0.3453,Low (MPS < 0.45),27.0,27.0,0.0,64.6,0,False
+TCGA-AA-3035,0,Stage III,0.2317,Low (MPS < 0.45),27.0,27.0,0.0,15.4,0,False
+TCGA-AA-3036,0,Stage II,0.3609,Low (MPS < 0.45),12.0,12.0,0.0,11.5,0,False
+TCGA-AA-3037,1,Stage IV,0.881,High (MPS ≥ 0.72),48.0,12.0,36.0,9.8,0,True
+TCGA-AA-3038,0,Stage I,0.4198,Low (MPS < 0.45),3.0,3.0,0.0,28.3,0,False
+TCGA-AA-3039,1,Stage IV,0.65,Intermediate (0.45–0.72),48.0,48.0,0.0,5.8,0,False
+TCGA-AA-3040,0,Stage I,0.4078,Low (MPS < 0.45),3.0,3.0,0.0,15.3,1,False
+TCGA-AA-3041,1,Stage IV,0.8227,High (MPS ≥ 0.72),48.0,12.0,36.0,4.6,0,True
+TCGA-AA-3042,0,Stage I,0.2899,Low (MPS < 0.45),3.0,3.0,0.0,39.5,1,False
+TCGA-AA-3043,1,Stage IV,0.7824,High (MPS ≥ 0.72),48.0,12.0,36.0,14.2,1,True
+TCGA-AA-3044,0,Stage I,0.2598,Low (MPS < 0.45),3.0,3.0,0.0,38.0,0,False
+TCGA-AA-3045,0,Stage III,0.3146,Low (MPS < 0.45),27.0,27.0,0.0,26.1,0,False
+TCGA-AA-3046,0,Stage II,0.2878,Low (MPS < 0.45),12.0,12.0,0.0,21.6,0,False
+TCGA-AA-3047,0,Stage III,0.4073,Low (MPS < 0.45),27.0,27.0,0.0,7.4,0,False
+TCGA-AA-3048,0,Stage II,0.2881,Low (MPS < 0.45),12.0,12.0,0.0,32.8,0,False
+TCGA-AA-3049,1,Stage IV,0.6874,Intermediate (0.45–0.72),48.0,48.0,0.0,7.7,1,False
+TCGA-AA-3050,0,Stage II,0.3722,Low (MPS < 0.45),12.0,12.0,0.0,30.0,1,False
+TCGA-AA-3051,1,Stage IV,0.8347,High (MPS ≥ 0.72),48.0,12.0,36.0,32.0,1,True
+TCGA-AA-3052,0,Stage III,0.3647,Low (MPS < 0.45),27.0,27.0,0.0,15.7,1,False
+TCGA-AA-3053,0,Stage I,0.372,Low (MPS < 0.45),3.0,3.0,0.0,49.6,0,False
+TCGA-AA-3054,0,Stage III,0.3405,Low (MPS < 0.45),27.0,27.0,0.0,88.7,0,False
+TCGA-AA-3055,0,Stage II,0.4557,Intermediate (0.45–0.72),12.0,12.0,0.0,37.3,0,False
+TCGA-AA-3056,1,Stage IV,0.7077,Intermediate (0.45–0.72),48.0,48.0,0.0,6.2,1,False
+TCGA-AA-3057,0,Stage II,0.4958,Intermediate (0.45–0.72),12.0,12.0,0.0,5.5,0,False
+TCGA-AA-3058,1,Stage IV,0.7758,High (MPS ≥ 0.72),48.0,12.0,36.0,8.1,1,True
+TCGA-AA-3059,1,Stage IV,0.898,High (MPS ≥ 0.72),48.0,12.0,36.0,8.4,1,True
+TCGA-AA-3060,0,Stage II,0.1697,Low (MPS < 0.45),12.0,12.0,0.0,27.6,1,False
+TCGA-AA-3061,0,Stage III,0.2885,Low (MPS < 0.45),27.0,27.0,0.0,61.8,0,False
+TCGA-AA-3062,1,Stage IV,0.5851,Intermediate (0.45–0.72),48.0,48.0,0.0,44.4,0,False
+TCGA-AA-3063,0,Stage III,0.3156,Low (MPS < 0.45),27.0,27.0,0.0,10.5,0,False
+TCGA-AA-3064,0,Stage III,0.3764,Low (MPS < 0.45),27.0,27.0,0.0,21.4,0,False
+TCGA-AA-3065,0,Stage II,0.3589,Low (MPS < 0.45),12.0,12.0,0.0,16.1,0,False
+TCGA-AA-3066,0,Stage II,0.2085,Low (MPS < 0.45),12.0,12.0,0.0,17.1,1,False
+TCGA-AA-3067,0,Stage II,0.4116,Low (MPS < 0.45),12.0,12.0,0.0,55.7,1,False
+TCGA-AA-3068,0,Stage II,0.3204,Low (MPS < 0.45),12.0,12.0,0.0,17.0,1,False
+TCGA-AA-3069,0,Stage III,0.3261,Low (MPS < 0.45),27.0,27.0,0.0,42.2,0,False
+TCGA-AA-3070,0,Stage II,0.4745,Intermediate (0.45–0.72),12.0,12.0,0.0,1.6,0,False
+TCGA-AA-3071,0,Stage I,0.3161,Low (MPS < 0.45),3.0,3.0,0.0,11.6,1,False
+TCGA-AA-3072,1,Stage IV,0.7476,High (MPS ≥ 0.72),48.0,12.0,36.0,0.0,1,True
+TCGA-AA-3073,0,Stage II,0.3465,Low (MPS < 0.45),12.0,12.0,0.0,112.7,0,False
+TCGA-AA-3074,0,Stage I,0.2896,Low (MPS < 0.45),3.0,3.0,0.0,32.1,0,False
+TCGA-AA-3075,1,Stage IV,0.8095,High (MPS ≥ 0.72),48.0,12.0,36.0,4.1,0,True
+TCGA-AA-3076,0,Stage III,0.3347,Low (MPS < 0.45),27.0,27.0,0.0,38.6,0,False
+TCGA-AA-3077,0,Stage I,0.4313,Low (MPS < 0.45),3.0,3.0,0.0,0.6,0,False
+TCGA-AA-3078,0,Stage III,0.3711,Low (MPS < 0.45),27.0,27.0,0.0,2.1,1,False
+TCGA-AA-3079,0,Stage I,0.5664,Intermediate (0.45–0.72),3.0,3.0,0.0,132.5,0,False
+TCGA-AA-3080,1,Stage IV,0.8554,High (MPS ≥ 0.72),48.0,12.0,36.0,0.5,1,True
+TCGA-AA-3081,1,Stage IV,0.7309,High (MPS ≥ 0.72),48.0,12.0,36.0,20.0,0,True
+TCGA-AA-3082,0,Stage II,0.4048,Low (MPS < 0.45),12.0,12.0,0.0,8.6,0,False
+TCGA-AA-3083,0,Stage II,0.2623,Low (MPS < 0.45),12.0,12.0,0.0,162.1,0,False
+TCGA-AA-3084,0,Stage I,0.3901,Low (MPS < 0.45),3.0,3.0,0.0,109.0,0,False
+TCGA-AA-3085,1,Stage IV,0.7089,Intermediate (0.45–0.72),48.0,48.0,0.0,13.1,1,False
+TCGA-AA-3086,0,Stage II,0.4068,Low (MPS < 0.45),12.0,12.0,0.0,8.9,0,False
+TCGA-AA-3087,1,Stage IV,0.6978,Intermediate (0.45–0.72),48.0,48.0,0.0,25.7,1,False
+TCGA-AA-3088,1,Stage IV,0.7272,High (MPS ≥ 0.72),48.0,12.0,36.0,68.0,1,True
+TCGA-AA-3089,1,Stage IV,0.8568,High (MPS ≥ 0.72),48.0,12.0,36.0,9.5,1,True
+TCGA-AA-3090,0,Stage III,0.4173,Low (MPS < 0.45),27.0,27.0,0.0,19.2,0,False
+TCGA-AA-3091,1,Stage IV,0.7772,High (MPS ≥ 0.72),48.0,12.0,36.0,5.8,0,True
+TCGA-AA-3092,0,Stage II,0.2149,Low (MPS < 0.45),12.0,12.0,0.0,4.1,1,False
+TCGA-AA-3093,1,Stage IV,0.76,High (MPS ≥ 0.72),48.0,12.0,36.0,33.9,0,True
+TCGA-AA-3094,0,Stage I,0.379,Low (MPS < 0.45),3.0,3.0,0.0,94.4,1,False
+TCGA-AA-3095,0,Stage III,0.4898,Intermediate (0.45–0.72),27.0,27.0,0.0,22.1,0,False
+TCGA-AA-3096,0,Stage II,0.5141,Intermediate (0.45–0.72),12.0,12.0,0.0,11.1,0,False
+TCGA-AA-3097,0,Stage I,0.3975,Low (MPS < 0.45),3.0,3.0,0.0,206.5,1,False
+TCGA-AA-3098,1,Stage IV,0.62,Intermediate (0.45–0.72),48.0,48.0,0.0,14.4,0,False
+TCGA-AA-3099,0,Stage I,0.2748,Low (MPS < 0.45),3.0,3.0,0.0,39.6,0,False
+TCGA-AA-3100,1,Stage IV,0.7975,High (MPS ≥ 0.72),48.0,12.0,36.0,10.3,1,True
+TCGA-AA-3101,0,Stage II,0.2109,Low (MPS < 0.45),12.0,12.0,0.0,52.5,1,False
+TCGA-AA-3102,1,Stage IV,0.9743,High (MPS ≥ 0.72),48.0,12.0,36.0,4.9,0,True
+TCGA-AA-3103,0,Stage III,0.3007,Low (MPS < 0.45),27.0,27.0,0.0,93.7,0,False
+TCGA-AA-3104,0,Stage I,0.2767,Low (MPS < 0.45),3.0,3.0,0.0,21.6,0,False
+TCGA-AA-3105,0,Stage II,0.3273,Low (MPS < 0.45),12.0,12.0,0.0,21.8,0,False
+TCGA-AA-3106,0,Stage III,0.1888,Low (MPS < 0.45),27.0,27.0,0.0,14.9,0,False
+TCGA-AA-3107,0,Stage I,0.4556,Intermediate (0.45–0.72),3.0,3.0,0.0,29.3,0,False
+TCGA-AA-3108,0,Stage II,0.3745,Low (MPS < 0.45),12.0,12.0,0.0,17.9,0,False
+TCGA-AA-3109,0,Stage I,0.4537,Intermediate (0.45–0.72),3.0,3.0,0.0,103.2,1,False
+TCGA-AA-3110,0,Stage III,0.2956,Low (MPS < 0.45),27.0,27.0,0.0,8.6,0,False
+TCGA-AA-3111,1,Stage IV,0.6344,Intermediate (0.45–0.72),48.0,48.0,0.0,14.2,1,False
+TCGA-AA-3112,1,Stage IV,0.7322,High (MPS ≥ 0.72),48.0,12.0,36.0,1.2,1,True
+TCGA-AA-3113,0,Stage III,0.2754,Low (MPS < 0.45),27.0,27.0,0.0,82.8,1,False
+TCGA-AA-3114,1,Stage IV,0.7517,High (MPS ≥ 0.72),48.0,12.0,36.0,8.7,0,True
+TCGA-AA-3115,0,Stage I,0.3552,Low (MPS < 0.45),3.0,3.0,0.0,0.4,1,False
+TCGA-AA-3116,0,Stage II,0.3404,Low (MPS < 0.45),12.0,12.0,0.0,55.9,0,False
+TCGA-AA-3117,1,Stage IV,0.858,High (MPS ≥ 0.72),48.0,12.0,36.0,29.7,1,True
+TCGA-AA-3118,1,Stage IV,0.6334,Intermediate (0.45–0.72),48.0,48.0,0.0,5.2,1,False
+TCGA-AA-3119,0,Stage II,0.2551,Low (MPS < 0.45),12.0,12.0,0.0,38.2,0,False
+TCGA-AA-3120,0,Stage III,0.5646,Intermediate (0.45–0.72),27.0,27.0,0.0,16.2,0,False
+TCGA-AA-3121,0,Stage II,0.4109,Low (MPS < 0.45),12.0,12.0,0.0,3.9,0,False
+TCGA-AA-3122,0,Stage I,0.3416,Low (MPS < 0.45),3.0,3.0,0.0,76.8,1,False
+TCGA-AA-3123,1,Stage IV,0.7913,High (MPS ≥ 0.72),48.0,12.0,36.0,13.1,0,True
+TCGA-AA-3124,0,Stage I,0.4045,Low (MPS < 0.45),3.0,3.0,0.0,26.9,1,False
+TCGA-AA-3125,1,Stage IV,0.8971,High (MPS ≥ 0.72),48.0,12.0,36.0,6.6,1,True
+TCGA-AA-3126,0,Stage II,0.2071,Low (MPS < 0.45),12.0,12.0,0.0,76.3,1,False
+TCGA-AA-3127,1,Stage IV,0.7748,High (MPS ≥ 0.72),48.0,12.0,36.0,1.5,0,True
+TCGA-AA-3128,0,Stage I,0.4271,Low (MPS < 0.45),3.0,3.0,0.0,19.2,0,False
+TCGA-AA-3129,1,Stage IV,0.7206,High (MPS ≥ 0.72),48.0,12.0,36.0,14.8,1,True
+TCGA-AA-3130,1,Stage IV,0.8786,High (MPS ≥ 0.72),48.0,12.0,36.0,6.4,1,True
+TCGA-AA-3131,1,Stage IV,0.7861,High (MPS ≥ 0.72),48.0,12.0,36.0,5.1,1,True
+TCGA-AA-3132,0,Stage II,0.3112,Low (MPS < 0.45),12.0,12.0,0.0,19.2,1,False
+TCGA-AA-3133,0,Stage III,0.211,Low (MPS < 0.45),27.0,27.0,0.0,10.4,1,False
+TCGA-AA-3134,1,Stage IV,0.9154,High (MPS ≥ 0.72),48.0,12.0,36.0,7.3,0,True
+TCGA-AA-3135,1,Stage IV,0.7698,High (MPS ≥ 0.72),48.0,12.0,36.0,3.3,0,True
+TCGA-AA-3136,0,Stage I,0.4292,Low (MPS < 0.45),3.0,3.0,0.0,51.0,1,False
+TCGA-AA-3137,0,Stage II,0.4831,Intermediate (0.45–0.72),12.0,12.0,0.0,15.2,0,False
+TCGA-AA-3138,0,Stage I,0.258,Low (MPS < 0.45),3.0,3.0,0.0,111.3,0,False
+TCGA-AA-3139,0,Stage II,0.4358,Low (MPS < 0.45),12.0,12.0,0.0,13.6,1,False
+TCGA-AA-3140,1,Stage IV,0.851,High (MPS ≥ 0.72),48.0,12.0,36.0,4.5,1,True
+TCGA-AA-3141,0,Stage III,0.468,Intermediate (0.45–0.72),27.0,27.0,0.0,47.5,0,False
+TCGA-AA-3142,0,Stage I,0.1597,Low (MPS < 0.45),3.0,3.0,0.0,20.0,0,False
+TCGA-AA-3143,0,Stage II,0.2336,Low (MPS < 0.45),12.0,12.0,0.0,3.8,0,False
+TCGA-AA-3144,0,Stage II,0.3952,Low (MPS < 0.45),12.0,12.0,0.0,130.0,0,False
+TCGA-AA-3145,1,Stage IV,0.6511,Intermediate (0.45–0.72),48.0,48.0,0.0,21.3,1,False
+TCGA-AA-3146,0,Stage III,0.3329,Low (MPS < 0.45),27.0,27.0,0.0,61.4,0,False
+TCGA-AA-3147,0,Stage II,0.464,Intermediate (0.45–0.72),12.0,12.0,0.0,88.2,1,False
+TCGA-AA-3148,0,Stage II,0.2422,Low (MPS < 0.45),12.0,12.0,0.0,15.5,0,False
+TCGA-AA-3149,0,Stage II,0.2989,Low (MPS < 0.45),12.0,12.0,0.0,21.2,1,False
+TCGA-AA-3150,0,Stage II,0.2466,Low (MPS < 0.45),12.0,12.0,0.0,152.4,1,False
+TCGA-AA-3151,0,Stage I,0.4048,Low (MPS < 0.45),3.0,3.0,0.0,62.3,0,False
+TCGA-AA-3152,1,Stage IV,0.7947,High (MPS ≥ 0.72),48.0,12.0,36.0,62.5,0,True
+TCGA-AA-3153,0,Stage II,0.2641,Low (MPS < 0.45),12.0,12.0,0.0,51.3,0,False
+TCGA-AA-3154,1,Stage IV,0.9408,High (MPS ≥ 0.72),48.0,12.0,36.0,11.7,1,True
+TCGA-AA-3155,0,Stage II,0.2799,Low (MPS < 0.45),12.0,12.0,0.0,6.7,0,False
+TCGA-AA-3156,1,Stage IV,0.7628,High (MPS ≥ 0.72),48.0,12.0,36.0,10.2,0,True
+TCGA-AA-3157,0,Stage II,0.4132,Low (MPS < 0.45),12.0,12.0,0.0,27.6,0,False
+TCGA-AA-3158,0,Stage II,0.4539,Intermediate (0.45–0.72),12.0,12.0,0.0,34.5,0,False
+TCGA-AA-3159,1,Stage IV,0.913,High (MPS ≥ 0.72),48.0,12.0,36.0,17.3,0,True
+TCGA-AA-3160,1,Stage IV,0.5977,Intermediate (0.45–0.72),48.0,48.0,0.0,3.5,1,False
+TCGA-AA-3161,0,Stage II,0.3197,Low (MPS < 0.45),12.0,12.0,0.0,55.3,0,False
+TCGA-AA-3162,0,Stage II,0.2416,Low (MPS < 0.45),12.0,12.0,0.0,52.6,0,False
+TCGA-AA-3163,0,Stage III,0.3995,Low (MPS < 0.45),27.0,27.0,0.0,117.5,1,False
+TCGA-AA-3164,1,Stage IV,0.6885,Intermediate (0.45–0.72),48.0,48.0,0.0,23.4,1,False
+TCGA-AA-3165,1,Stage IV,0.7736,High (MPS ≥ 0.72),48.0,12.0,36.0,5.3,0,True
+TCGA-AA-3166,1,Stage IV,0.7651,High (MPS ≥ 0.72),48.0,12.0,36.0,24.5,1,True
+TCGA-AA-3167,1,Stage IV,0.6936,Intermediate (0.45–0.72),48.0,48.0,0.0,16.5,0,False
+TCGA-AA-3168,1,Stage IV,0.7185,Intermediate (0.45–0.72),48.0,48.0,0.0,0.4,1,False
+TCGA-AA-3169,0,Stage II,0.3337,Low (MPS < 0.45),12.0,12.0,0.0,139.5,1,False
+TCGA-AA-3170,0,Stage II,0.2626,Low (MPS < 0.45),12.0,12.0,0.0,17.4,1,False
+TCGA-AA-3171,0,Stage II,0.3557,Low (MPS < 0.45),12.0,12.0,0.0,35.3,0,False
+TCGA-AA-3172,0,Stage II,0.1299,Low (MPS < 0.45),12.0,12.0,0.0,25.2,1,False
+TCGA-AA-3173,0,Stage III,0.5598,Intermediate (0.45–0.72),27.0,27.0,0.0,36.3,0,False
+TCGA-AA-3174,0,Stage II,0.2752,Low (MPS < 0.45),12.0,12.0,0.0,34.9,1,False
+TCGA-AA-3175,0,Stage III,0.3636,Low (MPS < 0.45),27.0,27.0,0.0,73.4,0,False
+TCGA-AA-3176,0,Stage III,0.3961,Low (MPS < 0.45),27.0,27.0,0.0,168.1,0,False
+TCGA-AA-3177,1,Stage IV,0.6814,Intermediate (0.45–0.72),48.0,48.0,0.0,29.8,0,False
+TCGA-AA-3178,0,Stage III,0.275,Low (MPS < 0.45),27.0,27.0,0.0,14.2,1,False
+TCGA-AA-3179,0,Stage II,0.4094,Low (MPS < 0.45),12.0,12.0,0.0,4.0,1,False
+TCGA-AA-3180,0,Stage II,0.215,Low (MPS < 0.45),12.0,12.0,0.0,54.0,0,False
+TCGA-AA-3181,1,Stage IV,0.6916,Intermediate (0.45–0.72),48.0,48.0,0.0,7.0,1,False
+TCGA-AA-3182,0,Stage III,0.2323,Low (MPS < 0.45),27.0,27.0,0.0,68.1,0,False
+TCGA-AA-3183,1,Stage IV,0.6785,Intermediate (0.45–0.72),48.0,48.0,0.0,5.4,1,False
+TCGA-AA-3184,0,Stage II,0.5106,Intermediate (0.45–0.72),12.0,12.0,0.0,21.4,1,False
+TCGA-AA-3185,0,Stage II,0.2123,Low (MPS < 0.45),12.0,12.0,0.0,31.9,0,False
+TCGA-AA-3186,0,Stage II,0.348,Low (MPS < 0.45),12.0,12.0,0.0,53.2,1,False
+TCGA-AA-3187,0,Stage III,0.3345,Low (MPS < 0.45),27.0,27.0,0.0,28.2,0,False
+TCGA-AA-3188,0,Stage II,0.1755,Low (MPS < 0.45),12.0,12.0,0.0,21.1,1,False
+TCGA-AA-3189,0,Stage III,0.5153,Intermediate (0.45–0.72),27.0,27.0,0.0,66.7,1,False
+TCGA-AA-3190,1,Stage IV,0.7768,High (MPS ≥ 0.72),48.0,12.0,36.0,6.4,0,True
+TCGA-AA-3191,0,Stage I,0.4075,Low (MPS < 0.45),3.0,3.0,0.0,42.3,0,False
+TCGA-AA-3192,1,Stage IV,0.8524,High (MPS ≥ 0.72),48.0,12.0,36.0,6.2,1,True
+TCGA-AA-3193,1,Stage IV,0.7805,High (MPS ≥ 0.72),48.0,12.0,36.0,3.3,1,True
+TCGA-AA-3194,0,Stage II,0.3728,Low (MPS < 0.45),12.0,12.0,0.0,54.0,0,False
+TCGA-AA-3195,0,Stage II,0.335,Low (MPS < 0.45),12.0,12.0,0.0,93.7,0,False
+TCGA-AA-3196,0,Stage I,0.2882,Low (MPS < 0.45),3.0,3.0,0.0,5.2,0,False
+TCGA-AA-3197,0,Stage III,0.2993,Low (MPS < 0.45),27.0,27.0,0.0,26.3,0,False
+TCGA-AA-3198,0,Stage III,0.4008,Low (MPS < 0.45),27.0,27.0,0.0,39.1,1,False
+TCGA-AA-3199,1,Stage IV,0.8165,High (MPS ≥ 0.72),48.0,12.0,36.0,5.3,0,True
+TCGA-AA-3200,0,Stage I,0.4946,Intermediate (0.45–0.72),3.0,3.0,0.0,25.4,0,False
+TCGA-AA-3201,0,Stage I,0.342,Low (MPS < 0.45),3.0,3.0,0.0,29.2,0,False
+TCGA-AA-3202,0,Stage III,0.4776,Intermediate (0.45–0.72),27.0,27.0,0.0,62.2,0,False
+TCGA-AA-3203,0,Stage II,0.1591,Low (MPS < 0.45),12.0,12.0,0.0,29.2,0,False
+TCGA-AA-3204,0,Stage II,0.3603,Low (MPS < 0.45),12.0,12.0,0.0,94.3,0,False
+TCGA-AA-3205,0,Stage I,0.1478,Low (MPS < 0.45),3.0,3.0,0.0,45.3,0,False
+TCGA-AA-3206,0,Stage III,0.305,Low (MPS < 0.45),27.0,27.0,0.0,30.8,0,False
+TCGA-AA-3207,0,Stage II,0.3275,Low (MPS < 0.45),12.0,12.0,0.0,10.8,0,False
+TCGA-AA-3208,1,Stage IV,0.8095,High (MPS ≥ 0.72),48.0,12.0,36.0,12.9,1,True
+TCGA-AA-3209,1,Stage IV,0.8821,High (MPS ≥ 0.72),48.0,12.0,36.0,18.6,1,True
+TCGA-AA-3210,0,Stage I,0.1814,Low (MPS < 0.45),3.0,3.0,0.0,33.8,0,False
+TCGA-AA-3211,0,Stage II,0.2982,Low (MPS < 0.45),12.0,12.0,0.0,28.6,0,False
+TCGA-AA-3212,0,Stage III,0.2969,Low (MPS < 0.45),27.0,27.0,0.0,16.3,0,False
+TCGA-AA-3213,0,Stage I,0.3431,Low (MPS < 0.45),3.0,3.0,0.0,6.9,1,False
+TCGA-AA-3214,0,Stage I,0.3933,Low (MPS < 0.45),3.0,3.0,0.0,65.1,0,False
+TCGA-AA-3215,0,Stage II,0.3119,Low (MPS < 0.45),12.0,12.0,0.0,66.5,0,False
+TCGA-AA-3216,0,Stage I,0.3268,Low (MPS < 0.45),3.0,3.0,0.0,59.8,0,False
+TCGA-AA-3217,0,Stage I,0.3727,Low (MPS < 0.45),3.0,3.0,0.0,3.1,0,False
+TCGA-AA-3218,0,Stage II,0.3852,Low (MPS < 0.45),12.0,12.0,0.0,10.9,0,False
+TCGA-AA-3219,0,Stage II,0.4576,Intermediate (0.45–0.72),12.0,12.0,0.0,41.9,0,False
+TCGA-AA-3220,0,Stage I,0.1906,Low (MPS < 0.45),3.0,3.0,0.0,51.9,0,False
+TCGA-AA-3221,1,Stage IV,0.793,High (MPS ≥ 0.72),48.0,12.0,36.0,15.7,1,True
+TCGA-AA-3222,1,Stage IV,0.83,High (MPS ≥ 0.72),48.0,12.0,36.0,2.9,1,True
+TCGA-AA-3223,0,Stage II,0.3342,Low (MPS < 0.45),12.0,12.0,0.0,35.3,0,False
+TCGA-AA-3224,0,Stage I,0.2109,Low (MPS < 0.45),3.0,3.0,0.0,109.8,0,False
+TCGA-AA-3225,1,Stage IV,0.8498,High (MPS ≥ 0.72),48.0,12.0,36.0,19.3,1,True
+TCGA-AA-3226,1,Stage IV,0.8098,High (MPS ≥ 0.72),48.0,12.0,36.0,0.1,1,True
+TCGA-AA-3227,0,Stage III,0.3681,Low (MPS < 0.45),27.0,27.0,0.0,18.5,0,False
+TCGA-AA-3228,0,Stage I,0.4015,Low (MPS < 0.45),3.0,3.0,0.0,8.6,1,False
+TCGA-AA-3229,0,Stage I,0.4058,Low (MPS < 0.45),3.0,3.0,0.0,91.0,1,False
+TCGA-AA-3230,1,Stage IV,0.7111,Intermediate (0.45–0.72),48.0,48.0,0.0,0.0,1,False
+TCGA-AA-3231,0,Stage III,0.3045,Low (MPS < 0.45),27.0,27.0,0.0,20.6,0,False
+TCGA-AA-3232,1,Stage IV,0.6687,Intermediate (0.45–0.72),48.0,48.0,0.0,13.5,1,False
+TCGA-AA-3233,0,Stage III,0.5597,Intermediate (0.45–0.72),27.0,27.0,0.0,47.0,0,False
+TCGA-AA-3234,0,Stage III,0.4036,Low (MPS < 0.45),27.0,27.0,0.0,23.2,0,False
+TCGA-AA-3235,1,Stage IV,0.6221,Intermediate (0.45–0.72),48.0,48.0,0.0,11.1,1,False
+TCGA-AA-3236,0,Stage I,0.3152,Low (MPS < 0.45),3.0,3.0,0.0,20.7,0,False
+TCGA-AA-3237,1,Stage IV,0.9231,High (MPS ≥ 0.72),48.0,12.0,36.0,39.8,1,True
+TCGA-AA-3238,1,Stage IV,0.7572,High (MPS ≥ 0.72),48.0,12.0,36.0,1.1,1,True
+TCGA-AA-3239,0,Stage III,0.4333,Low (MPS < 0.45),27.0,27.0,0.0,42.0,0,False
+TCGA-AA-3240,1,Stage IV,0.8278,High (MPS ≥ 0.72),48.0,12.0,36.0,18.5,1,True
+TCGA-AA-3241,0,Stage II,0.2876,Low (MPS < 0.45),12.0,12.0,0.0,41.4,0,False
+TCGA-AA-3242,0,Stage III,0.3843,Low (MPS < 0.45),27.0,27.0,0.0,37.4,1,False
+TCGA-AA-3243,0,Stage II,0.3061,Low (MPS < 0.45),12.0,12.0,0.0,7.1,0,False
+TCGA-AA-3244,0,Stage III,0.0611,Low (MPS < 0.45),27.0,27.0,0.0,136.1,0,False
+TCGA-AA-3245,0,Stage I,0.4645,Intermediate (0.45–0.72),3.0,3.0,0.0,28.5,1,False
+TCGA-AA-3246,0,Stage II,0.3323,Low (MPS < 0.45),12.0,12.0,0.0,35.6,0,False
+TCGA-AA-3247,0,Stage I,0.3122,Low (MPS < 0.45),3.0,3.0,0.0,100.8,0,False
+TCGA-AA-3248,0,Stage II,0.237,Low (MPS < 0.45),12.0,12.0,0.0,32.3,0,False
+TCGA-AA-3249,0,Stage II,0.337,Low (MPS < 0.45),12.0,12.0,0.0,17.3,1,False
+TCGA-AA-3250,0,Stage III,0.2551,Low (MPS < 0.45),27.0,27.0,0.0,15.8,1,False
+TCGA-AA-3251,0,Stage III,0.3521,Low (MPS < 0.45),27.0,27.0,0.0,44.1,0,False
+TCGA-AA-3252,0,Stage II,0.2935,Low (MPS < 0.45),12.0,12.0,0.0,18.1,1,False
+TCGA-AA-3253,0,Stage I,0.2855,Low (MPS < 0.45),3.0,3.0,0.0,30.7,0,False
+TCGA-AA-3254,0,Stage III,0.2859,Low (MPS < 0.45),27.0,27.0,0.0,30.2,0,False
+TCGA-AA-3255,1,Stage IV,0.7752,High (MPS ≥ 0.72),48.0,12.0,36.0,26.1,0,True
+TCGA-AA-3256,0,Stage III,0.2549,Low (MPS < 0.45),27.0,27.0,0.0,44.4,0,False
+TCGA-AA-3257,0,Stage II,0.465,Intermediate (0.45–0.72),12.0,12.0,0.0,48.9,1,False
+TCGA-AA-3258,1,Stage IV,0.6494,Intermediate (0.45–0.72),48.0,48.0,0.0,10.3,0,False
+TCGA-AA-3259,0,Stage III,0.1385,Low (MPS < 0.45),27.0,27.0,0.0,9.1,1,False
+TCGA-AA-3260,0,Stage I,0.4125,Low (MPS < 0.45),3.0,3.0,0.0,28.4,0,False
+TCGA-AA-3261,1,Stage IV,0.7013,Intermediate (0.45–0.72),48.0,48.0,0.0,21.2,0,False
+TCGA-AA-3262,0,Stage III,0.3584,Low (MPS < 0.45),27.0,27.0,0.0,23.0,0,False
+TCGA-AA-3263,0,Stage III,0.1739,Low (MPS < 0.45),27.0,27.0,0.0,18.6,0,False
+TCGA-AA-3264,1,Stage IV,0.7784,High (MPS ≥ 0.72),48.0,12.0,36.0,6.6,1,True
+TCGA-AA-3265,0,Stage III,0.3879,Low (MPS < 0.45),27.0,27.0,0.0,42.0,0,False
+TCGA-AA-3266,0,Stage I,0.3435,Low (MPS < 0.45),3.0,3.0,0.0,23.7,0,False
+TCGA-AA-3267,1,Stage IV,0.7575,High (MPS ≥ 0.72),48.0,12.0,36.0,3.6,0,True
+TCGA-AA-3268,0,Stage II,0.3849,Low (MPS < 0.45),12.0,12.0,0.0,56.8,0,False
+TCGA-AA-3269,1,Stage IV,0.7621,High (MPS ≥ 0.72),48.0,12.0,36.0,2.1,1,True
+TCGA-AA-3270,0,Stage II,0.1663,Low (MPS < 0.45),12.0,12.0,0.0,23.1,0,False
+TCGA-AA-3271,0,Stage I,0.3669,Low (MPS < 0.45),3.0,3.0,0.0,36.7,0,False
+TCGA-AA-3272,0,Stage I,0.4039,Low (MPS < 0.45),3.0,3.0,0.0,152.5,0,False
+TCGA-AA-3273,0,Stage I,0.4406,Low (MPS < 0.45),3.0,3.0,0.0,49.2,1,False
+TCGA-AA-3274,0,Stage III,0.2142,Low (MPS < 0.45),27.0,27.0,0.0,2.0,1,False
+TCGA-AA-3275,1,Stage IV,0.7159,Intermediate (0.45–0.72),48.0,48.0,0.0,21.3,0,False
+TCGA-AA-3276,0,Stage III,0.4921,Intermediate (0.45–0.72),27.0,27.0,0.0,19.5,0,False
+TCGA-AA-3277,0,Stage II,0.5295,Intermediate (0.45–0.72),12.0,12.0,0.0,8.2,0,False
+TCGA-AA-3278,0,Stage II,0.3799,Low (MPS < 0.45),12.0,12.0,0.0,173.2,0,False
+TCGA-AA-3279,0,Stage II,0.4025,Low (MPS < 0.45),12.0,12.0,0.0,4.9,0,False
+TCGA-AA-3280,0,Stage I,0.3649,Low (MPS < 0.45),3.0,3.0,0.0,16.6,0,False
+TCGA-AA-3281,0,Stage II,0.4002,Low (MPS < 0.45),12.0,12.0,0.0,2.0,0,False
+TCGA-AA-3282,0,Stage I,0.3131,Low (MPS < 0.45),3.0,3.0,0.0,16.3,0,False
+TCGA-AA-3283,0,Stage I,0.3862,Low (MPS < 0.45),3.0,3.0,0.0,148.7,0,False
+TCGA-AA-3284,1,Stage IV,0.8041,High (MPS ≥ 0.72),48.0,12.0,36.0,7.7,0,True
+TCGA-AA-3285,0,Stage III,0.305,Low (MPS < 0.45),27.0,27.0,0.0,66.4,0,False
+TCGA-AA-3286,0,Stage I,0.35,Low (MPS < 0.45),3.0,3.0,0.0,10.0,1,False
+TCGA-AA-3287,1,Stage IV,0.7423,High (MPS ≥ 0.72),48.0,12.0,36.0,39.2,1,True
+TCGA-AA-3288,0,Stage I,0.1319,Low (MPS < 0.45),3.0,3.0,0.0,30.1,0,False
+TCGA-AA-3289,0,Stage III,0.372,Low (MPS < 0.45),27.0,27.0,0.0,22.0,0,False
+TCGA-AA-3290,1,Stage IV,0.8339,High (MPS ≥ 0.72),48.0,12.0,36.0,15.1,1,True
+TCGA-AA-3291,0,Stage II,0.38,Low (MPS < 0.45),12.0,12.0,0.0,47.9,0,False
+TCGA-AA-3292,1,Stage IV,0.5455,Intermediate (0.45–0.72),48.0,48.0,0.0,6.0,0,False
+TCGA-AA-3293,0,Stage I,0.5192,Intermediate (0.45–0.72),3.0,3.0,0.0,26.8,0,False
+TCGA-AA-3294,0,Stage II,0.2468,Low (MPS < 0.45),12.0,12.0,0.0,19.4,0,False
+TCGA-AA-3295,0,Stage II,0.2378,Low (MPS < 0.45),12.0,12.0,0.0,65.7,1,False
+TCGA-AA-3296,0,Stage III,0.2828,Low (MPS < 0.45),27.0,27.0,0.0,73.0,0,False
+TCGA-AA-3297,1,Stage IV,0.8433,High (MPS ≥ 0.72),48.0,12.0,36.0,2.3,1,True
+TCGA-AA-3298,0,Stage II,0.2087,Low (MPS < 0.45),12.0,12.0,0.0,35.0,0,False
+TCGA-AA-3299,0,Stage I,0.2605,Low (MPS < 0.45),3.0,3.0,0.0,58.0,0,False
+TCGA-AA-3300,0,Stage II,0.2637,Low (MPS < 0.45),12.0,12.0,0.0,16.4,0,False
+TCGA-AA-3301,1,Stage IV,0.7736,High (MPS ≥ 0.72),48.0,12.0,36.0,29.8,0,True
+TCGA-AA-3302,1,Stage IV,1.0,High (MPS ≥ 0.72),48.0,12.0,36.0,8.8,0,True
+TCGA-AA-3303,0,Stage II,0.1513,Low (MPS < 0.45),12.0,12.0,0.0,76.3,0,False
+TCGA-AA-3304,0,Stage II,0.3062,Low (MPS < 0.45),12.0,12.0,0.0,5.1,0,False
+TCGA-AA-3305,1,Stage IV,0.7369,High (MPS ≥ 0.72),48.0,12.0,36.0,2.6,1,True
+TCGA-AA-3306,0,Stage II,0.3008,Low (MPS < 0.45),12.0,12.0,0.0,24.2,0,False
+TCGA-AA-3307,0,Stage III,0.4263,Low (MPS < 0.45),27.0,27.0,0.0,74.7,1,False
+TCGA-AA-3308,1,Stage IV,0.858,High (MPS ≥ 0.72),48.0,12.0,36.0,7.0,0,True
+TCGA-AA-3309,0,Stage III,0.307,Low (MPS < 0.45),27.0,27.0,0.0,47.8,0,False
+TCGA-AA-3310,0,Stage II,0.3728,Low (MPS < 0.45),12.0,12.0,0.0,34.0,1,False
+TCGA-AA-3311,0,Stage III,0.2944,Low (MPS < 0.45),27.0,27.0,0.0,87.3,0,False
+TCGA-AA-3312,1,Stage IV,0.8239,High (MPS ≥ 0.72),48.0,12.0,36.0,18.0,0,True
+TCGA-AA-3313,1,Stage IV,0.8137,High (MPS ≥ 0.72),48.0,12.0,36.0,14.7,1,True
+TCGA-AA-3314,1,Stage IV,0.8072,High (MPS ≥ 0.72),48.0,12.0,36.0,7.8,0,True
+TCGA-AA-3315,0,Stage I,0.3975,Low (MPS < 0.45),3.0,3.0,0.0,37.9,1,False
+TCGA-AA-3316,0,Stage III,0.2859,Low (MPS < 0.45),27.0,27.0,0.0,36.4,0,False
+TCGA-AA-3317,0,Stage II,0.4529,Intermediate (0.45–0.72),12.0,12.0,0.0,39.8,1,False
+TCGA-AA-3318,0,Stage I,0.2326,Low (MPS < 0.45),3.0,3.0,0.0,31.1,0,False
+TCGA-AA-3319,1,Stage IV,0.8304,High (MPS ≥ 0.72),48.0,12.0,36.0,14.3,0,True
+TCGA-AA-3320,0,Stage II,0.3012,Low (MPS < 0.45),12.0,12.0,0.0,8.2,1,False
+TCGA-AA-3321,0,Stage III,0.4175,Low (MPS < 0.45),27.0,27.0,0.0,29.1,0,False
+TCGA-AA-3322,1,Stage IV,0.7451,High (MPS ≥ 0.72),48.0,12.0,36.0,40.8,1,True
+TCGA-AA-3323,0,Stage III,0.3203,Low (MPS < 0.45),27.0,27.0,0.0,28.3,1,False
+TCGA-AA-3324,1,Stage IV,0.7157,Intermediate (0.45–0.72),48.0,48.0,0.0,20.0,0,False
+TCGA-AA-3325,0,Stage II,0.5035,Intermediate (0.45–0.72),12.0,12.0,0.0,37.5,0,False
+TCGA-AA-3326,0,Stage I,0.434,Low (MPS < 0.45),3.0,3.0,0.0,24.2,0,False
+TCGA-AA-3327,0,Stage III,0.1551,Low (MPS < 0.45),27.0,27.0,0.0,14.3,0,False
+TCGA-AA-3328,0,Stage II,0.282,Low (MPS < 0.45),12.0,12.0,0.0,38.2,0,False
+TCGA-AA-3329,0,Stage II,0.3384,Low (MPS < 0.45),12.0,12.0,0.0,3.9,0,False
+TCGA-AA-3330,0,Stage III,0.1507,Low (MPS < 0.45),27.0,27.0,0.0,61.8,0,False
+TCGA-AA-3331,0,Stage I,0.3834,Low (MPS < 0.45),3.0,3.0,0.0,17.2,0,False
+TCGA-AA-3332,0,Stage III,0.5011,Intermediate (0.45–0.72),27.0,27.0,0.0,4.8,0,False
+TCGA-AA-3333,1,Stage IV,0.8511,High (MPS ≥ 0.72),48.0,12.0,36.0,6.9,0,True
+TCGA-AA-3334,0,Stage I,0.2381,Low (MPS < 0.45),3.0,3.0,0.0,57.6,0,False
+TCGA-AA-3335,0,Stage I,0.2909,Low (MPS < 0.45),3.0,3.0,0.0,76.9,0,False
+TCGA-AA-3336,0,Stage II,0.2666,Low (MPS < 0.45),12.0,12.0,0.0,258.9,0,False
+TCGA-AA-3337,1,Stage IV,0.9508,High (MPS ≥ 0.72),48.0,12.0,36.0,19.3,0,True
+TCGA-AA-3338,0,Stage II,0.4202,Low (MPS < 0.45),12.0,12.0,0.0,122.8,0,False
+TCGA-AA-3339,0,Stage III,0.2694,Low (MPS < 0.45),27.0,27.0,0.0,35.8,0,False
+TCGA-AA-3340,0,Stage I,0.0957,Low (MPS < 0.45),3.0,3.0,0.0,108.6,0,False
+TCGA-AA-3341,0,Stage I,0.3124,Low (MPS < 0.45),3.0,3.0,0.0,22.8,0,False
+TCGA-AA-3342,1,Stage IV,0.8695,High (MPS ≥ 0.72),48.0,12.0,36.0,27.7,0,True
+TCGA-AA-3343,0,Stage I,0.2685,Low (MPS < 0.45),3.0,3.0,0.0,54.4,0,False
+TCGA-AA-3344,0,Stage III,0.413,Low (MPS < 0.45),27.0,27.0,0.0,9.3,0,False
+TCGA-AA-3345,0,Stage II,0.3156,Low (MPS < 0.45),12.0,12.0,0.0,16.8,0,False
+TCGA-AA-3346,0,Stage III,0.3687,Low (MPS < 0.45),27.0,27.0,0.0,11.4,0,False
+TCGA-AA-3347,1,Stage IV,0.8717,High (MPS ≥ 0.72),48.0,12.0,36.0,15.4,0,True
+TCGA-AA-3348,0,Stage II,0.1989,Low (MPS < 0.45),12.0,12.0,0.0,61.8,0,False
+TCGA-AA-3349,1,Stage IV,0.8425,High (MPS ≥ 0.72),48.0,12.0,36.0,66.6,1,True
+TCGA-AA-3350,0,Stage I,0.5194,Intermediate (0.45–0.72),3.0,3.0,0.0,16.0,0,False
+TCGA-AA-3351,1,Stage IV,0.7155,Intermediate (0.45–0.72),48.0,48.0,0.0,0.0,1,False
+TCGA-AA-3352,1,Stage IV,0.6486,Intermediate (0.45–0.72),48.0,48.0,0.0,16.6,0,False
+TCGA-AA-3353,1,Stage IV,0.8698,High (MPS ≥ 0.72),48.0,12.0,36.0,21.7,1,True
+TCGA-AA-3354,0,Stage III,0.2772,Low (MPS < 0.45),27.0,27.0,0.0,8.9,0,False
+TCGA-AA-3355,0,Stage II,0.3176,Low (MPS < 0.45),12.0,12.0,0.0,10.2,0,False
+TCGA-AA-3356,0,Stage II,0.1521,Low (MPS < 0.45),12.0,12.0,0.0,4.9,1,False
+TCGA-AA-3357,0,Stage II,0.3414,Low (MPS < 0.45),12.0,12.0,0.0,23.4,1,False
+TCGA-AA-3358,1,Stage IV,0.6137,Intermediate (0.45–0.72),48.0,48.0,0.0,52.0,1,False
+TCGA-AA-3359,0,Stage II,0.4956,Intermediate (0.45–0.72),12.0,12.0,0.0,14.5,0,False
+TCGA-AA-3360,1,Stage IV,0.6908,Intermediate (0.45–0.72),48.0,48.0,0.0,15.9,1,False
+TCGA-AA-3361,0,Stage I,0.2463,Low (MPS < 0.45),3.0,3.0,0.0,18.2,0,False
+TCGA-AA-3362,1,Stage IV,0.8301,High (MPS ≥ 0.72),48.0,12.0,36.0,17.0,0,True
+TCGA-AA-3363,1,Stage IV,0.6338,Intermediate (0.45–0.72),48.0,48.0,0.0,17.7,0,False
+TCGA-AA-3364,0,Stage III,0.337,Low (MPS < 0.45),27.0,27.0,0.0,7.3,0,False
+TCGA-AA-3365,0,Stage I,0.3913,Low (MPS < 0.45),3.0,3.0,0.0,30.2,0,False
+TCGA-AA-3366,0,Stage III,0.4571,Intermediate (0.45–0.72),27.0,27.0,0.0,44.4,0,False
+TCGA-AA-3367,1,Stage IV,0.8744,High (MPS ≥ 0.72),48.0,12.0,36.0,16.9,1,True
+TCGA-AA-3368,1,Stage IV,0.8156,High (MPS ≥ 0.72),48.0,12.0,36.0,21.3,0,True
+TCGA-AA-3369,0,Stage III,0.4197,Low (MPS < 0.45),27.0,27.0,0.0,72.9,0,False
+TCGA-AA-3370,0,Stage III,0.4039,Low (MPS < 0.45),27.0,27.0,0.0,24.5,0,False
+TCGA-AA-3371,0,Stage II,0.5375,Intermediate (0.45–0.72),12.0,12.0,0.0,94.9,0,False
+TCGA-AA-3372,0,Stage II,0.4854,Intermediate (0.45–0.72),12.0,12.0,0.0,24.2,0,False
+TCGA-AA-3373,0,Stage II,0.4369,Low (MPS < 0.45),12.0,12.0,0.0,45.3,0,False
+TCGA-AA-3374,0,Stage III,0.3549,Low (MPS < 0.45),27.0,27.0,0.0,3.1,0,False
+TCGA-AA-3375,0,Stage II,0.4048,Low (MPS < 0.45),12.0,12.0,0.0,12.0,0,False
+TCGA-AA-3376,0,Stage I,0.3284,Low (MPS < 0.45),3.0,3.0,0.0,18.5,1,False
+TCGA-AA-3377,0,Stage II,0.3004,Low (MPS < 0.45),12.0,12.0,0.0,7.5,1,False
+TCGA-AA-3378,1,Stage IV,0.821,High (MPS ≥ 0.72),48.0,12.0,36.0,10.7,0,True
+TCGA-AA-3379,0,Stage I,0.1744,Low (MPS < 0.45),3.0,3.0,0.0,55.0,0,False
+TCGA-AA-3380,0,Stage I,0.3267,Low (MPS < 0.45),3.0,3.0,0.0,54.7,0,False
+TCGA-AA-3381,0,Stage III,0.3029,Low (MPS < 0.45),27.0,27.0,0.0,78.4,0,False
+TCGA-AA-3382,1,Stage IV,0.7164,Intermediate (0.45–0.72),48.0,48.0,0.0,16.0,0,False
+TCGA-AA-3383,0,Stage III,0.4265,Low (MPS < 0.45),27.0,27.0,0.0,54.4,1,False
+TCGA-AA-3384,0,Stage II,0.4444,Low (MPS < 0.45),12.0,12.0,0.0,40.2,0,False
+TCGA-AA-3385,1,Stage IV,0.8042,High (MPS ≥ 0.72),48.0,12.0,36.0,12.8,1,True
+TCGA-AA-3386,0,Stage I,0.2502,Low (MPS < 0.45),3.0,3.0,0.0,29.9,0,False
+TCGA-AA-3387,0,Stage III,0.3052,Low (MPS < 0.45),27.0,27.0,0.0,32.7,1,False
+TCGA-AA-3388,0,Stage III,0.4646,Intermediate (0.45–0.72),27.0,27.0,0.0,51.7,0,False
+TCGA-AA-3389,0,Stage II,0.4952,Intermediate (0.45–0.72),12.0,12.0,0.0,17.1,1,False
+TCGA-AA-3390,0,Stage II,0.4236,Low (MPS < 0.45),12.0,12.0,0.0,115.7,1,False
+TCGA-AA-3391,0,Stage III,0.2711,Low (MPS < 0.45),27.0,27.0,0.0,86.1,0,False
+TCGA-AA-3392,1,Stage IV,0.8729,High (MPS ≥ 0.72),48.0,12.0,36.0,9.7,0,True
+TCGA-AA-3393,0,Stage I,0.647,Intermediate (0.45–0.72),3.0,3.0,0.0,40.2,0,False
+TCGA-AA-3394,0,Stage III,0.136,Low (MPS < 0.45),27.0,27.0,0.0,27.1,1,False
+TCGA-AA-3395,1,Stage IV,0.633,Intermediate (0.45–0.72),48.0,48.0,0.0,9.1,0,False
+TCGA-AA-3396,0,Stage I,0.3214,Low (MPS < 0.45),3.0,3.0,0.0,9.9,0,False
+TCGA-AA-3397,0,Stage III,0.2782,Low (MPS < 0.45),27.0,27.0,0.0,161.9,1,False
+TCGA-AA-3398,0,Stage III,0.4446,Low (MPS < 0.45),27.0,27.0,0.0,110.5,1,False
+TCGA-AA-3399,0,Stage III,0.3641,Low (MPS < 0.45),27.0,27.0,0.0,20.7,0,False
+TCGA-AA-3400,1,Stage IV,0.7228,High (MPS ≥ 0.72),48.0,12.0,36.0,29.7,1,True
+TCGA-AA-3401,1,Stage IV,0.865,High (MPS ≥ 0.72),48.0,12.0,36.0,9.1,1,True
+TCGA-AA-3402,0,Stage III,0.2772,Low (MPS < 0.45),27.0,27.0,0.0,28.3,0,False
+TCGA-AA-3403,1,Stage IV,0.7841,High (MPS ≥ 0.72),48.0,12.0,36.0,9.0,0,True
+TCGA-AA-3404,0,Stage I,0.3871,Low (MPS < 0.45),3.0,3.0,0.0,76.3,0,False
+TCGA-AA-3405,0,Stage I,0.2599,Low (MPS < 0.45),3.0,3.0,0.0,48.1,1,False
+TCGA-AA-3406,0,Stage II,0.1786,Low (MPS < 0.45),12.0,12.0,0.0,100.2,0,False
+TCGA-AA-3407,0,Stage III,0.2774,Low (MPS < 0.45),27.0,27.0,0.0,67.5,0,False
+TCGA-AA-3408,0,Stage I,0.2759,Low (MPS < 0.45),3.0,3.0,0.0,16.8,1,False
+TCGA-AA-3409,0,Stage I,0.2877,Low (MPS < 0.45),3.0,3.0,0.0,21.6,0,False
+TCGA-AA-3410,0,Stage II,0.3251,Low (MPS < 0.45),12.0,12.0,0.0,80.3,0,False
+TCGA-AA-3411,0,Stage II,0.3324,Low (MPS < 0.45),12.0,12.0,0.0,3.5,0,False
+TCGA-AA-3412,1,Stage IV,0.8533,High (MPS ≥ 0.72),48.0,12.0,36.0,5.7,0,True
+TCGA-AA-3413,1,Stage IV,0.8695,High (MPS ≥ 0.72),48.0,12.0,36.0,14.6,1,True
+TCGA-AA-3414,0,Stage II,0.3714,Low (MPS < 0.45),12.0,12.0,0.0,19.2,1,False
+TCGA-AA-3415,1,Stage IV,0.8193,High (MPS ≥ 0.72),48.0,12.0,36.0,14.2,0,True
+TCGA-AA-3416,1,Stage IV,0.7869,High (MPS ≥ 0.72),48.0,12.0,36.0,18.4,0,True
+TCGA-AA-3417,0,Stage I,0.2819,Low (MPS < 0.45),3.0,3.0,0.0,80.0,0,False
+TCGA-AA-3418,0,Stage I,0.3305,Low (MPS < 0.45),3.0,3.0,0.0,9.0,1,False
+TCGA-AA-3419,1,Stage IV,0.6553,Intermediate (0.45–0.72),48.0,48.0,0.0,0.9,1,False
+TCGA-AA-3420,0,Stage II,0.2684,Low (MPS < 0.45),12.0,12.0,0.0,23.4,1,False
+TCGA-AA-3421,0,Stage I,0.3034,Low (MPS < 0.45),3.0,3.0,0.0,13.7,0,False
+TCGA-AA-3422,0,Stage III,0.3277,Low (MPS < 0.45),27.0,27.0,0.0,46.5,1,False
+TCGA-AA-3423,1,Stage IV,0.7673,High (MPS ≥ 0.72),48.0,12.0,36.0,13.8,0,True
+TCGA-AA-3424,0,Stage I,0.4481,Low (MPS < 0.45),3.0,3.0,0.0,96.0,0,False
+TCGA-AA-3425,1,Stage IV,0.5146,Intermediate (0.45–0.72),48.0,48.0,0.0,0.9,1,False
+TCGA-AA-3426,0,Stage II,0.5635,Intermediate (0.45–0.72),12.0,12.0,0.0,66.8,1,False
+TCGA-AA-3427,1,Stage IV,0.8355,High (MPS ≥ 0.72),48.0,12.0,36.0,37.9,1,True
+TCGA-AA-3428,0,Stage III,0.3766,Low (MPS < 0.45),27.0,27.0,0.0,84.5,0,False
+TCGA-AA-3429,0,Stage III,0.398,Low (MPS < 0.45),27.0,27.0,0.0,21.1,0,False
+TCGA-AA-3430,0,Stage II,0.3981,Low (MPS < 0.45),12.0,12.0,0.0,100.0,0,False
+TCGA-AA-3431,0,Stage II,0.3326,Low (MPS < 0.45),12.0,12.0,0.0,23.9,1,False
+TCGA-AA-3432,0,Stage III,0.4461,Low (MPS < 0.45),27.0,27.0,0.0,81.5,1,False
+TCGA-AA-3433,0,Stage II,0.3082,Low (MPS < 0.45),12.0,12.0,0.0,50.0,0,False
+TCGA-AA-3434,0,Stage I,0.4054,Low (MPS < 0.45),3.0,3.0,0.0,24.5,1,False
+TCGA-AA-3435,0,Stage III,0.172,Low (MPS < 0.45),27.0,27.0,0.0,88.9,0,False
+TCGA-AA-3436,1,Stage IV,0.7806,High (MPS ≥ 0.72),48.0,12.0,36.0,14.1,1,True
+TCGA-AA-3437,0,Stage III,0.3818,Low (MPS < 0.45),27.0,27.0,0.0,25.3,0,False
+TCGA-AA-3438,1,Stage IV,0.793,High (MPS ≥ 0.72),48.0,12.0,36.0,0.6,1,True
+TCGA-AA-3439,0,Stage II,0.228,Low (MPS < 0.45),12.0,12.0,0.0,111.2,0,False
+TCGA-AA-3440,0,Stage II,0.4221,Low (MPS < 0.45),12.0,12.0,0.0,6.9,0,False
+TCGA-AA-3441,1,Stage IV,0.7277,High (MPS ≥ 0.72),48.0,12.0,36.0,9.4,0,True
+TCGA-AA-3442,0,Stage II,0.2588,Low (MPS < 0.45),12.0,12.0,0.0,7.8,1,False
+TCGA-AA-3443,0,Stage I,0.1821,Low (MPS < 0.45),3.0,3.0,0.0,56.8,1,False
+TCGA-AA-3444,1,Stage IV,0.873,High (MPS ≥ 0.72),48.0,12.0,36.0,1.8,1,True
+TCGA-AA-3445,0,Stage II,0.2781,Low (MPS < 0.45),12.0,12.0,0.0,94.1,1,False
+TCGA-AA-3446,0,Stage III,0.2619,Low (MPS < 0.45),27.0,27.0,0.0,43.7,0,False
+TCGA-AA-3447,0,Stage III,0.2382,Low (MPS < 0.45),27.0,27.0,0.0,49.3,1,False
+TCGA-AA-3448,1,Stage IV,0.9089,High (MPS ≥ 0.72),48.0,12.0,36.0,11.2,1,True
+TCGA-AA-3449,0,Stage III,0.2291,Low (MPS < 0.45),27.0,27.0,0.0,45.0,0,False

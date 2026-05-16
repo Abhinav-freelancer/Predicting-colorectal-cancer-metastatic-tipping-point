@@ -1,0 +1,58 @@
+{
+  "patient_id": "TCGA-AA-3302",
+  "label": 1,
+  "mps": 1.0,
+  "alerted": true,
+  "top_features": [
+    {
+      "feature": "stage_order",
+      "value": 1.2614894240103165,
+      "shap": 14.933623559204198
+    },
+    {
+      "feature": "invasion_potential",
+      "value": 1.9158452777935289,
+      "shap": 0.15633716128022207
+    },
+    {
+      "feature": "epi_dist",
+      "value": 0.26769,
+      "shap": 0.07408805292271269
+    },
+    {
+      "feature": "ews_em_ratio",
+      "value": 3.335976488212842,
+      "shap": 0.07177700275074175
+    },
+    {
+      "feature": "fitted_T_ext",
+      "value": 1.5608,
+      "shap": 0.0693095427624709
+    },
+    {
+      "feature": "epithelial",
+      "value": -3.0473988212173166,
+      "shap": -0.0003690801601902993
+    },
+    {
+      "feature": "attractor_proximity",
+      "value": 0.73231,
+      "shap": -5.18066832589061e-05
+    },
+    {
+      "feature": "mes_dist",
+      "value": 0.73231,
+      "shap": -3.592580674330185e-05
+    },
+    {
+      "feature": "emt_index",
+      "value": 2.4023908516565595,
+      "shap": -1.9341017730088316e-05
+    },
+    {
+      "feature": "ews_skew_emt",
+      "value": 0.6974860627216137,
+      "shap": -1.3578739111487926e-05
+    }
+  ]
+}

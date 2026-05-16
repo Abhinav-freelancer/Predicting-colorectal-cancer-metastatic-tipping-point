@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/ADMIN/Desktop/coding stuff/ML/crc_metastasis/experiments/mlflow/449442778131367097/2830e8a715a34beabe326f4b17ab239e/artifacts
+end_time: 1778708410808
+entry_point_name: ''
+experiment_id: '449442778131367097'
+lifecycle_stage: active
+run_id: 2830e8a715a34beabe326f4b17ab239e
+run_name: phase4_cv5fold
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778708199263
+status: 3
+tags: []
+user_id: ADMIN
