@@ -10,9 +10,6 @@ build/
 experiments/mlflow/
 experiments/runs/
 
-# Large raw data
-data/raw/
-
 # Large processed files (>100MB, rejected by GitHub - use LFS)
 data/processed/geo/*.csv
 
