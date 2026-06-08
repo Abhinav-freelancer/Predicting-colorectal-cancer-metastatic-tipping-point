@@ -32,6 +32,8 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 from scipy import stats
+from typing import Optional
+from scipy.ndimage import uniform_filter1d
 from scipy.signal import detrend
 from sklearn.preprocessing import StandardScaler
 
@@ -229,34 +231,88 @@ def compute_cross_sectional_ews(vst_matrix: pd.DataFrame,
     return df
 
 
+def compute_spatial_synchrony(vst:           pd.DataFrame,
+                               ordered_ids:   list,
+                               gene_ids:      list,
+                               window:        int) -> np.ndarray:
+    """
+    Rolling pairwise gene correlation along a pseudo-time trajectory.
+
+    For each window position, computes the mean pairwise Pearson correlation
+    (Fisher z-transformed) among the given gene set. Rising correlation
+    (spatial synchrony) is a canonical EWS for approaching a tipping point.
+
+    Args:
+        vst:         VST expression matrix (index=ENSG IDs, columns=patient IDs)
+        ordered_ids: Patient IDs in trajectory (sorted) order
+        gene_ids:    ENSG IDs of the genes to correlate (e.g., 7 ODE genes)
+        window:      Rolling window size
+
+    Returns:
+        Array of spatial synchrony values, same length as ordered_ids,
+        NaN for first (window-1) positions.
+    """
+    n_patients = len(ordered_ids)
+    sync = np.full(n_patients, np.nan, dtype=float)
+
+    # Filter to available genes
+    avail_ids = [gid for gid in gene_ids if gid in vst.index]
+    if len(avail_ids) < 3:
+        return sync  # need at least 3 genes for meaningful correlation
+
+    for i in range(n_patients - window + 1):
+        win_ids = ordered_ids[i:i + window]
+        # Submatrix: genes x patients in window
+        sub = vst.loc[avail_ids, [pid for pid in win_ids if pid in vst.columns]]
+        if sub.shape[1] < 3:
+            continue
+        # Transpose to patients x genes for corrcoef
+        corr = np.corrcoef(sub.values.astype(float))
+        # Fisher z-transform: arctanh(r)
+        triu = corr[np.triu_indices_from(corr, k=1)]
+        triu = np.clip(triu, -0.999, 0.999)  # avoid inf from r=±1
+        zvals = np.arctanh(triu)
+        sync[i + window - 1] = float(np.nanmean(zvals))
+
+    return sync
+
+
 def compute_cohort_ews_trajectory(scores: pd.DataFrame,
                                    manifest: pd.DataFrame,
-                                   window: int,
-                                   lag: int) -> pd.DataFrame:
+                                   vst: Optional[pd.DataFrame] = None,
+                                   window: int = 10,
+                                   lag: int = 1,
+                                   sort_by: str = "emt_index") -> pd.DataFrame:
     """
     Treat the cohort as a pseudo-time series ordered by disease progression.
-    Stage order: I → II → III → IV (increasing progression).
+    Default sorting by EMT index (continuous) — captures within-stage variance.
+    Falls back to AJCC stage ordering if sort_by is "stage_order".
 
     Computes rolling EWS indicators on the cohort-level EMT index trajectory.
-    This gives a 'population-level tipping point' signal.
+    Also projects per-patient trajectory position and EWS slope features.
 
-    Returns DataFrame with one row per cohort position (patient sorted by stage).
+    Returns DataFrame with one row per patient with trajectory EWS + projection features.
     """
-    # Sort patients by progression proxy (AJCC stage)
-    stage_order = {"Stage I": 0, "Stage II": 1, "Stage III": 2, "Stage IV": 3}
-    manifest_s  = manifest.copy()
-    manifest_s["stage_order"] = manifest_s["ajcc_stage"].map(stage_order).fillna(2)
-    manifest_s  = manifest_s.sort_values("stage_order")
-
-    # Align EMT index to sorted patient order
     if "emt_index" not in scores.columns:
         return pd.DataFrame()
 
-    ordered_ids  = manifest_s["submitter_id"].values
-    valid_ids    = [pid for pid in ordered_ids if pid in scores.index]
-    emt_series   = scores.loc[valid_ids, "emt_index"].values.astype(float)
-    n            = len(emt_series)
+    manifest_s = manifest.copy()
 
+    if sort_by == "stage_order":
+        stage_order = {"Stage I": 0, "Stage II": 1, "Stage III": 2, "Stage IV": 3}
+        manifest_s["sort_key"] = manifest_s["ajcc_stage"].map(stage_order).fillna(2)
+    else:
+        # Sort by EMT index (continuous) — captures within-stage variance
+        emt_map = scores["emt_index"].to_dict()
+        manifest_s["sort_key"] = manifest_s["case_id"].map(emt_map).fillna(0)
+
+    manifest_s = manifest_s.sort_values("sort_key")
+    ordered_ids = manifest_s["case_id"].values
+    valid_ids   = [pid for pid in ordered_ids if pid in scores.index]
+    emt_series  = scores.loc[valid_ids, "emt_index"].values.astype(float)
+    n           = len(emt_series)
+
+    # Rolling EWS along sorted trajectory
     ac1   = rolling_ac1(emt_series,      window, lag)
     var_  = rolling_variance(emt_series,  window)
     skew_ = rolling_skewness(emt_series,  window)
@@ -268,7 +324,7 @@ def compute_cohort_ews_trajectory(scores: pd.DataFrame,
     tau_var,  p_var  = kendall_tau_trend(var_)
     tau_skew, p_skew = kendall_tau_trend(skew_)
 
-    print(f"\n  Cohort EWS trajectory (pseudo-time, N={n}):")
+    print(f"\n  Cohort EWS trajectory (pseudo-time by {sort_by}, N={n}):")
     print(f"    AC1  trend  — τ={tau_ac1:+.3f}, p={p_ac1:.4f}  "
           + ("✓ Rising" if tau_ac1 > 0 and p_ac1 < 0.05 else "—"))
     print(f"    Var  trend  — τ={tau_var:+.3f}, p={p_var:.4f}  "
@@ -276,16 +332,62 @@ def compute_cohort_ews_trajectory(scores: pd.DataFrame,
     print(f"    Skew trend  — τ={tau_skew:+.3f}, p={p_skew:.4f}  "
           + ("✓ Rising" if tau_skew > 0 and p_skew < 0.05 else "—"))
 
+    # ── Spatial synchrony (pairwise gene correlation along trajectory) ────
+    # Rising correlation across ODE gene pairs = approaching tipping point
+    ODE_GENE_IDS = [
+        "ENSG00000039068.19",  # CDH1
+        "ENSG00000026025.16",  # VIM
+        "ENSG00000124216.4",   # SNAI1
+        "ENSG00000148516.22",  # ZEB1
+        "ENSG00000105329.11",  # TGFB1
+        "ENSG00000207730.3",   # MIR200B
+        "ENSG00000100644.17",  # HIF1A
+    ]
+    spatial_sync = None
+    tau_sync = p_sync = np.nan
+    if vst is not None:
+        spatial_sync = compute_spatial_synchrony(vst, valid_ids, ODE_GENE_IDS, window)
+        if not np.all(np.isnan(spatial_sync)):
+            tau_sync, p_sync = kendall_tau_trend(spatial_sync)
+            print(f"    Sync trend  — τ={tau_sync:+.3f}, p={p_sync:.4f}  "
+                  + ("✓ Rising" if tau_sync > 0 and p_sync < 0.05 else "—"))
+
+    # ── Per-patient trajectory projection features ────────────────────────
+    # Compute local slopes using central differences (fill ends with NaN)
+    def local_slope(arr):
+        s = np.full_like(arr, np.nan, dtype=float)
+        for i in range(1, len(arr) - 1):
+            s[i] = (arr[i + 1] - arr[i - 1]) / 2.0
+        return s
+
+    ac1_slope   = local_slope(ac1)
+    var_slope   = local_slope(var_)
+    skew_slope  = local_slope(skew_)
+    # Trajectory position as percentile [0, 1]
+    positions   = np.linspace(0, 1, n)
+
+    # Anomaly score: how far local EWS deviates from trajectory trend
+    # Use rolling average as baseline, compute z-score of deviation
+    ac1_baseline   = uniform_filter1d(np.nan_to_num(ac1, nan=np.nanmean(ac1)), size=window, mode="nearest")
+    var_baseline   = uniform_filter1d(np.nan_to_num(var_, nan=np.nanmean(var_)), size=window, mode="nearest")
+    ac1_anomaly    = np.abs(ac1 - ac1_baseline) / max(np.nanstd(ac1), 1e-6)
+    var_anomaly    = np.abs(var_ - var_baseline) / max(np.nanstd(var_), 1e-6)
+    ews_anomaly    = (ac1_anomaly + var_anomaly) / 2.0
+
     trajectory_df = pd.DataFrame({
-        "patient_id":   valid_ids,
-        "stage_order":  manifest_s.loc[manifest_s["submitter_id"].isin(valid_ids),
-                                       "stage_order"].values,
-        "emt_index":    emt_series,
-        "ews_ac1":      ac1,
-        "ews_variance": var_,
-        "ews_skewness": skew_,
-        "ews_kurtosis": kurt_,
-        "ews_cv":       cv_,
+        "patient_id":          valid_ids,
+        "trajectory_position": positions,
+        "emt_index":           emt_series,
+        "ews_ac1":             ac1,
+        "ews_variance":        var_,
+        "ews_skewness":        skew_,
+        "ews_kurtosis":        kurt_,
+        "ews_cv":              cv_,
+        "spatial_synchrony":   spatial_sync if spatial_sync is not None else np.full(n, np.nan),
+        "ews_ac1_slope":       ac1_slope,
+        "ews_var_slope":       var_slope,
+        "ews_skew_slope":      skew_slope,
+        "ews_anomaly":         ews_anomaly,
     })
 
     return trajectory_df
@@ -350,11 +452,29 @@ def main():
 
     # ── Cross-sectional EWS (per patient) ─────────────────────────────────
     from emt_scorer import SIGNATURES   # reuse gene sets
+
+    # Load gene name map (same approach as emt_scorer)
+    gene_map_path = manifest_dir.parent / "processed" / "rna_seq" / "gene_name_map.csv"
+    if gene_map_path.exists():
+        gmap = pd.read_csv(gene_map_path, index_col=0, header=0)
+        rev = {}
+        for gid, gname in gmap.iloc[:, 0].items():
+            gname = str(gname).strip()
+            if gname and gname != "nan":
+                rev.setdefault(gname, []).append(gid)
+        symbol_to_id = {sym: ids[0] for sym, ids in rev.items()}
+        print(f"  Loaded {len(symbol_to_id)} gene symbols → Ensembl IDs")
+        epi_genes = [symbol_to_id.get(g, g) for g in SIGNATURES["epithelial"]]
+        mes_genes = [symbol_to_id.get(g, g) for g in SIGNATURES["mesenchymal"]]
+    else:
+        epi_genes = SIGNATURES["epithelial"]
+        mes_genes = SIGNATURES["mesenchymal"]
+
     print(f"\n  Computing cross-sectional EWS (per patient)...")
     cross_ews = compute_cross_sectional_ews(
         vst,
-        SIGNATURES["epithelial"],
-        SIGNATURES["mesenchymal"],
+        epi_genes,
+        mes_genes,
     )
 
     # Composite score
@@ -367,7 +487,7 @@ def main():
     # ── Cohort pseudo-time trajectory EWS ─────────────────────────────────
     print(f"\n  Computing cohort trajectory EWS (window={args.window}, lag={args.lag})...")
     trajectory = compute_cohort_ews_trajectory(
-        scores, manifest, args.window, args.lag
+        scores, manifest, vst=vst, window=args.window, lag=args.lag, sort_by="emt_index"
     )
 
     if not trajectory.empty:
@@ -375,7 +495,7 @@ def main():
         print(f"  Saved trajectory EWS → {out_dir}/cohort_ews_trajectory.csv")
 
     # ── Quick validation: do EWS scores differ by metastasis label? ────────
-    manifest_idx = manifest.set_index("submitter_id")
+    manifest_idx = manifest.set_index("case_id")
     labels       = manifest_idx.reindex(cross_ews.index)["metastasis_label"]
 
     print(f"\n  EWS composite score by label:")

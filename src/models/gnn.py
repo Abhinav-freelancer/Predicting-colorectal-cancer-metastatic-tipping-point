@@ -109,6 +109,30 @@ class SAGEConv(nn.Module):
         return out
 
 
+# ── Attention pooling ──────────────────────────────────────────────────────────
+
+class AttentivePooling(nn.Module):
+    """
+    Learnable attention-based graph readout.
+    Computes a weighted sum of node features where weights are learned.
+    More expressive than mean/max pooling — learns which genes matter per patient.
+    """
+    def __init__(self, in_dim: int):
+        super().__init__()
+        self.W_attn = nn.Linear(in_dim, 1, bias=False)
+
+    def forward(self, x: torch.Tensor, mask: torch.Tensor) -> torch.Tensor:
+        """
+        x: (B, N, D) node features
+        mask: (B, N, 1) — 1 for real nodes, 0 for padding
+        Returns: (B, D)
+        """
+        attn_logits = self.W_attn(x)  # (B, N, 1)
+        attn_logits = attn_logits + (mask == 0).float() * -1e9
+        attn_weights = torch.softmax(attn_logits, dim=1)  # (B, N, 1)
+        return (attn_weights * x).sum(dim=1)  # (B, D)
+
+
 # ── GNN model ─────────────────────────────────────────────────────────────────
 
 class EMTGraphNet(nn.Module):
@@ -116,16 +140,16 @@ class EMTGraphNet(nn.Module):
     3-layer GraphSAGE network for EMT gene interaction graphs.
 
     Architecture:
-        SAGEConv(6 → 64)  + LayerNorm + ReLU + Dropout
-        SAGEConv(64 → 128) + LayerNorm + ReLU + Dropout
-        SAGEConv(128 → 128) + LayerNorm + ReLU
-        Global mean pooling + Global max pooling → concat
-        Linear(256 → gnn_out_dim)
+        SAGEConv(6 → 96)  + LayerNorm + ReLU + Dropout
+        SAGEConv(96 → 192) + LayerNorm + ReLU + Dropout
+        SAGEConv(192 → 192) + LayerNorm + ReLU
+        Attention pooling
+        Linear(192 → gnn_out_dim)
     """
 
     def __init__(self,
                  node_in_dim:  int   = 6,
-                 hidden_dim:   int   = 64,
+                 hidden_dim:   int   = 96,
                  out_dim:      int   = 128,
                  dropout:      float = 0.3):
         super().__init__()
@@ -141,9 +165,12 @@ class EMTGraphNet(nn.Module):
         self.norm2 = nn.LayerNorm(hidden_dim * 2)
         self.norm3 = nn.LayerNorm(hidden_dim * 2)
 
-        # Readout: mean + max pooling → project to out_dim
+        # Attention pooling — learn which genes matter most
+        self.attn_pool = AttentivePooling(hidden_dim * 2)
+
+        # Project attention-pooled features to out_dim
         self.readout = nn.Sequential(
-            nn.Linear(hidden_dim * 4, hidden_dim * 2),
+            nn.Linear(hidden_dim * 2, hidden_dim * 2),
             nn.ReLU(),
             nn.Dropout(dropout),
             nn.Linear(hidden_dim * 2, out_dim),
@@ -154,7 +181,8 @@ class EMTGraphNet(nn.Module):
     def forward(self,
                 node_features: torch.Tensor,   # (B, max_N, 6)
                 edge_index:    torch.Tensor,   # (2, total_edges)
-                n_nodes:       torch.Tensor    # (B,) real nodes per graph
+                n_nodes:       torch.Tensor,   # (B,) real nodes per graph
+                return_node_emb: bool = False   # return conv3 node embeddings for cross-attn
                 ) -> torch.Tensor:             # (B, out_dim)
 
         B, max_N, _ = node_features.shape
@@ -172,29 +200,22 @@ class EMTGraphNet(nn.Module):
         x = F.relu(x)
         x = F.dropout(x, p=self.dropout, training=self.training)
 
-        # Layer 3
-        x = self.conv3(x, edge_index, n_nodes, B)
-        x = self.norm3(x)
+        # Layer 3 — save node embeddings for cross-attention
+        node_emb = self.conv3(x, edge_index, n_nodes, B)
+        x = self.norm3(node_emb)
         x = F.relu(x)
 
-        # Global pooling: mask padded nodes, then mean + max
+        # Build mask for real vs padded nodes
         mask = torch.zeros(B, max_N, 1, device=x.device)
         for b in range(B):
             mask[b, :n_nodes[b]] = 1.0
 
-        x_masked  = x * mask
-        sum_feats = x_masked.sum(dim=1)                          # (B, dim)
-        n_real    = n_nodes.float().unsqueeze(1).clamp(min=1)    # (B, 1)
-        mean_pool = sum_feats / n_real                           # (B, dim)
+        # Attention pooling
+        graph_repr = self.attn_pool(x, mask)  # (B, hidden*2)
+        out = self.readout(graph_repr)        # (B, out_dim)
 
-        # Max pooling (ignore padding)
-        x_neg_inf = x.masked_fill(mask == 0, float("-inf"))
-        max_pool  = x_neg_inf.max(dim=1).values                  # (B, dim)
-        max_pool  = max_pool.nan_to_num(nan=0.0, posinf=0.0)
-
-        # Concatenate and project
-        graph_repr = torch.cat([mean_pool, max_pool], dim=-1)    # (B, 4*hidden)
-        out        = self.readout(graph_repr)                     # (B, out_dim)
+        if return_node_emb:
+            return out, node_emb
         return out
 
 

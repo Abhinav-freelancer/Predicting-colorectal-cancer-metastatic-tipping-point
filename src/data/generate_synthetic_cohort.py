@@ -8,7 +8,7 @@ tcga_downloader.py when you don't yet have real data.
 Produces:
   - data/manifests/cohort_manifest.csv
   - data/manifests/cohort_labeled.csv
-  - data/processed/rna_seq/raw_counts.csv.gz    (patients × genes)
+  - data/processed/rna_seq/raw_counts.csv.gz    (patients �- genes)
   - data/processed/rna_seq/log1p_counts.csv.gz
 
 Biological realism:
@@ -31,9 +31,10 @@ from pathlib import Path
 
 
 # ── EMT gene sets (used to inject biologically realistic signal) ──────────────
-EMT_EPITHELIAL = ["CDH1", "EPCAM", "KRT18", "KRT8", "MUC1", "DSP", "OCLN"]
+EMT_EPITHELIAL = ["CDH1", "EPCAM", "KRT18", "KRT8", "MUC1", "DSP", "OCLN",
+                  "MIR200B"]  # miR-200 (epithelial miRNA)
 EMT_MESENCHYMAL = ["VIM", "FN1", "CDH2", "SNAI1", "SNAI2",
-                   "ZEB1", "ZEB2", "TWIST1", "ACTA2", "MMP2"]
+                   "ZEB1", "ZEB2", "TWIST1", "ACTA2", "MMP2", "HIF1A"]
 TGFB_PATHWAY   = ["TGFB1", "TGFB2", "SMAD2", "SMAD3", "SMAD4"]
 KNOWN_GENES     = EMT_EPITHELIAL + EMT_MESENCHYMAL + TGFB_PATHWAY
 
@@ -62,7 +63,7 @@ def generate_count_matrix(
     rng:         np.random.Generator,
 ) -> pd.DataFrame:
     """
-    Generate a realistic gene × patient raw count matrix.
+    Generate a realistic gene �- patient raw count matrix.
 
     Signal injected:
       - Epithelial genes (CDH1, EPCAM...) are DOWN-regulated in metastatic (M1)
@@ -221,18 +222,18 @@ def main():
     print(f"  Saved → {manifest_dir}/cohort_labeled.csv")
 
     # ── Expression matrix ─────────────────────────────────────────────────
-    print(f"\n  Generating {args.n_genes:,} × {args.n_patients} expression matrix...")
+    print(f"\n  Generating {args.n_genes:,} �- {args.n_patients} expression matrix...")
     matrix = generate_count_matrix(args.n_genes, args.n_patients, labels, rng)
 
-    print(f"  Matrix shape : {matrix.shape[0]:,} genes × {matrix.shape[1]} patients")
+    print(f"  Matrix shape : {matrix.shape[0]:,} genes �- {matrix.shape[1]} patients")
     print(f"  Zero fraction: {(matrix == 0).mean().mean():.2%}")
     print(f"  Max count    : {int(matrix.max().max()):,}")
 
     raw_path  = out_dir / "raw_counts.csv.gz"
     log_path  = out_dir / "log1p_counts.csv.gz"
-    matrix.to_csv(str(raw_path).replace(".parquet",".csv.gz"), compression="gzip")
+    matrix.to_csv(raw_path, compression="gzip")
     log_matrix = np.log1p(matrix.astype(float))
-    pd.DataFrame(log_matrix, index=matrix.index, columns=matrix.columns).to_csv(str(log_path).replace(".parquet",".csv.gz"), compression="gzip")
+    pd.DataFrame(log_matrix, index=matrix.index, columns=matrix.columns).to_csv(log_path, compression="gzip")
 
     print(f"\n  Saved raw counts → {raw_path}")
     print(f"  Saved log1p      → {log_path}")
@@ -242,12 +243,12 @@ def main():
     print(f"  {'Gene':<12} {'Non-meta (M0)':>16} {'Metastatic (M1)':>16}  Direction")
     print(f"  {'─'*12} {'─'*16} {'─'*16}  {'─'*10}")
 
-    m0_idx  = manifest[manifest["metastasis_label"] == 0]["submitter_id"].tolist()
-    m1_idx  = manifest[manifest["metastasis_label"] == 1]["submitter_id"].tolist()
+    m0_ids = set(manifest[manifest["metastasis_label"] == 0]["submitter_id"].tolist())
+    m1_ids = set(manifest[manifest["metastasis_label"] == 1]["submitter_id"].tolist())
 
     # matrix columns are TCGA barcodes (submitter_ids)
-    m0_cols = [c for c in matrix.columns if c in m0_idx]
-    m1_cols = [c for c in matrix.columns if c in m1_idx]
+    m0_cols = [c for c in matrix.columns if c in m0_ids]
+    m1_cols = [c for c in matrix.columns if c in m1_ids]
 
     spot_genes = ["CDH1", "VIM", "ZEB1", "SNAI1", "TGFB1", "EPCAM"]
     for gene in spot_genes:

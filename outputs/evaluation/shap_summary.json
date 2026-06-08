@@ -2,69 +2,69 @@
   "top_10_features": [
     {
       "feature": "stage_order",
-      "mean_abs_shap": 8.717997162415942,
+      "mean_abs_shap": 1.9001095940306245,
       "group": "Clinical",
       "description": "AJCC pathologic stage (0=I, 1=II, 2=III, 3=IV)"
     },
     {
-      "feature": "invasion_potential",
-      "mean_abs_shap": 0.08979501564262146,
-      "group": "EMT scores",
-      "description": "Combined invasion capacity (EMT + hypoxia + TGF-\u03b2)"
-    },
-    {
-      "feature": "epi_dist",
-      "mean_abs_shap": 0.04325004455582648,
-      "group": "ODE physics",
-      "description": "Epi Dist"
-    },
-    {
-      "feature": "fitted_T_ext",
-      "mean_abs_shap": 0.040701537716475215,
-      "group": "ODE physics",
-      "description": "Fitted T Ext"
-    },
-    {
-      "feature": "ews_em_ratio",
-      "mean_abs_shap": 0.04018046686237495,
+      "feature": "ews_var_mesenchymal",
+      "mean_abs_shap": 0.47618415427736677,
       "group": "Early warning signals",
-      "description": "M/E gene ratio \u2014 tipping point early warning signal"
+      "description": "Mesenchymal gene variance \u2014 rising = approaching tipping point"
     },
     {
-      "feature": "attractor_proximity",
-      "mean_abs_shap": 0.00015306900181984861,
-      "group": "ODE physics",
-      "description": "Distance to mesenchymal attractor in state space"
-    },
-    {
-      "feature": "emt_index",
-      "mean_abs_shap": 0.00012246789598146894,
+      "feature": "tgfb_pathway",
+      "mean_abs_shap": 0.31185244520227934,
       "group": "EMT scores",
-      "description": "EMT progression score (\u22121=epithelial, +1=mesenchymal)"
-    },
-    {
-      "feature": "mes_dist",
-      "mean_abs_shap": 0.0001112310089018589,
-      "group": "ODE physics",
-      "description": "Mes Dist"
-    },
-    {
-      "feature": "epithelial",
-      "mean_abs_shap": 5.0451003633213144e-05,
-      "group": "EMT scores",
-      "description": "Epithelial gene programme strength (CDH1, EPCAM)"
+      "description": "TGF-\u03b2 signalling activity \u2014 EMT inducer"
     },
     {
       "feature": "age_at_index",
-      "mean_abs_shap": 4.870666838793283e-06,
+      "mean_abs_shap": 0.28691187392792605,
       "group": "Clinical",
       "description": "Age At Index"
+    },
+    {
+      "feature": "days_to_last_fu_rna",
+      "mean_abs_shap": 0.21017041188988425,
+      "group": "Other",
+      "description": "Days To Last Fu Rna"
+    },
+    {
+      "feature": "cytotoxic_t",
+      "mean_abs_shap": 0.19352789893871628,
+      "group": "EMT scores",
+      "description": "Anti-tumour immune surveillance (CD8+, Granzyme B)"
+    },
+    {
+      "feature": "immune_suppression",
+      "mean_abs_shap": 0.176892681143605,
+      "group": "EMT scores",
+      "description": "Immunosuppressive TME (FOXP3, PD-L1, M2 macrophage)"
+    },
+    {
+      "feature": "ews_var_epithelial",
+      "mean_abs_shap": 0.16750949979503535,
+      "group": "Early warning signals",
+      "description": "Ews Var Epithelial"
+    },
+    {
+      "feature": "immune_balance",
+      "mean_abs_shap": 0.1514016493919128,
+      "group": "EMT scores",
+      "description": "Immune Balance"
+    },
+    {
+      "feature": "wnt_pathway",
+      "mean_abs_shap": 0.12099875745567334,
+      "group": "EMT scores",
+      "description": "Wnt Pathway"
     }
   ],
   "group_importance": {
-    "EMT scores": 0.08997092896266987,
-    "Early warning signals": 0.04019965886178553,
-    "ODE physics": 0.08421588228302342,
-    "Clinical": 8.718005667559542
+    "EMT scores": 1.188586647364221,
+    "Early warning signals": 0.9261554052529247,
+    "ODE physics": 0.12897641506180652,
+    "Clinical": 2.359379462304141
   }
 }

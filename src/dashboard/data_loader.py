@@ -26,7 +26,7 @@ PATHS = {
     "cv":        ROOT / "outputs/evaluation/cv_full_results.json",
 }
 
-LABEL_COLS = ["metastasis_label", "ajcc_stage", "ajcc_m"]
+LABEL_COLS = ["metastasis_label"]
 
 EMT_SIGNATURES = {
     "Epithelial":        "epithelial",
@@ -77,7 +77,7 @@ class DataStore:
         feat_cols = [c for c in feat.columns if c not in LABEL_COLS]
         self.features  = feat[feat_cols]
         self.labels    = feat["metastasis_label"].astype(int)
-        self.ajcc      = feat["ajcc_stage"]
+        self.ajcc      = feat.get("ajcc_stage", pd.Series("Unknown", index=feat.index))
         self.patient_ids = feat.index.tolist()
 
         # ── Manifest (clinical info) ───────────────────────────────────────

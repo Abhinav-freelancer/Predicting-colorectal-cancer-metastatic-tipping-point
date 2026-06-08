@@ -7,52 +7,52 @@
     {
       "feature": "stage_order",
       "value": 1.2614894240103165,
-      "shap": 14.933623559204198
+      "shap": 15.00575250058659
     },
     {
       "feature": "invasion_potential",
       "value": 1.9158452777935289,
-      "shap": 0.15633716128022207
-    },
-    {
-      "feature": "epi_dist",
-      "value": 0.26769,
-      "shap": 0.07408805292271269
+      "shap": 0.22514394654141526
     },
     {
       "feature": "ews_em_ratio",
       "value": 3.335976488212842,
-      "shap": 0.07177700275074175
-    },
-    {
-      "feature": "fitted_T_ext",
-      "value": 1.5608,
-      "shap": 0.0693095427624709
-    },
-    {
-      "feature": "epithelial",
-      "value": -3.0473988212173166,
-      "shap": -0.0003690801601902993
-    },
-    {
-      "feature": "attractor_proximity",
-      "value": 0.73231,
-      "shap": -5.18066832589061e-05
-    },
-    {
-      "feature": "mes_dist",
-      "value": 0.73231,
-      "shap": -3.592580674330185e-05
+      "shap": 0.07385495883426295
     },
     {
       "feature": "emt_index",
       "value": 2.4023908516565595,
-      "shap": -1.9341017730088316e-05
+      "shap": -5.456585227732382e-05
+    },
+    {
+      "feature": "mesenchymal",
+      "value": 1.5643934116020666,
+      "shap": -3.8742323618832716e-05
+    },
+    {
+      "feature": "ajcc_t_encoded",
+      "value": 0.4691895267741942,
+      "shap": -2.081854761342393e-05
+    },
+    {
+      "feature": "ews_var_mesenchymal",
+      "value": 1.6225694130317787,
+      "shap": 2.0292035796473304e-05
     },
     {
       "feature": "ews_skew_emt",
       "value": 0.6974860627216137,
-      "shap": -1.3578739111487926e-05
+      "shap": -1.9786809649620504e-05
+    },
+    {
+      "feature": "ews_kurt_emt",
+      "value": -0.545995702276232,
+      "shap": 1.3118872224235877e-05
+    },
+    {
+      "feature": "ews_var_epithelial",
+      "value": -0.7731072901019633,
+      "shap": 1.0682825840227506e-05
     }
   ]
 }

@@ -1,0 +1,58 @@
+{
+  "patient_id": "b54865b6-824e-4163-b759-21a6eacc98ce",
+  "label": 0,
+  "mps": 0.7802,
+  "alerted": true,
+  "top_features": [
+    {
+      "feature": "stage_order",
+      "value": -0.109615253847122,
+      "shap": -1.1036994847015522
+    },
+    {
+      "feature": "age_at_index",
+      "value": -1.9050729496049543,
+      "shap": 0.3889580650177953
+    },
+    {
+      "feature": "ews_var_mesenchymal",
+      "value": 2.0612545038162327,
+      "shap": -0.3539934708169717
+    },
+    {
+      "feature": "tgfb_pathway",
+      "value": 1.6637263426890174,
+      "shap": -0.28920592198384626
+    },
+    {
+      "feature": "days_to_last_fu_rna",
+      "value": -0.2674167838397318,
+      "shap": 0.16142809495838759
+    },
+    {
+      "feature": "immune_suppression",
+      "value": 1.2795742211745569,
+      "shap": -0.15944558312234683
+    },
+    {
+      "feature": "immune_balance",
+      "value": -0.0763758877442501,
+      "shap": -0.14668110466614942
+    },
+    {
+      "feature": "cytotoxic_t",
+      "value": 0.7837305211143419,
+      "shap": -0.1357347212788275
+    },
+    {
+      "feature": "ews_var_epithelial",
+      "value": -1.710717517725573,
+      "shap": -0.09152265583924428
+    },
+    {
+      "feature": "mesenchymal",
+      "value": 1.7950647399219422,
+      "shap": 0.05049945900350393
+    }
+  ]
+}

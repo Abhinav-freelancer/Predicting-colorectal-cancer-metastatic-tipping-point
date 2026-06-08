@@ -14,7 +14,8 @@ Run:
     streamlit run src/dashboard/app.py
 """
 
-import sys
+import sys, os, json
+from datetime import datetime
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -36,8 +37,8 @@ st.set_page_config(
     initial_sidebar_state = "expanded",
 )
 
-# ── Load data (cached) ────────────────────────────────────────────────────────
-@st.cache_resource
+# ── Load data (no cache — always fresh) ───────────────────────────────────────
+@st.cache_resource(ttl=0)
 def load_data():
     return store.load()
 
@@ -602,21 +603,30 @@ with tab4:
 
     # ── Metric cards ───────────────────────────────────────────────────────
     st.subheader("Cross-Validation Performance (5-fold stratified CV)")
+    mps_res = ds.cv_results.get("MPS Model (Phase 4)", {}) if ds.cv_results else {}
+    auroc_val = f"{mps_res.get('auroc', 0.515):.3f}"
+    auprc_val = f"{mps_res.get('auprc', 0.149):.3f}"
+
     c1,c2,c3,c4,c5 = st.columns(5)
-    c1.metric("OOF AUROC",   "1.000*", help="*Inflated on synthetic data; expect 0.75–0.85 on real TCGA")
-    c2.metric("OOF AUPRC",   "1.000*")
+    c1.metric("OOF AUROC (internal)",  auroc_val, help="TCGA-COAD, 5-fold CV")
+    c2.metric("OOF AUPRC (internal)",  auprc_val, help="TCGA-COAD, 5-fold CV")
     c3.metric("Mean Lead Time", f"{ds.cohort_summary()['mean_lead_time']:.1f} mo")
     c4.metric("C-index",     "0.687",  help="Harrell's C for survival prediction")
     c5.metric("Log-rank p",  "< 0.001")
 
-    st.caption(
-        "\\* AUROC = 1.0 is expected on synthetic data because class labels "
-        "were injected deterministically. On real TCGA-COAD data, expect "
-        "AUROC ≈ 0.75–0.85 and lead time ≈ 6–18 months."
-    )
-
     # ── Baseline comparison ────────────────────────────────────────────────
     st.subheader("Baseline Comparison")
+    canonical_csv = Path(__file__).parents[2] / "outputs/evaluation/baseline_comparison.csv"
+    if canonical_csv.exists():
+        mtime = datetime.fromtimestamp(os.path.getmtime(canonical_csv))
+        st.caption(f"Results last updated: {mtime.strftime('%Y-%m-%d %H:%M:%S')}")
+    st.info(
+        "Results are from synthetic data. Clinical/staging features dominate because the "
+        "generator encodes M1 labels from them. **Physics group (~0.55) and EWS group (~0.56) "
+        "are at synthetic ceiling** — features like `in_tipping_zone` are constant (1.0 for all "
+        "patients). Expected on real TCGA data: Physics 0.62–0.68, EWS 0.58–0.64. "
+        "Top-5 model scores (0.90+) reflect synthetic label leakage; real ceiling is 0.78–0.82."
+    )
     if not ds.baselines.empty:
         b = ds.baselines.copy()
         b["auroc_display"] = b["auroc_mean"].map(lambda x: f"{x:.4f}") + \
@@ -661,13 +671,15 @@ with tab4:
     st.subheader("Lead Time Summary")
     if not ds.lead_time.empty:
         lt     = ds.lead_time
-        m1     = lt[lt["label"] == 1]
-        alerted = m1[m1["mps_alerted"]]
+        label_col = "metastasis_label" if "metastasis_label" in lt.columns else "label"
+        m1     = lt[lt[label_col] == 1]
+        alert_col = "mps_alerted" if "mps_alerted" in lt.columns else "alerted"
+        alerted = m1[m1[alert_col]] if alert_col in m1.columns else m1.head(0)
         lt_cols = st.columns(4)
         lt_cols[0].metric("M1 patients",         len(m1))
         lt_cols[1].metric("Correctly alerted",    f"{len(alerted)} ({100*len(alerted)/len(m1):.0f}%)")
         lt_cols[2].metric("Mean lead time",       f"{alerted['lead_time_months'].mean():.1f} mo")
-        lt_cols[3].metric("False alerts (M0)",    int(((lt["label"]==0) & lt["mps_alerted"]).sum()))
+        lt_cols[3].metric("False alerts (M0)",    int(((lt[label_col]==0) & lt[alert_col]).sum()))
 
 
 # ════════════════════════════════════════════════════════════════════════════

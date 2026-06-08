@@ -125,10 +125,10 @@ class TemporalTransformer(nn.Module):
 
     def __init__(self,
                  n_features:  int,
-                 d_model:     int   = 128,
-                 n_heads:     int   = 4,
+                 d_model:     int   = 192,
+                 n_heads:     int   = 6,
                  n_layers:    int   = 3,
-                 ffn_dim:     int   = 256,
+                 ffn_dim:     int   = 384,
                  out_dim:     int   = 128,
                  max_seq_len: int   = 16,
                  dropout:     float = 0.1):

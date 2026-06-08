@@ -26,11 +26,17 @@ from pathlib import Path
 
 def load_counts(data_dir: Path) -> pd.DataFrame:
     """Load raw count matrix (genes × patients)."""
-    path = data_dir / "raw_counts.csv.gz"
-    if not path.exists():
-        raise FileNotFoundError(f"Raw counts not found at {path}. Run Phase 1 first.")
-    print(f"  Loading raw counts from {path}...")
-    df = pd.read_csv(path, index_col=0, compression="gzip")
+    # Prefer parquet (faster, smaller); fall back to csv.gz
+    parquet_path = data_dir / "raw_counts.parquet"
+    csv_path = data_dir / "raw_counts.csv.gz"
+    if parquet_path.exists():
+        print(f"  Loading raw counts from {parquet_path}...")
+        df = pd.read_parquet(parquet_path)
+    elif csv_path.exists():
+        print(f"  Loading raw counts from {csv_path}...")
+        df = pd.read_csv(csv_path, index_col=0, compression="gzip")
+    else:
+        raise FileNotFoundError(f"No raw counts found at {parquet_path} or {csv_path}. Run Phase 1 first.")
     print(f"  Shape: {df.shape[0]:,} genes × {df.shape[1]} patients")
     return df
 

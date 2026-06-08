@@ -14,8 +14,11 @@ lifelines>=0.27          # survival analysis
 
 # ── Deep learning ─────────────────────────────────────────────────────
 torch>=2.1
-torch-geometric>=2.4     # GNN
+# torch-geometric>=2.4  # GNN is pure PyTorch — no PyG needed
 transformers>=4.35       # temporal transformer
+
+# ── Imbalanced learning ───────────────────────────────────────────────
+imbalanced-learn>=0.12
 
 # ── Explainability ────────────────────────────────────────────────────
 shap>=0.43

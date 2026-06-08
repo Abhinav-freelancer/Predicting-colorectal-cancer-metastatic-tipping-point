@@ -3,11 +3,11 @@
     5
   ],
   "timestamps": {
-    "5": "2026-05-14T11:51:35.082904"
+    "5": "2026-05-30T10:04:35.789772"
   },
   "metrics": {
     "5": {
-      "best_baseline_auroc": 1.0
+      "best_baseline_auroc": 0.7167
     }
   }
 }

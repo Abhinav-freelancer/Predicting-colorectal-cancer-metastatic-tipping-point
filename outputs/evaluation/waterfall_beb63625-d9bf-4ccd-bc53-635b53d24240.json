@@ -1,0 +1,58 @@
+{
+  "patient_id": "beb63625-d9bf-4ccd-bc53-635b53d24240",
+  "label": 1,
+  "mps": 0.6118,
+  "alerted": false,
+  "top_features": [
+    {
+      "feature": "stage_order",
+      "value": 2.5282227903449104,
+      "shap": 10.87933603340574
+    },
+    {
+      "feature": "tgfb_pathway",
+      "value": 0.8995840142272177,
+      "shap": -0.15186557726930527
+    },
+    {
+      "feature": "age_at_index",
+      "value": 0.2799239629443699,
+      "shap": -0.12721274506544736
+    },
+    {
+      "feature": "ews_skew_emt",
+      "value": 0.8167289892155991,
+      "shap": 0.11172868721263361
+    },
+    {
+      "feature": "ajcc_n_encoded",
+      "value": 2.249895233096972,
+      "shap": 0.09190139335243637
+    },
+    {
+      "feature": "cytotoxic_t",
+      "value": -0.1180621986882195,
+      "shap": -0.07088648204667376
+    },
+    {
+      "feature": "mesenchymal",
+      "value": 0.992755949011484,
+      "shap": 0.06138643849186932
+    },
+    {
+      "feature": "ews_var_epithelial",
+      "value": -0.0087712893365246,
+      "shap": -0.05512773241895959
+    },
+    {
+      "feature": "vital_status_encoded",
+      "value": -0.4679254730894794,
+      "shap": -0.053557428479866644
+    },
+    {
+      "feature": "ews_var_mesenchymal",
+      "value": -0.3954105474725494,
+      "shap": -0.04586274988182736
+    }
+  ]
+}

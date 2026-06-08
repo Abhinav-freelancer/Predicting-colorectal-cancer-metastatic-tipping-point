@@ -28,10 +28,10 @@ STAR_SPECIAL_ROWS = {
 }
 
 # Minimum mean count across patients to keep a gene
-MIN_MEAN_COUNT = 1.0
+MIN_MEAN_COUNT = 0.1
 
 # Minimum fraction of patients with non-zero expression
-MIN_NONZERO_FRAC = 0.1
+MIN_NONZERO_FRAC = 0.05
 
 
 def parse_star_counts(filepath: Path) -> pd.Series:
@@ -45,19 +45,37 @@ def parse_star_counts(filepath: Path) -> pd.Series:
     # Column names vary slightly; normalise
     df.columns = [c.strip() for c in df.columns]
 
-    # STAR output: first col = gene_id/feature, second = unstranded count
+    # STAR output: first col = gene_id, "unstranded" = count column
     gene_col  = df.columns[0]
-    count_col = df.columns[1]   # unstranded
+
+    # Find the "unstranded" column (may be at index 3, not 1, when
+    # gene_name/gene_type are present in the augmented output)
+    count_col = "unstranded" if "unstranded" in df.columns else df.columns[1]
+
+    # Also capture gene_name column if present (for signature matching)
+    has_gene_name = "gene_name" in df.columns
 
     df = df[[gene_col, count_col]].copy()
     df.columns = ["gene_id", "count"]
+
+    if has_gene_name:
+        # Re-read gene_name from original cols
+        name_df = pd.read_csv(filepath, sep="\t", comment="#", header=0,
+                              usecols=[0, 1], names=["gene_id", "gene_name"])
+        name_df.columns = [c.strip() if isinstance(c, str) else c for c in name_df.columns]
+        name_map = name_df.set_index("gene_id")["gene_name"]
+    else:
+        name_map = pd.Series(dtype=object)
 
     # Drop special summary rows
     df = df[~df["gene_id"].isin(STAR_SPECIAL_ROWS)]
     df = df[df["gene_id"].notna()]
     df = df.set_index("gene_id")["count"]
 
-    return df
+    if has_gene_name:
+        name_map = name_map.reindex(df.index)
+
+    return df, name_map
 
 
 def extract_case_id(filepath: Path, manifest: pd.DataFrame) -> str:
@@ -91,14 +109,18 @@ def build_matrix(data_dir: Path, manifest: pd.DataFrame) -> pd.DataFrame:
 
     series_dict = {}
     failed      = []
+    gene_names  = None  # gene_id → gene_name mapping (built from first file)
 
     for i, fp in enumerate(tsv_files):
         cid = extract_case_id(fp, manifest)
         try:
-            s = parse_star_counts(fp)
+            s, nm = parse_star_counts(fp)
             series_dict[cid] = s
             if (i + 1) % 50 == 0:
                 print(f"  [{i+1}/{len(tsv_files)}] parsed")
+            # Build gene name map from the first file
+            if gene_names is None and len(nm):
+                gene_names = nm
         except Exception as e:
             print(f"  ⚠ Failed {fp.name}: {e}")
             failed.append(fp.name)
@@ -109,11 +131,11 @@ def build_matrix(data_dir: Path, manifest: pd.DataFrame) -> pd.DataFrame:
     print(f"\n  Parsed {len(series_dict)} files  |  failed {len(failed)}")
 
     matrix = pd.DataFrame(series_dict)   # genes × patients
-    matrix = matrix.fillna(0).astype(int)
+    matrix = matrix.apply(pd.to_numeric, errors='coerce').fillna(0.0)
 
     print(f"  Raw matrix shape: {matrix.shape[0]} genes × {matrix.shape[1]} patients")
 
-    return matrix
+    return matrix, gene_names
 
 
 def filter_genes(matrix: pd.DataFrame) -> pd.DataFrame:
@@ -169,22 +191,25 @@ def main():
     manifest      = pd.read_csv(manifest_path) if manifest_path.exists() else pd.DataFrame()
 
     # Build raw count matrix
-    matrix = build_matrix(data_dir, manifest)
+    matrix, gene_names = build_matrix(data_dir, manifest)
 
     # Filter genes
     if not args.no_filter:
+        old_idx = set(matrix.index)
         matrix = filter_genes(matrix)
+        if gene_names is not None:
+            gene_names = gene_names[gene_names.index.isin(matrix.index)]
 
-    # Save raw counts (integer)
+    # Save raw counts (float)
     raw_path = out_dir / "raw_counts.parquet"
     matrix.to_parquet(raw_path)
-    print(f"\n  Saved raw counts → {raw_path}")
+    print(f"\n  Saved raw counts -> {raw_path}")
 
     # log1p version for quick exploration
     lognorm = log_normalise(matrix)
     log_path = out_dir / "log1p_counts.parquet"
     lognorm.to_parquet(log_path)
-    print(f"  Saved log1p      → {log_path}")
+    print(f"  Saved log1p      -> {log_path}")
 
     # Summary statistics
     summary = pd.DataFrame({
@@ -194,6 +219,11 @@ def main():
         "nonzero_frac":(matrix > 0).mean(axis=1).values,
     })
     summary.to_csv(out_dir / "gene_summary.csv", index=False)
+
+    # Save gene name mapping (for EMT signature scoring etc.)
+    if gene_names is not None:
+        gene_names.to_csv(out_dir / "gene_name_map.csv", header=True)
+        print(f"  Saved gene name map -> {out_dir / 'gene_name_map.csv'}")
 
     print(f"\n  Final matrix: {matrix.shape[0]:,} genes × {matrix.shape[1]} patients")
     print(f"  Memory usage: {matrix.memory_usage(deep=True).sum() / 1e6:.1f} MB")

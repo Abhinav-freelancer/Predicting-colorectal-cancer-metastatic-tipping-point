@@ -1,7 +1,7 @@
 """
 Phase 3 - Step 3: Bifurcation diagram computation
 ===================================================
-Sweeps the bifurcation parameter (TGF-β external input, T_ext) from 0 → 3
+Sweeps the bifurcation parameter (TGF-β external input, T_ext) from 0 → t_max
 and traces how the stable steady states (attractors) change.
 
 The bifurcation diagram reveals:
@@ -51,15 +51,17 @@ def compute_bifurcation_diagram(params_template: EMTParams,
       - Run ODE from mesenchymal IC → find mesenchymal branch (if stable)
 
     Returns DataFrame with columns:
-        T_ext, E_epi, M_epi, E_mes, M_mes,
+        T_ext, E_epi, M_epi, E_mes, M_mes, R_epi, R_mes, H_epi, H_mes,
         epi_stable, mes_stable, region
     """
     t_values = np.linspace(t_min, t_max, n_steps)
     rows     = []
 
     # Initial conditions for each branch
-    IC_EPI = [1.5, 0.1, 0.05, 0.05, 0.1]    # near epithelial attractor
-    IC_MES = [0.05, 2.0, 1.5, 1.5, 0.5]     # near mesenchymal attractor
+    # Epithelial IC — high E-cadherin, high miR-200, low hypoxia/mesenchymal
+    IC_EPI = [6.656, 0.506, 0.104, 0.079, 0.167, 2.0, 0.25]
+    # Mesenchymal IC — low E-cadherin, low miR-200, high mesenchymal, hypoxic
+    IC_MES = [0.005, 7.005, 2.595, 4.134, 0.167, 0.5, 0.8]
 
     print(f"  Sweeping T_ext: {t_min:.2f} → {t_max:.2f} ({n_steps} steps)...")
 
@@ -73,9 +75,11 @@ def compute_bifurcation_diagram(params_template: EMTParams,
             ss_epi    = res_epi["steady_state"]
             epi_E     = ss_epi["E"]
             epi_M     = ss_epi["M"]
+            epi_R     = ss_epi["R"]
+            epi_H     = ss_epi["H"]
             epi_stable = epi_E > epi_M   # still in epithelial attractor
         except Exception:
-            epi_E, epi_M, epi_stable = np.nan, np.nan, False
+            epi_E, epi_M, epi_R, epi_H, epi_stable = np.nan, np.nan, np.nan, np.nan, False
 
         # ── Mesenchymal branch ────────────────────────────────────────
         try:
@@ -83,9 +87,11 @@ def compute_bifurcation_diagram(params_template: EMTParams,
             ss_mes    = res_mes["steady_state"]
             mes_E     = ss_mes["E"]
             mes_M     = ss_mes["M"]
+            mes_R     = ss_mes["R"]
+            mes_H     = ss_mes["H"]
             mes_stable = mes_M > mes_E   # still in mesenchymal attractor
         except Exception:
-            mes_E, mes_M, mes_stable = np.nan, np.nan, False
+            mes_E, mes_M, mes_R, mes_H, mes_stable = np.nan, np.nan, np.nan, np.nan, False
 
         # ── Classify region ───────────────────────────────────────────
         if epi_stable and mes_stable:
@@ -108,8 +114,12 @@ def compute_bifurcation_diagram(params_template: EMTParams,
             "T_ext":       round(T_ext, 4),
             "E_epi":       round(float(epi_E), 5) if not np.isnan(epi_E) else np.nan,
             "M_epi":       round(float(epi_M), 5) if not np.isnan(epi_M) else np.nan,
+            "R_epi":       round(float(epi_R), 5) if not np.isnan(epi_R) else np.nan,
+            "H_epi":       round(float(epi_H), 5) if not np.isnan(epi_H) else np.nan,
             "E_mes":       round(float(mes_E), 5) if not np.isnan(mes_E) else np.nan,
             "M_mes":       round(float(mes_M), 5) if not np.isnan(mes_M) else np.nan,
+            "R_mes":       round(float(mes_R), 5) if not np.isnan(mes_R) else np.nan,
+            "H_mes":       round(float(mes_H), 5) if not np.isnan(mes_H) else np.nan,
             "epi_stable":  epi_stable,
             "mes_stable":  mes_stable,
             "region":      region,
@@ -223,7 +233,7 @@ def print_bifurcation_ascii(bif_df: pd.DataFrame,
     Shows E-cadherin steady state vs T_ext for both branches.
     """
     print(f"\n  Bifurcation diagram  (E-cadherin vs TGF-β input)")
-    print(f"  {'─' * width}")
+    print(f"  {'-' * width}")
 
     T_lower = bif_points.get("T_lower", np.nan)
     T_upper = bif_points.get("T_upper", np.nan)
@@ -238,30 +248,30 @@ def print_bifurcation_ascii(bif_df: pd.DataFrame,
     n_rows   = 12
     E_levels = np.linspace(E_max * 1.1, 0, n_rows)
 
-    print(f"  E  ↑")
+    print(f"  E  ^")
     for e_level in E_levels:
-        line = f" {e_level:4.1f} │"
+        line = f" {e_level:4.1f} |"
         for _, row in rows_to_show.iterrows():
             epi_near = (not np.isnan(row["E_epi"]) and
                         abs(row["E_epi"] - e_level) < E_max / (n_rows * 1.5))
             mes_near = (not np.isnan(row["E_mes"]) and
                         abs(row["E_mes"] - e_level) < E_max / (n_rows * 1.5))
             if epi_near and mes_near:
-                line += "◆"
+                line += "*"
             elif epi_near:
-                line += "●"
+                line += "o"
             elif mes_near:
-                line += "○"
+                line += "x"
             elif row["region"] == "bistable":
-                line += "·"
+                line += "."
             else:
                 line += " "
         print(f"  {line}")
 
-    t_axis = f"  {'':5}└{'─' * len(rows_to_show)}"
-    print(t_axis + f"  TGF-β →")
+    t_axis = f"  {'':5}+{'-' * len(rows_to_show)}"
+    print(t_axis + f"  TGF-b ->")
     print(f"  {'':6}{T_values[0]:.1f}{' ' * (len(rows_to_show)-8)}{T_values[-1]:.1f}")
-    print(f"\n  ● Epithelial branch (stable)  ○ Mesenchymal branch  ◆ Bistable region")
+    print(f"\n  o Epithelial branch (stable)  x Mesenchymal branch  * Bistable region")
 
     if not np.isnan(T_lower):
         print(f"\n  Fold bifurcation points:")
@@ -280,7 +290,7 @@ def main():
                         help="Output from param_fitter.py (optional; uses defaults if absent)")
     parser.add_argument("--out-dir",      default="data/processed/temporal")
     parser.add_argument("--t-min",        type=float, default=0.0)
-    parser.add_argument("--t-max",        type=float, default=3.5)
+    parser.add_argument("--t-max",        type=float, default=1.5)
     parser.add_argument("--n-steps",      type=int,   default=60)
     args = parser.parse_args()
 

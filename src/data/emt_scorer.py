@@ -43,6 +43,11 @@ SIGNATURES = {
         "TJP1",   # ZO-1 tight junction
         "CLDN3",  # claudin 3
         "CLDN4",  # claudin 4
+        "CLDN7",  # claudin 7 — CRC epithelial marker
+        "GRHL2",  # grainyhead-like 2 — epithelial transcription factor
+        "ELF3",   # E74-like factor 3 — epithelial-specific
+        "ST14",   # matriptase — epithelial serine protease
+        "SPINT1", # hepatocyte growth factor inhibitor — epithelial
     ],
 
     # ── Mesenchymal programme ─────────────────────────────────────────────
@@ -59,6 +64,12 @@ SIGNATURES = {
         "MMP2",   # matrix metalloproteinase 2 — ECM degradation
         "MMP9",   # matrix metalloproteinase 9
         "S100A4", # metastasis-associated protein
+        "PDGFRB", # PDGF receptor beta — mesenchymal / CAF marker
+        "COL1A1", # collagen type I — ECM remodelling
+        "COL5A2", # collagen type V — ECM remodelling
+        "LOXL2",  # lysyl oxidase-like 2 — ECM crosslinking
+        "SERPINE1",# PAI-1 — invasion / metastasis
+        "ITGB6",  # integrin beta-6 — EMT-associated integrin
     ],
 
     # ── TGF-β / SMAD pathway ─────────────────────────────────────────────
@@ -71,6 +82,10 @@ SIGNATURES = {
         "SMAD4",  # SMAD4 — common mediator
         "TGFBR1", # TGF-β receptor type 1
         "TGFBR2", # TGF-β receptor type 2
+        "TGFBR3", # betaglycan — TGF-β co-receptor
+        "LTBP1",  # latent TGF-β binding protein 1
+        "FURIN",  # proprotein convertase — TGF-β activation
+        "ITGAV",  # integrin alpha-V — TGF-β activation
     ],
 
     # ── Wnt / β-catenin (CRC driver) ─────────────────────────────────────
@@ -92,6 +107,7 @@ SIGNATURES = {
         "TOP2A",  # topoisomerase IIa
         "MCM2",   # minichromosome maintenance complex component 2
         "CCNE1",  # cyclin E1
+        "AURKA",  # aurora kinase A — mitotic regulator
     ],
 
     # ── Cytotoxic T cell activity (immune surveillance) ───────────────────
@@ -163,6 +179,7 @@ def ssgsea_score(expression: pd.Series, gene_set: list) -> float:
 
 def score_all_patients(vst_matrix: pd.DataFrame,
                        signatures: dict = SIGNATURES,
+                       gene_name_map: dict = None,
                        verbose: bool = True) -> pd.DataFrame:
     """
     Score every patient (column) on every signature (rows of output).
@@ -173,12 +190,22 @@ def score_all_patients(vst_matrix: pd.DataFrame,
     results    = {}
 
     for sig_name, gene_set in signatures.items():
+        # Map gene symbols → Ensembl IDs if mapping available
+        if gene_name_map:
+            mapped = [gene_name_map.get(g, g) for g in gene_set]
+        else:
+            mapped = gene_set
+        # Only keep genes present in the matrix index
+        matched = [g for g in mapped if g in vst_matrix.index]
         if verbose:
-            n_found = sum(1 for g in gene_set if g in vst_matrix.index)
-            print(f"  Scoring '{sig_name}': {n_found}/{len(gene_set)} genes found")
+            print(f"  Scoring '{sig_name}': {len(matched)}/{len(gene_set)} genes found")
+
+        if not matched:
+            results[sig_name] = pd.Series(np.nan, index=vst_matrix.columns)
+            continue
 
         scores = vst_matrix.apply(
-            lambda col: ssgsea_score(col, gene_set), axis=0
+            lambda col: ssgsea_score(col, matched), axis=0
         )
         results[sig_name] = scores
 
@@ -214,12 +241,13 @@ def compute_derived_scores(score_df: pd.DataFrame) -> pd.DataFrame:
 
 def differential_summary(scores: pd.DataFrame,
                           manifest: pd.DataFrame,
-                          out_dir: Path) -> pd.DataFrame:
+                          out_dir: Path,
+                          id_col: str = "submitter_id") -> pd.DataFrame:
     """
     Show mean score per signature broken down by metastasis label.
     Saves a summary CSV and prints a compact table.
     """
-    manifest_indexed = manifest.set_index("submitter_id")
+    manifest_indexed = manifest.set_index(id_col)
 
     # Align labels to score_df index
     labels = manifest_indexed.reindex(scores.index)["metastasis_label"]
@@ -288,14 +316,34 @@ def main():
 
     # Transpose so columns = patients for apply()
     print(f"\n  Computing ssGSEA scores for {len(SIGNATURES)} signatures...")
-    scores = score_all_patients(vst)          # patients × signatures
+
+    # Load gene_name → gene_id mapping (if available)
+    gene_map_path = out_dir / "gene_name_map.csv"
+    if gene_map_path.exists():
+        gmap = pd.read_csv(gene_map_path, index_col=0, header=0)
+        # gene_name_map has index=gene_id, values=gene_name
+        # Build reverse lookup: gene_name → list of gene_ids
+        rev = {}
+        for gid, gname in gmap.iloc[:, 0].items():
+            gname = str(gname).strip()
+            if gname and gname != "nan":
+                rev.setdefault(gname, []).append(gid)
+        # Use first matching gene_id per symbol
+        symbol_to_id = {sym: ids[0] for sym, ids in rev.items()}
+        print(f"  Loaded {len(symbol_to_id)} gene symbols → Ensembl IDs")
+    else:
+        symbol_to_id = {}
+        print(f"  No gene_name_map.csv found — matching by index directly")
+
+    scores = score_all_patients(vst, gene_name_map=symbol_to_id)  # patients × signatures
 
     # Derived composite scores
     scores = compute_derived_scores(scores)
 
     # Differential summary vs metastasis label
     manifest = pd.read_csv(manifest_dir / "cohort_labeled.csv")
-    differential_summary(scores, manifest, out_dir)
+    # Use case_id (UUID) for alignment — scores index uses UUIDs
+    differential_summary(scores, manifest, out_dir, id_col="case_id")
 
     # Save
     scores_path = out_dir / "emt_scores.csv"

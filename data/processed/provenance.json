@@ -1,0 +1,9 @@
+{
+  "data_source": "TCGA_real",
+  "n_patients": 373,
+  "n_features": 60,
+  "n_metastatic": 50,
+  "m1_rate": 0.134,
+  "patients_dropped_no_label": 65,
+  "run_timestamp": "2026-06-05T23:07:42.923092"
+}

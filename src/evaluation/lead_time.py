@@ -45,9 +45,10 @@ sys.path.insert(0, str(Path(__file__).parents[2]))
 # ── Lead time simulation ──────────────────────────────────────────────────────
 
 def simulate_mps_alert_timing(features:    pd.DataFrame,
-                               manifest:    pd.DataFrame,
-                               mps_scores:  np.ndarray,
-                               mps_threshold: float = 0.72) -> pd.DataFrame:
+                                manifest:    pd.DataFrame,
+                                mps_scores:  np.ndarray,
+                                mps_threshold: float = 0.72,
+                                labels:      pd.Series = None) -> pd.DataFrame:
     """
     Simulate when MPS would have raised an alert vs actual clinical detection.
 
@@ -72,20 +73,25 @@ def simulate_mps_alert_timing(features:    pd.DataFrame,
         "Stage IV":  48.0,
     }
 
-    # Merge manifest data
-    manifest_idx = manifest.set_index("submitter_id")
+    # Use manifest for clinical data; fall back to features matrix columns
+    manifest_idx = manifest.set_index("submitter_id") if "submitter_id" in manifest.columns else pd.DataFrame()
     rows = []
 
     for i, pid in enumerate(features.index):
-        if pid not in manifest_idx.index:
-            continue
-
-        row         = manifest_idx.loc[pid]
-        label       = int(row.get("metastasis_label", 0))
-        stage       = str(row.get("ajcc_stage", "Stage II"))
-        days_to_fu  = float(row.get("days_to_last_fu", 365))
-        days_to_death = row.get("days_to_death")
-        vital_status  = str(row.get("vital_status", "Alive")).lower()
+        manifest_row = manifest_idx.loc[pid] if pid in manifest_idx.index else None
+        if manifest_row is not None:
+            label       = int(manifest_row.get("metastasis_label", 0))
+            stage       = str(manifest_row.get("ajcc_stage", "Stage II"))
+            days_to_fu  = float(manifest_row.get("days_to_last_fu", 365))
+            days_to_death = manifest_row.get("days_to_death")
+            vital_status  = str(manifest_row.get("vital_status", "Alive")).lower()
+        else:
+            label       = int(labels.loc[pid]) if labels is not None and pid in labels.index else 0
+            stage       = str(features.loc[pid, "ajcc_stage"]) if "ajcc_stage" in features.columns else "Stage II"
+            days_to_fu  = float(features.loc[pid, "days_to_last_fu_rna"]) if "days_to_last_fu_rna" in features.columns else 365
+            vital_status_enc = float(features.loc[pid, "vital_status_encoded"]) if "vital_status_encoded" in features.columns else 0
+            vital_status = "dead" if vital_status_enc == 1 else "alive"
+            days_to_death = None
 
         mps = float(mps_scores[i]) if i < len(mps_scores) else 0.5
 
@@ -112,12 +118,12 @@ def simulate_mps_alert_timing(features:    pd.DataFrame,
         lead_time_months = standard_detect_months - alert_months
 
         # Survival time
-        if vital_status == "dead" and pd.notna(days_to_death):
+        if vital_status == "dead" and days_to_death is not None and pd.notna(days_to_death):
             survival_months = float(days_to_death) / 30.44
             event           = 1
         else:
             survival_months = days_to_fu / 30.44
-            event           = 0
+            event           = int(vital_status == "dead")
 
         # MPS risk stratum
         if mps >= 0.72:
@@ -129,7 +135,7 @@ def simulate_mps_alert_timing(features:    pd.DataFrame,
 
         rows.append({
             "patient_id":            pid,
-            "label":                 label,
+            "metastasis_label":      label,
             "stage":                 stage,
             "mps_score":             round(mps, 4),
             "risk_stratum":          risk_stratum,
@@ -257,10 +263,10 @@ def lead_time_report(lt_df: pd.DataFrame, out_dir: Path) -> dict:
     """
     Print and save the full lead time analysis.
     """
-    meta_patients   = lt_df[lt_df["label"] == 1]
+    meta_patients   = lt_df[lt_df["metastasis_label"] == 1]
     alerted_correct = meta_patients[meta_patients["mps_alerted"]]
     missed          = meta_patients[~meta_patients["mps_alerted"]]
-    false_alerts    = lt_df[(lt_df["label"] == 0) & (lt_df["mps_alerted"])]
+    false_alerts    = lt_df[(lt_df["metastasis_label"] == 0) & (lt_df["mps_alerted"])]
 
     print("\n" + "=" * 60)
     print("  LEAD TIME ANALYSIS")
@@ -272,8 +278,9 @@ def lead_time_report(lt_df: pd.DataFrame, out_dir: Path) -> dict:
           f"({100*len(alerted_correct)/len(meta_patients):.1f}%)")
     print(f"    Missed               : {len(missed)}  "
           f"({100*len(missed)/len(meta_patients):.1f}%)")
+    n_m0 = len(lt_df[lt_df["metastasis_label"] == 0])
     print(f"    False alerts (M0)    : {len(false_alerts)}  "
-          f"({100*len(false_alerts)/len(lt_df[lt_df['label']==0]):.1f}%)")
+          f"({'N/A' if n_m0 == 0 else f'{100*len(false_alerts)/n_m0:.1f}%'})")
 
     if len(alerted_correct) > 0:
         lt_vals = alerted_correct["lead_time_months"].values
@@ -385,6 +392,8 @@ def main():
     feat_cols = [c for c in pd.read_csv(args.phase4_input, index_col=0, nrows=0).columns
                  if c not in ["metastasis_label", "ajcc_stage", "ajcc_m"]]
     features  = pd.read_csv(args.phase4_input, index_col=0)[feat_cols].fillna(0)
+    full_data = pd.read_csv(args.phase4_input, index_col=0)
+    labels    = full_data["metastasis_label"].astype(int)
     manifest  = pd.read_csv(Path(args.manifest_dir) / "cohort_labeled.csv")
 
     # Derive MPS proxy from physics + EMT features
@@ -406,7 +415,7 @@ def main():
           f"{(mps_scores >= args.mps_threshold).sum()} patients")
 
     lt_df   = simulate_mps_alert_timing(
-        features, manifest, mps_scores, args.mps_threshold
+        features, manifest, mps_scores, args.mps_threshold, labels=labels
     )
     metrics = lead_time_report(lt_df, out_dir)
 

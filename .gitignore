@@ -1,0 +1,27 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# MLflow experiment artifacts
+experiments/mlflow/
+experiments/runs/
+
+# Large raw data
+data/raw/
+
+# Large processed files (>100MB, rejected by GitHub)
+data/processed/geo/*.csv
+data/processed/rna_seq/*.csv.gz
+*.parquet
+
+# Output artifacts
+outputs/shap/
+
+# Temp/debug files
+streamlit_*.txt
+debug_*.py
+_investigate.py

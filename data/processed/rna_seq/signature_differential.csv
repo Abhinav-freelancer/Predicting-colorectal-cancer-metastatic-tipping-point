@@ -1,12 +1,12 @@
 signature,m0_mean,m1_mean,delta,pvalue,direction
-epithelial,-0.0429,-0.15026,-0.10736,0.0,↓ in M1
-mesenchymal,0.03001,0.18265,0.15264,0.0,↑ in M1
-tgfb_pathway,-0.02081,0.13214,0.15295,0.0,↑ in M1
-wnt_pathway,,,,,~
-proliferation,,,,,~
-cytotoxic_t,,,,,~
-immune_suppression,0.11207,0.28069,0.16862,0.0,↑ in M1
-hypoxia,,,,,~
-emt_index,0.07291,0.33291,0.26,0.0,↑ in M1
-immune_balance,,,,,~
-invasion_potential,0.02605,0.23253,0.20648,0.0,↑ in M1
+epithelial,0.467,0.46457,-0.00242,0.51765,~
+mesenchymal,0.33306,0.33506,0.002,0.92812,~
+tgfb_pathway,0.36276,0.36031,-0.00245,0.40882,~
+wnt_pathway,0.40925,0.41004,0.00079,0.49289,~
+proliferation,0.41915,0.41548,-0.00367,0.15765,~
+cytotoxic_t,0.22951,0.17578,-0.05373,0.0,↓ in M1
+immune_suppression,0.19802,0.17693,-0.02109,0.00691,↓ in M1
+hypoxia,0.43647,0.43072,-0.00575,0.11852,~
+emt_index,-0.13394,-0.12951,0.00442,0.74206,~
+immune_balance,0.03149,-0.00115,-0.03265,3e-05,↓ in M1
+invasion_potential,0.22176,0.22051,-0.00126,0.40444,~

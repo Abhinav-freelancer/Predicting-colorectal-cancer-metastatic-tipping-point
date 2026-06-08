@@ -27,6 +27,7 @@ Usage:
 """
 
 import argparse
+from typing import Optional
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -42,27 +43,27 @@ N_ORDER  = {"N0": 0, "N1": 1, "N2": 2}
 
 def encode_clinical(manifest: pd.DataFrame) -> pd.DataFrame:
     """Encode categorical clinical variables as ordinal integers."""
-    clin = manifest[["submitter_id", "metastasis_label",
+    clin = manifest[["case_id", "metastasis_label",
                      "ajcc_stage", "ajcc_m", "ajcc_t", "ajcc_n",
-                     "gender", "vital_status",
-                     "age_at_index", "days_to_last_fu"]].copy()
+                     "gender_rna", "vital_status_rna",
+                     "age_at_index", "days_to_last_fu_rna"]].copy()
 
-    clin = clin.set_index("submitter_id")
+    clin = clin.set_index("case_id")
 
     clin["stage_order"]          = clin["ajcc_stage"].map(STAGE_ORDER).fillna(1)
     clin["ajcc_t_encoded"]       = clin["ajcc_t"].map(T_ORDER).fillna(1)
     clin["ajcc_n_encoded"]       = clin["ajcc_n"].map(N_ORDER).fillna(0)
-    clin["gender_encoded"]       = (clin["gender"].str.lower() == "male").astype(int)
-    clin["vital_status_encoded"] = (clin["vital_status"].str.lower() == "dead").astype(int)
+    clin["gender_encoded"]       = (clin["gender_rna"].str.lower() == "male").astype(int)
+    clin["vital_status_encoded"] = (clin["vital_status_rna"].str.lower() == "dead").astype(int)
 
     # Normalise continuous clinical features
-    for col in ["age_at_index", "days_to_last_fu"]:
+    for col in ["age_at_index", "days_to_last_fu_rna"]:
         clin[col] = pd.to_numeric(clin[col], errors="coerce").fillna(clin[col].median())
 
     keep = ["metastasis_label", "ajcc_stage", "ajcc_m",
             "stage_order", "ajcc_t_encoded", "ajcc_n_encoded",
             "gender_encoded", "vital_status_encoded",
-            "age_at_index", "days_to_last_fu"]
+            "age_at_index", "days_to_last_fu_rna"]
 
     return clin[keep]
 
@@ -71,10 +72,12 @@ def build_feature_matrix(
     emt_scores:   pd.DataFrame,
     ews_scores:   pd.DataFrame,
     clinical:     pd.DataFrame,
+    cnv_features: Optional[pd.DataFrame] = None,
+    trajectory:   Optional[pd.DataFrame] = None,
 ) -> pd.DataFrame:
     """
-    Inner-join all three feature tables on patient ID.
-    Patients without all three are dropped with a warning.
+    Inner-join all feature tables on patient ID.
+    Patients without all required tables are dropped with a warning.
     """
     # Align indices
     emt_scores.index.name  = "patient_id"
@@ -84,10 +87,61 @@ def build_feature_matrix(
     merged = emt_scores.join(ews_scores,  how="inner", rsuffix="_ews")
     merged = merged.join(clinical,        how="inner", rsuffix="_clin")
 
+    # Merge trajectory projection features (cohort pseudo-time EWS)
+    TRAJECTORY_FEATURES = [
+        "trajectory_position", "ews_ac1_slope", "ews_var_slope",
+        "ews_skew_slope", "ews_anomaly", "spatial_synchrony",
+    ]
+    if trajectory is not None and len(trajectory) > 0:
+        traj = trajectory.set_index("patient_id")
+        traj_avail = [c for c in TRAJECTORY_FEATURES if c in traj.columns]
+        if traj_avail:
+            merged = merged.join(traj[traj_avail], how="left")
+
+    # Merge CNV features if provided (left join — CNV data may be partial)
+    if cnv_features is not None and len(cnv_features) > 0:
+        cnv_idx = cnv_features.set_index("case_id")
+        cnv_idx.index.name = "patient_id"
+        cnv_cols = [c for c in cnv_idx.columns]
+        cnv_existing = [c for c in cnv_cols if c in merged.columns]
+        if cnv_existing:
+            cnv_idx = cnv_idx.drop(columns=cnv_existing)
+        merged = merged.join(cnv_idx, how="left")
+        # Fill missing CNV values with 0 (no CNV data = neutral)
+        for c in cnv_idx.columns:
+            if c in merged.columns:
+                merged[c] = merged[c].fillna(0.0)
+        print(f"    CNV features : {len(cnv_cols)} added to feature matrix")
+
     # Rename duplicate columns
     dup_cols = [c for c in merged.columns if c.endswith("_ews") or c.endswith("_clin")]
     if dup_cols:
         merged = merged.drop(columns=dup_cols)
+
+    # ── Biologically motivated interaction features (Phase 2 only) ──────
+    # Mesenchymal dominance: net shift along the E-M axis.
+    if "mesenchymal" in merged.columns and "epithelial" in merged.columns:
+        merged["mesenchymal_dominance"] = merged["mesenchymal"] - merged["epithelial"]
+
+    # EWS composite v2: mean of the strongest variance-based signals.
+    ews_vars = ["ews_var_epithelial", "ews_var_mesenchymal", "ews_em_ratio"]
+    ews_present = [c for c in ews_vars if c in merged.columns]
+    if ews_present:
+        merged["ews_composite_v2"] = merged[ews_present].mean(axis=1)
+
+    # Epithelial-mesenchymal ratio (inverse of ews_em_ratio for interpretability)
+    if "epithelial" in merged.columns and "mesenchymal" in merged.columns:
+        merged["em_ratio"] = merged["epithelial"] / (merged["mesenchymal"] + 1e-6)
+
+    # Critical slowing down index: proxy for lag1_autocorr x rolling_variance
+    ews_vm = "ews_var_mesenchymal"
+    ews_ve = "ews_var_epithelial"
+    if ews_vm in merged.columns and ews_ve in merged.columns:
+        merged["critical_slowing_down_index"] = merged[ews_vm] * merged[ews_ve]
+
+    # Variance-skewness ratio: asymmetry of fluctuations
+    if "ews_var_mesenchymal" in merged.columns and "ews_skew_emt" in merged.columns:
+        merged["variance_skewness_ratio"] = merged["ews_var_mesenchymal"] / (merged["ews_skew_emt"] + 1e-6)
 
     return merged
 
@@ -150,11 +204,11 @@ def feature_summary(features: pd.DataFrame,
     print(f"\n  Feature groups:")
     groups = {
         "EMT scores":    [c for c in features.columns if not c.startswith("ews_")
-                          and c not in ["stage_order","age_at_index","days_to_last_fu",
+                          and c not in ["stage_order","age_at_index","days_to_last_fu_rna",
                                         "gender_encoded","vital_status_encoded",
                                         "ajcc_t_encoded","ajcc_n_encoded"]],
         "EWS signals":   [c for c in features.columns if c.startswith("ews_")],
-        "Clinical":      ["stage_order","age_at_index","days_to_last_fu",
+        "Clinical":      ["stage_order","age_at_index","days_to_last_fu_rna",
                           "gender_encoded","vital_status_encoded",
                           "ajcc_t_encoded","ajcc_n_encoded"],
     }
@@ -179,6 +233,8 @@ def main():
     parser = argparse.ArgumentParser(description="Phase 2 - Feature builder")
     parser.add_argument("--emt-scores",   default="data/processed/rna_seq/emt_scores.csv")
     parser.add_argument("--ews-scores",   default="data/processed/ews/patient_ews.csv")
+    parser.add_argument("--cnv-features", default="data/processed/temporal/cnv_features.csv",
+                        help="Optional CNV features CSV (from tcga_downloader_cnv.py)")
     parser.add_argument("--manifest-dir", default="data/manifests")
     parser.add_argument("--out-dir",      default="data/processed/temporal")
     parser.add_argument("--no-scale",     action="store_true",
@@ -203,12 +259,30 @@ def main():
     print(f"    EWS scores : {ews_scores.shape}")
     print(f"    Manifest   : {manifest.shape}")
 
+    # Load optional CNV features
+    cnv_path = Path(args.cnv_features)
+    cnv_features = None
+    if cnv_path.exists():
+        cnv_features = pd.read_csv(cnv_path)
+        print(f"    CNV features : {cnv_features.shape}")
+    else:
+        print(f"    CNV features : not found at {cnv_path}, skipping")
+
+    # Load cohort trajectory features (pseudo-time EWS projection)
+    traj_path = Path("data/processed/ews/cohort_ews_trajectory.csv")
+    trajectory = None
+    if traj_path.exists():
+        trajectory = pd.read_csv(traj_path)
+        print(f"    Trajectory  : {trajectory.shape}")
+    else:
+        print(f"    Trajectory  : not found at {traj_path}, skipping")
+
     # Encode clinical variables
     clinical = encode_clinical(manifest)
 
     # Build merged matrix
     print("\n  Merging feature tables...")
-    merged = build_feature_matrix(emt_scores, ews_scores, clinical)
+    merged = build_feature_matrix(emt_scores, ews_scores, clinical, cnv_features, trajectory)
     print(f"  Merged shape: {merged.shape}")
 
     # Label columns to separate out
